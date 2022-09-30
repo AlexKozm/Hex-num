@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/src",
+  "command": "/usr/bin/c++  -I/home/alex/Mephi/sem3/Infa/lab3/./src   -Wall -g -std=gnu++2a -o CMakeFiles/lab3_run.dir/hex_num.cpp.o -c /home/alex/Mephi/sem3/Infa/lab3/src/hex_num.cpp",
+  "file": "/home/alex/Mephi/sem3/Infa/lab3/src/hex_num.cpp"
+},
+{
+  "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/src",
+  "command": "/usr/bin/c++  -I/home/alex/Mephi/sem3/Infa/lab3/./src   -Wall -g -std=gnu++2a -o CMakeFiles/lab3_run.dir/main.cpp.o -c /home/alex/Mephi/sem3/Infa/lab3/src/main.cpp",
+  "file": "/home/alex/Mephi/sem3/Infa/lab3/src/main.cpp"
+}
+]
