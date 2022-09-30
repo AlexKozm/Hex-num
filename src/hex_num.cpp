@@ -22,6 +22,7 @@ char Container::get(int pos) {
 }
 
 void Container::set(int pos, char val) { arr[pos] = val; }
+hex_num::Container *Container::get_new() {}
 
 Hex_num::Hex_num() : hex_num::Hex_num::Hex_num(new Container()) {}
 Hex_num::Hex_num(int hex) : hex_num::Hex_num(new Container) {}

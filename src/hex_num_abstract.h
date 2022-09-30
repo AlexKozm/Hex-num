@@ -53,29 +53,4 @@ public:
 };
 
 } // namespace hex_num
-
-namespace static_hex {
-
-class Container : public hex_num::Container {
-  const static int len = 31;
-  char arr[len] = {};
-
-public:
-  Container();
-  char get(int pos) override;
-  void set(int pos, char val) override;
-  hex_num::Container *get_new() override;
-};
-
-class Hex_num : hex_num::Hex_num {
-public:
-  Hex_num();
-  Hex_num(int hex);
-  Hex_num(std::string hex);
-  Hex_num(hex_num::Hex_num &base);
-  // ~Hex_num();
-};
-
-} // namespace static_hex
-
 #endif
