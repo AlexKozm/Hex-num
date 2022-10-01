@@ -1,0 +1,123 @@
+\hypertarget{classhex__num_1_1_container}{}\doxysection{hex\+\_\+num\+::Container Class Reference}
+\label{classhex__num_1_1_container}\index{hex\_num::Container@{hex\_num::Container}}
+
+
+Abstract class for container.  
+
+
+
+
+{\ttfamily \#include $<$hex\+\_\+num\+\_\+abstract.\+h$>$}
+
+
+
+Inheritance diagram for hex\+\_\+num\+::Container\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classhex__num_1_1_container__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{classhex__num_1_1_container_a7460a02575f693edbea7e44d08c4f290}{get\+\_\+len}} ()
+\begin{DoxyCompactList}\small\item\em Get len of the \mbox{\hyperlink{classhex__num_1_1_container}{Container}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classhex__num_1_1_container_a2ab598efdb3efd5232bd31fc65c6e7f1}{set\+\_\+len}} (size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Set len of the container. \end{DoxyCompactList}\item 
+virtual char \mbox{\hyperlink{classhex__num_1_1_container_a5dc2afc45c0a0d76e8c33518ad85f7fe}{get}} (int pos)=0
+\begin{DoxyCompactList}\small\item\em Get char on pos in container. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classhex__num_1_1_container_a5093b21b641049ad64da98d49b9a810d}{set}} (int pos, char val)=0
+\begin{DoxyCompactList}\small\item\em Set val. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhex__num_1_1_container_a4d0295104a6b573010c86180dbae625f}\label{classhex__num_1_1_container_a4d0295104a6b573010c86180dbae625f}} 
+virtual void \mbox{\hyperlink{classhex__num_1_1_container_a4d0295104a6b573010c86180dbae625f}{set\+\_\+minus}} ()=0
+\begin{DoxyCompactList}\small\item\em Make num negative. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhex__num_1_1_container_afa27ccadbb192ea1b7c82e6211caf244}\label{classhex__num_1_1_container_afa27ccadbb192ea1b7c82e6211caf244}} 
+virtual void \mbox{\hyperlink{classhex__num_1_1_container_afa27ccadbb192ea1b7c82e6211caf244}{unset\+\_\+minus}} ()=0
+\begin{DoxyCompactList}\small\item\em Make num positive. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhex__num_1_1_container_adfdd4ca94ea3b65305dcb3d46d7846b8}\label{classhex__num_1_1_container_adfdd4ca94ea3b65305dcb3d46d7846b8}} 
+virtual \mbox{\hyperlink{classhex__num_1_1_container}{Container}} $\ast$ {\bfseries get\+\_\+new} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for container. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhex__num_1_1_container_a5dc2afc45c0a0d76e8c33518ad85f7fe}\label{classhex__num_1_1_container_a5dc2afc45c0a0d76e8c33518ad85f7fe}} 
+\index{hex\_num::Container@{hex\_num::Container}!get@{get}}
+\index{get@{get}!hex\_num::Container@{hex\_num::Container}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily virtual char hex\+\_\+num\+::\+Container\+::get (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get char on pos in container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Char on pos in container 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_a74cfe2911c36542f7cd2337660423834}{static\+\_\+hex\+::\+Container}}.
+
+\mbox{\Hypertarget{classhex__num_1_1_container_a7460a02575f693edbea7e44d08c4f290}\label{classhex__num_1_1_container_a7460a02575f693edbea7e44d08c4f290}} 
+\index{hex\_num::Container@{hex\_num::Container}!get\_len@{get\_len}}
+\index{get\_len@{get\_len}!hex\_num::Container@{hex\_num::Container}}
+\doxysubsubsection{\texorpdfstring{get\_len()}{get\_len()}}
+{\footnotesize\ttfamily size\+\_\+t Container\+::get\+\_\+len (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get len of the \mbox{\hyperlink{classhex__num_1_1_container}{Container}}. 
+
+\begin{DoxyReturn}{Returns}
+Length 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classhex__num_1_1_container_a5093b21b641049ad64da98d49b9a810d}\label{classhex__num_1_1_container_a5093b21b641049ad64da98d49b9a810d}} 
+\index{hex\_num::Container@{hex\_num::Container}!set@{set}}
+\index{set@{set}!hex\_num::Container@{hex\_num::Container}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily virtual void hex\+\_\+num\+::\+Container\+::set (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{char}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set val. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & \\
+\hline
+{\em val} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_ad9c46d0d8cfcc11af06a278a83816d8f}{static\+\_\+hex\+::\+Container}}.
+
+\mbox{\Hypertarget{classhex__num_1_1_container_a2ab598efdb3efd5232bd31fc65c6e7f1}\label{classhex__num_1_1_container_a2ab598efdb3efd5232bd31fc65c6e7f1}} 
+\index{hex\_num::Container@{hex\_num::Container}!set\_len@{set\_len}}
+\index{set\_len@{set\_len}!hex\_num::Container@{hex\_num::Container}}
+\doxysubsubsection{\texorpdfstring{set\_len()}{set\_len()}}
+{\footnotesize\ttfamily void Container\+::set\+\_\+len (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Set len of the container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em len} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hex\+\_\+num\+\_\+abstract.\+h\item 
+src/hex\+\_\+num\+\_\+abstract.\+cpp\end{DoxyCompactItemize}

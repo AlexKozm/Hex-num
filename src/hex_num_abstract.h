@@ -1,5 +1,5 @@
-#if !defined(HEX_NUM_H)
-#define HEX_NUM_H
+#if !defined(HEX_NUM_ABSTRACT_H)
+#define HEX_NUM_ABSTRACT_H
 
 #include <iostream>
 #include <stdexcept>
@@ -12,7 +12,19 @@ namespace hex_num {
  * @brief Abstract class for container
  */
 class Container {
+  size_t len; //current len of container
+
 public:
+  /**
+   * @brief Get len of the Container
+   * @return Length
+   */
+  size_t get_len();
+  /**
+   * @brief Set len of the container
+   * @param len 
+   */
+  void set_len(size_t len);
   /**
    * @brief Get char on pos in container
    * @param pos
@@ -25,6 +37,15 @@ public:
    * @param val
    */
   virtual void set(int pos, char val) = 0;
+  /**
+   * @brief Make num negative
+   */
+  virtual void set_minus() = 0;
+  /**
+   * @brief Make num positive
+   */
+  virtual void unset_minus() = 0;
+  //TODO write a doc. Will be done at sum and dif realization
   virtual Container *get_new() = 0;
 };
 
@@ -32,22 +53,80 @@ public:
  * @class Hex_num
  * @brief Class with abstract container
  * @details
+ * @todo make abstract
  */
 class Hex_num {
+
+  /**
+   * @brief Convert string to arr
+   * @details Convert string to arr. In case of error throws an exception 
+              and object stays in undefined state
+   * @throw Wrong_format_exception
+   * @param str 
+   */
+  void str_to_arr(std::string str);
+
 protected:
   Container *arr;
+  /**
+   * @brief Create Hex_num with given Container arr
+   * @param arr 
+   */
   Hex_num(Container *arr);
+  /**
+   * @brief Create Hex_num with given Container arr and init it with hex int or throw an error
+   * @param arr 
+   * @param hex 
+   */
   Hex_num(Container *arr, int hex);
+  /**
+   * @brief Create Hex_num with given Container arr and init it with string or throw an error
+   * @param arr 
+   * @param hex 
+   */
   Hex_num(Container *arr, std::string hex);
 
 public:
+  class Wrong_format_exception : public std::runtime_error {
+  public:
+    Wrong_format_exception(std::string msg);
+  };
+
+  /**
+   * @brief Return hex as a char
+   * @details Return (hex % 16) and cast ro right char symbol
+   * @param hex Should be >= 0
+   * @return Hex as a char
+   */
+  char hex_remains_to_char(int hex);
+  //TODO
   void move_left();
+  //TODO
   void move_right();
+  //TODO
   bool evenness();
-  void input(std::istream inp);
-  void output(std::istream out);
+  /**
+   * @brief Input str from istream and convert it to Hex_num
+   * @details Input str from istream and convert it to Hex_num.
+              In case of error throws an exception 
+              and object stays in undefined state
+   * @throw Wrong_format_exception
+   * @param inp
+   */
+  void input(std::istream &inp);
+  //TODO
+  void output(std::ostream &out);
+  /**
+   * @brief Print Hex_num in direct code with hex num
+   * @param out 
+   */
+  void print_container(std::ostream &out);
+  //TODO
   static bool equal(Hex_num const &a, Hex_num const &b);
+  //TODO
   static Hex_num *sum(Hex_num const &a, Hex_num const &b);
+  //TODO
+  static Hex_num *dif(Hex_num const &a, Hex_num const &b);
 
   // virtual ~Hex_num() = 0;
 };

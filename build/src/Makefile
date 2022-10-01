@@ -154,6 +154,30 @@ hex_num.cpp.s:
 	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/hex_num.cpp.s
 .PHONY : hex_num.cpp.s
 
+hex_num_abstract.o: hex_num_abstract.cpp.o
+.PHONY : hex_num_abstract.o
+
+# target to build an object file
+hex_num_abstract.cpp.o:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/hex_num_abstract.cpp.o
+.PHONY : hex_num_abstract.cpp.o
+
+hex_num_abstract.i: hex_num_abstract.cpp.i
+.PHONY : hex_num_abstract.i
+
+# target to preprocess a source file
+hex_num_abstract.cpp.i:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/hex_num_abstract.cpp.i
+.PHONY : hex_num_abstract.cpp.i
+
+hex_num_abstract.s: hex_num_abstract.cpp.s
+.PHONY : hex_num_abstract.s
+
+# target to generate assembly for a file
+hex_num_abstract.cpp.s:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/hex_num_abstract.cpp.s
+.PHONY : hex_num_abstract.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -190,6 +214,9 @@ help:
 	@echo "... hex_num.o"
 	@echo "... hex_num.i"
 	@echo "... hex_num.s"
+	@echo "... hex_num_abstract.o"
+	@echo "... hex_num_abstract.i"
+	@echo "... hex_num_abstract.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

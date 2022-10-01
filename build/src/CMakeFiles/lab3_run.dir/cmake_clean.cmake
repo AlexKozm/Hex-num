@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lab3_run.dir/hex_num.cpp.o"
   "CMakeFiles/lab3_run.dir/hex_num.cpp.o.d"
+  "CMakeFiles/lab3_run.dir/hex_num_abstract.cpp.o"
+  "CMakeFiles/lab3_run.dir/hex_num_abstract.cpp.o.d"
   "CMakeFiles/lab3_run.dir/main.cpp.o"
   "CMakeFiles/lab3_run.dir/main.cpp.o.d"
   "lab3_run"

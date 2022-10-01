@@ -1,0 +1,203 @@
+\hypertarget{classhex__num_1_1_hex__num}{}\doxysection{hex\+\_\+num\+::Hex\+\_\+num Class Reference}
+\label{classhex__num_1_1_hex__num}\index{hex\_num::Hex\_num@{hex\_num::Hex\_num}}
+
+
+Class with abstract container.  
+
+
+
+
+{\ttfamily \#include $<$hex\+\_\+num\+\_\+abstract.\+h$>$}
+
+
+
+Inheritance diagram for hex\+\_\+num\+::Hex\+\_\+num\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classhex__num_1_1_hex__num__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for hex\+\_\+num\+::Hex\+\_\+num\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classhex__num_1_1_hex__num__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classhex__num_1_1_hex__num_1_1_wrong__format__exception}{Wrong\+\_\+format\+\_\+exception}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{classhex__num_1_1_hex__num_a500692867c9006d2f1140f4d75adbc88}{hex\+\_\+remains\+\_\+to\+\_\+char}} (int hex)
+\begin{DoxyCompactList}\small\item\em Return hex as a char. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_a5685f8cb931775c3e234d5065f64af6a}\label{classhex__num_1_1_hex__num_a5685f8cb931775c3e234d5065f64af6a}} 
+void {\bfseries move\+\_\+left} ()
+\item 
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_a51c992a712dfb2e071ee3cd7148dd8cf}\label{classhex__num_1_1_hex__num_a51c992a712dfb2e071ee3cd7148dd8cf}} 
+void {\bfseries move\+\_\+right} ()
+\item 
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_acddc9ead823f7fb6af1daeeaaa671adb}\label{classhex__num_1_1_hex__num_acddc9ead823f7fb6af1daeeaaa671adb}} 
+bool {\bfseries evenness} ()
+\item 
+void \mbox{\hyperlink{classhex__num_1_1_hex__num_aa0f82a02a794f758403788fd1bf7ba12}{input}} (std\+::istream \&inp)
+\begin{DoxyCompactList}\small\item\em Input str from istream and convert it to \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_a648379650ecd806905f1e4e77c0cedc1}\label{classhex__num_1_1_hex__num_a648379650ecd806905f1e4e77c0cedc1}} 
+void {\bfseries output} (std\+::ostream \&out)
+\item 
+void \mbox{\hyperlink{classhex__num_1_1_hex__num_a4292fa97f674a841667cb084f5b5b7e2}{print\+\_\+container}} (std\+::ostream \&out)
+\begin{DoxyCompactList}\small\item\em Print \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} in direct code with hex num. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_a6660f7c666d64029c661cb06397df637}\label{classhex__num_1_1_hex__num_a6660f7c666d64029c661cb06397df637}} 
+static bool {\bfseries equal} (\mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} const \&a, \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} const \&b)
+\item 
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_ac543b26f0227e948bdd925af7547499d}\label{classhex__num_1_1_hex__num_ac543b26f0227e948bdd925af7547499d}} 
+static \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} $\ast$ {\bfseries sum} (\mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} const \&a, \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} const \&b)
+\item 
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_a6775f8c6bf96e07fc2f02a3cb37ce5de}\label{classhex__num_1_1_hex__num_a6775f8c6bf96e07fc2f02a3cb37ce5de}} 
+static \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} $\ast$ {\bfseries dif} (\mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} const \&a, \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} const \&b)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhex__num_1_1_hex__num_a908fa5189bba2cee49b1ac19decd1d01}{Hex\+\_\+num}} (\mbox{\hyperlink{classhex__num_1_1_container}{Container}} $\ast$arr)
+\begin{DoxyCompactList}\small\item\em Create \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} with given \mbox{\hyperlink{classhex__num_1_1_container}{Container}} arr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhex__num_1_1_hex__num_ad5fee34cec85fb74c380e306b6596301}{Hex\+\_\+num}} (\mbox{\hyperlink{classhex__num_1_1_container}{Container}} $\ast$arr, int hex)
+\begin{DoxyCompactList}\small\item\em Create \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} with given \mbox{\hyperlink{classhex__num_1_1_container}{Container}} arr and init it with hex int or throw an error. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhex__num_1_1_hex__num_ab624d59d214164f57dab003ef70c816f}{Hex\+\_\+num}} (\mbox{\hyperlink{classhex__num_1_1_container}{Container}} $\ast$arr, std\+::string hex)
+\begin{DoxyCompactList}\small\item\em Create \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} with given \mbox{\hyperlink{classhex__num_1_1_container}{Container}} arr and init it with string or throw an error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_aa834be4f01830f12cc010f3d9b82b882}\label{classhex__num_1_1_hex__num_aa834be4f01830f12cc010f3d9b82b882}} 
+\mbox{\hyperlink{classhex__num_1_1_container}{Container}} $\ast$ {\bfseries arr}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class with abstract container. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]make abstract \end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_a908fa5189bba2cee49b1ac19decd1d01}\label{classhex__num_1_1_hex__num_a908fa5189bba2cee49b1ac19decd1d01}} 
+\index{hex\_num::Hex\_num@{hex\_num::Hex\_num}!Hex\_num@{Hex\_num}}
+\index{Hex\_num@{Hex\_num}!hex\_num::Hex\_num@{hex\_num::Hex\_num}}
+\doxysubsubsection{\texorpdfstring{Hex\_num()}{Hex\_num()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Hex\+\_\+num\+::\+Hex\+\_\+num (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhex__num_1_1_container}{Container}} $\ast$}]{arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Create \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} with given \mbox{\hyperlink{classhex__num_1_1_container}{Container}} arr. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_ad5fee34cec85fb74c380e306b6596301}\label{classhex__num_1_1_hex__num_ad5fee34cec85fb74c380e306b6596301}} 
+\index{hex\_num::Hex\_num@{hex\_num::Hex\_num}!Hex\_num@{Hex\_num}}
+\index{Hex\_num@{Hex\_num}!hex\_num::Hex\_num@{hex\_num::Hex\_num}}
+\doxysubsubsection{\texorpdfstring{Hex\_num()}{Hex\_num()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Hex\+\_\+num\+::\+Hex\+\_\+num (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhex__num_1_1_container}{Container}} $\ast$}]{arr,  }\item[{int}]{hex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Create \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} with given \mbox{\hyperlink{classhex__num_1_1_container}{Container}} arr and init it with hex int or throw an error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & \\
+\hline
+{\em hex} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_ab624d59d214164f57dab003ef70c816f}\label{classhex__num_1_1_hex__num_ab624d59d214164f57dab003ef70c816f}} 
+\index{hex\_num::Hex\_num@{hex\_num::Hex\_num}!Hex\_num@{Hex\_num}}
+\index{Hex\_num@{Hex\_num}!hex\_num::Hex\_num@{hex\_num::Hex\_num}}
+\doxysubsubsection{\texorpdfstring{Hex\_num()}{Hex\_num()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Hex\+\_\+num\+::\+Hex\+\_\+num (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhex__num_1_1_container}{Container}} $\ast$}]{arr,  }\item[{std\+::string}]{hex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Create \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} with given \mbox{\hyperlink{classhex__num_1_1_container}{Container}} arr and init it with string or throw an error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & \\
+\hline
+{\em hex} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_a500692867c9006d2f1140f4d75adbc88}\label{classhex__num_1_1_hex__num_a500692867c9006d2f1140f4d75adbc88}} 
+\index{hex\_num::Hex\_num@{hex\_num::Hex\_num}!hex\_remains\_to\_char@{hex\_remains\_to\_char}}
+\index{hex\_remains\_to\_char@{hex\_remains\_to\_char}!hex\_num::Hex\_num@{hex\_num::Hex\_num}}
+\doxysubsubsection{\texorpdfstring{hex\_remains\_to\_char()}{hex\_remains\_to\_char()}}
+{\footnotesize\ttfamily char Hex\+\_\+num\+::hex\+\_\+remains\+\_\+to\+\_\+char (\begin{DoxyParamCaption}\item[{int}]{hex }\end{DoxyParamCaption})}
+
+
+
+Return hex as a char. 
+
+Return (hex \% 16) and cast ro right char symbol 
+\begin{DoxyParams}{Parameters}
+{\em hex} & Should be $>$= 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Hex as a char 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_aa0f82a02a794f758403788fd1bf7ba12}\label{classhex__num_1_1_hex__num_aa0f82a02a794f758403788fd1bf7ba12}} 
+\index{hex\_num::Hex\_num@{hex\_num::Hex\_num}!input@{input}}
+\index{input@{input}!hex\_num::Hex\_num@{hex\_num::Hex\_num}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily void Hex\+\_\+num\+::input (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{inp }\end{DoxyParamCaption})}
+
+
+
+Input str from istream and convert it to \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}}. 
+
+Input str from istream and convert it to \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}}. In case of error throws an exception and object stays in undefined state 
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classhex__num_1_1_hex__num_1_1_wrong__format__exception}{Wrong\+\_\+format\+\_\+exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em inp} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_a4292fa97f674a841667cb084f5b5b7e2}\label{classhex__num_1_1_hex__num_a4292fa97f674a841667cb084f5b5b7e2}} 
+\index{hex\_num::Hex\_num@{hex\_num::Hex\_num}!print\_container@{print\_container}}
+\index{print\_container@{print\_container}!hex\_num::Hex\_num@{hex\_num::Hex\_num}}
+\doxysubsubsection{\texorpdfstring{print\_container()}{print\_container()}}
+{\footnotesize\ttfamily void Hex\+\_\+num\+::print\+\_\+container (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Print \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} in direct code with hex num. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hex\+\_\+num\+\_\+abstract.\+h\item 
+src/hex\+\_\+num\+\_\+abstract.\+cpp\end{DoxyCompactItemize}

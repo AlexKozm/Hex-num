@@ -96,12 +96,12 @@ src/clean: src/CMakeFiles/lab3_run.dir/clean
 src/CMakeFiles/lab3_run.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=1,2,3 "Built target lab3_run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=1,2,3,4 "Built target lab3_run"
 .PHONY : src/CMakeFiles/lab3_run.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/lab3_run.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/lab3_run.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/lab3_run.dir/rule
