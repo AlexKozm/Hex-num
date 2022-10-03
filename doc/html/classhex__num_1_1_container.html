@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classhex__num_1_1_container-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">hex_num::Container Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -112,6 +113,15 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:adfdd4ca94ea3b65305dcb3d46d7846b8"><td class="memItemLeft" align="right" valign="top"><a id="adfdd4ca94ea3b65305dcb3d46d7846b8"></a>
 virtual <a class="el" href="classhex__num_1_1_container.html">Container</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_new</b> ()=0</td></tr>
 <tr class="separator:adfdd4ca94ea3b65305dcb3d46d7846b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7d29dc002fb9d2d7de9180e494536bb1"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_container.html#a7d29dc002fb9d2d7de9180e494536bb1">hex_remains_to_char</a> (int hex)</td></tr>
+<tr class="memdesc:a7d29dc002fb9d2d7de9180e494536bb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hex as a char.  <a href="classhex__num_1_1_container.html#a7d29dc002fb9d2d7de9180e494536bb1">More...</a><br /></td></tr>
+<tr class="separator:a7d29dc002fb9d2d7de9180e494536bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb094acb8c045bc36aead152f030092a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_container.html#afb094acb8c045bc36aead152f030092a">int_hex_from_char</a> (char hex)</td></tr>
+<tr class="memdesc:afb094acb8c045bc36aead152f030092a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hex char as int.  <a href="classhex__num_1_1_container.html#afb094acb8c045bc36aead152f030092a">More...</a><br /></td></tr>
+<tr class="separator:afb094acb8c045bc36aead152f030092a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract class for container. </p>
@@ -170,6 +180,82 @@ virtual <a class="el" href="classhex__num_1_1_container.html">Container</a> *&#1
 
 <p>Get len of the <a class="el" href="classhex__num_1_1_container.html" title="Abstract class for container.">Container</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>Length </dd></dl>
+
+</div>
+</div>
+<a id="a7d29dc002fb9d2d7de9180e494536bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d29dc002fb9d2d7de9180e494536bb1">&#9670;&nbsp;</a></span>hex_remains_to_char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Container::hex_remains_to_char </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return hex as a char. </p>
+<p>Return (hex % 16) and cast ro right char symbol </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hex</td><td>Should be &gt;= 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Hex as a char </dd></dl>
+
+</div>
+</div>
+<a id="afb094acb8c045bc36aead152f030092a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb094acb8c045bc36aead152f030092a">&#9670;&nbsp;</a></span>int_hex_from_char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Container::int_hex_from_char </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>hex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return hex char as int. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hex</td><td>Should be in 0..9A..F or throws an exception </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Wrong_format_exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int hex </dd></dl>
 
 </div>
 </div>

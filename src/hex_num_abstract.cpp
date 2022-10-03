@@ -21,7 +21,7 @@ Hex_num::Hex_num(Container *arr, int hex) : arr(arr) {
   }
   int i = 0;
   while (hex > 0) {
-    arr->set(i++, hex_remains_to_char(hex));
+    arr->set(i++, Container::hex_remains_to_char(hex));
     hex /= 16;
   }
 }
@@ -57,7 +57,7 @@ void Hex_num::str_to_arr(string str) {
   }
 }
 
-char Hex_num::hex_remains_to_char(int hex) {
+char Container::hex_remains_to_char(int hex) {
   hex %= 16;
   if (hex < 10) {
     return '0' + hex;
@@ -66,23 +66,23 @@ char Hex_num::hex_remains_to_char(int hex) {
   }
 }
 
-int Hex_num::int_hex_from_char(char hex) {
+int Container::int_hex_from_char(char hex) {
   if ('0' <= hex && hex <= '9') {
-    return hex;
+    return hex - '0';
   } else if ('A' <= hex && hex <= 'F') {
-    return 'A' + hex - 10;
+    return hex - 'A' + 10;
   } else {
-    throw Wrong_format_exception("Wrong format in converting char to arr");
+    throw Hex_num::Wrong_format_exception(
+        "Wrong format in converting char to arr");
   }
 }
-
 //-------------------------------------------------------------
 
 void Hex_num::move_left(int n) {}
 void Hex_num::move_right(int n) {}
 
 bool Hex_num::evenness() {
-  if (int_hex_from_char(arr->get(0)) % 2 == 0) {
+  if (Container::int_hex_from_char(arr->get(0)) % 2 == 0) {
     return 1;
   } else {
     return 0;
@@ -96,14 +96,24 @@ void Hex_num::input(std::istream &is) {
 }
 
 void Hex_num::output(std::ostream &os) {
+  bool started = 0;
   int i = arr->get_len() - 1;
-  int a = int_hex_from_char(arr->get(i));
-  if (a == '8' || a == '9' || ('A' <= a && a <= 'F')) {
+  int a = Container::int_hex_from_char(arr->get(i));
+  if (a >= 8) {
     os << '-';
+    if (a > 8) {
+      os << a - 8;
+    }
     --i;
   }
   for (; i >= 0; --i) {
-    os << arr->get(i);
+    a = Container::int_hex_from_char(arr->get(i));
+    if (a != 0) {
+      os << a;
+      started = 1;
+    } else if (started) {
+      os << a;
+    }
   }
   os << endl;
 }

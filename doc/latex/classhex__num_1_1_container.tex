@@ -38,6 +38,13 @@ virtual void \mbox{\hyperlink{classhex__num_1_1_container_afa27ccadbb192ea1b7c82
 \mbox{\Hypertarget{classhex__num_1_1_container_adfdd4ca94ea3b65305dcb3d46d7846b8}\label{classhex__num_1_1_container_adfdd4ca94ea3b65305dcb3d46d7846b8}} 
 virtual \mbox{\hyperlink{classhex__num_1_1_container}{Container}} $\ast$ {\bfseries get\+\_\+new} ()=0
 \end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static char \mbox{\hyperlink{classhex__num_1_1_container_a7d29dc002fb9d2d7de9180e494536bb1}{hex\+\_\+remains\+\_\+to\+\_\+char}} (int hex)
+\begin{DoxyCompactList}\small\item\em Return hex as a char. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classhex__num_1_1_container_afb094acb8c045bc36aead152f030092a}{int\+\_\+hex\+\_\+from\+\_\+char}} (char hex)
+\begin{DoxyCompactList}\small\item\em Return hex char as int. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -78,6 +85,47 @@ Get len of the \mbox{\hyperlink{classhex__num_1_1_container}{Container}}.
 
 \begin{DoxyReturn}{Returns}
 Length 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classhex__num_1_1_container_a7d29dc002fb9d2d7de9180e494536bb1}\label{classhex__num_1_1_container_a7d29dc002fb9d2d7de9180e494536bb1}} 
+\index{hex\_num::Container@{hex\_num::Container}!hex\_remains\_to\_char@{hex\_remains\_to\_char}}
+\index{hex\_remains\_to\_char@{hex\_remains\_to\_char}!hex\_num::Container@{hex\_num::Container}}
+\doxysubsubsection{\texorpdfstring{hex\_remains\_to\_char()}{hex\_remains\_to\_char()}}
+{\footnotesize\ttfamily char Container\+::hex\+\_\+remains\+\_\+to\+\_\+char (\begin{DoxyParamCaption}\item[{int}]{hex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return hex as a char. 
+
+Return (hex \% 16) and cast ro right char symbol 
+\begin{DoxyParams}{Parameters}
+{\em hex} & Should be $>$= 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Hex as a char 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classhex__num_1_1_container_afb094acb8c045bc36aead152f030092a}\label{classhex__num_1_1_container_afb094acb8c045bc36aead152f030092a}} 
+\index{hex\_num::Container@{hex\_num::Container}!int\_hex\_from\_char@{int\_hex\_from\_char}}
+\index{int\_hex\_from\_char@{int\_hex\_from\_char}!hex\_num::Container@{hex\_num::Container}}
+\doxysubsubsection{\texorpdfstring{int\_hex\_from\_char()}{int\_hex\_from\_char()}}
+{\footnotesize\ttfamily int Container\+::int\+\_\+hex\+\_\+from\+\_\+char (\begin{DoxyParamCaption}\item[{char}]{hex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return hex char as int. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex} & Should be in 0..9A..F or throws an exception \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Wrong\+\_\+format\+\_\+exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+int hex 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classhex__num_1_1_container_a5093b21b641049ad64da98d49b9a810d}\label{classhex__num_1_1_container_a5093b21b641049ad64da98d49b9a810d}} 
 \index{hex\_num::Container@{hex\_num::Container}!set@{set}}

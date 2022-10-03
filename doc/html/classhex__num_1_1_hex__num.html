@@ -153,12 +153,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:acca92379e001ae9ec5e3cd4f9c84bb03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_hex__num.html#acca92379e001ae9ec5e3cd4f9c84bb03">str_to_arr</a> (std::string str)</td></tr>
 <tr class="memdesc:acca92379e001ae9ec5e3cd4f9c84bb03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert string to arr.  <a href="classhex__num_1_1_hex__num.html#acca92379e001ae9ec5e3cd4f9c84bb03">More...</a><br /></td></tr>
 <tr class="separator:acca92379e001ae9ec5e3cd4f9c84bb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a500692867c9006d2f1140f4d75adbc88"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_hex__num.html#a500692867c9006d2f1140f4d75adbc88">hex_remains_to_char</a> (int hex)</td></tr>
-<tr class="memdesc:a500692867c9006d2f1140f4d75adbc88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hex as a char.  <a href="classhex__num_1_1_hex__num.html#a500692867c9006d2f1140f4d75adbc88">More...</a><br /></td></tr>
-<tr class="separator:a500692867c9006d2f1140f4d75adbc88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab24c1f1911ce0b874f0d96599e46c733"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_hex__num.html#ab24c1f1911ce0b874f0d96599e46c733">int_hex_from_char</a> (char hex)</td></tr>
-<tr class="memdesc:ab24c1f1911ce0b874f0d96599e46c733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hex char as int.  <a href="classhex__num_1_1_hex__num.html#ab24c1f1911ce0b874f0d96599e46c733">More...</a><br /></td></tr>
-<tr class="separator:ab24c1f1911ce0b874f0d96599e46c733"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -315,41 +309,6 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a500692867c9006d2f1140f4d75adbc88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a500692867c9006d2f1140f4d75adbc88">&#9670;&nbsp;</a></span>hex_remains_to_char()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char Hex_num::hex_remains_to_char </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>hex</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return hex as a char. </p>
-<p>Return (hex % 16) and cast ro right char symbol </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hex</td><td>Should be &gt;= 0 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Hex as a char </dd></dl>
-
-</div>
-</div>
 <a id="aa0f82a02a794f758403788fd1bf7ba12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa0f82a02a794f758403788fd1bf7ba12">&#9670;&nbsp;</a></span>input()</h2>
 
@@ -379,47 +338,6 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="ab24c1f1911ce0b874f0d96599e46c733"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab24c1f1911ce0b874f0d96599e46c733">&#9670;&nbsp;</a></span>int_hex_from_char()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Hex_num::int_hex_from_char </td>
-          <td>(</td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>hex</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return hex char as int. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hex</td><td>Should be in 0..9A..F or throws an exception </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classhex__num_1_1_hex__num_1_1_wrong__format__exception.html" title="Exception for wrong format.">Wrong_format_exception</a></td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>int hex </dd></dl>
 
 </div>
 </div>
