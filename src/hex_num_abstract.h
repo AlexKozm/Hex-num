@@ -12,7 +12,7 @@ namespace hex_num {
  * @brief Abstract class for container
  */
 class Container {
-  size_t len; //current len of container
+  size_t len = 0; //current len of container
 
 public:
   /**
@@ -57,17 +57,9 @@ public:
  */
 class Hex_num {
 
-  /**
-   * @brief Convert string to arr
-   * @details Convert string to arr. In case of error throws an exception 
-              and object stays in undefined state
-   * @throw Wrong_format_exception
-   * @param str 
-   */
-  void str_to_arr(std::string str);
 
 protected:
-  Container *arr;
+  Container *arr = nullptr;
   /**
    * @brief Create Hex_num with given Container arr
    * @param arr 
@@ -85,13 +77,14 @@ protected:
    * @param hex 
    */
   Hex_num(Container *arr, std::string hex);
-
-public:
-  class Wrong_format_exception : public std::runtime_error {
-  public:
-    Wrong_format_exception(std::string msg);
-  };
-
+  /**
+   * @brief Convert string to arr
+   * @details Convert string to arr. In case of error throws an exception 
+              and object stays in undefined state
+   * @throw Wrong_format_exception
+   * @param str 
+   */
+  void str_to_arr(std::string str);
   /**
    * @brief Return hex as a char
    * @details Return (hex % 16) and cast ro right char symbol
@@ -99,11 +92,36 @@ public:
    * @return Hex as a char
    */
   char hex_remains_to_char(int hex);
+  /**
+   * @brief Return hex char as int
+   * @param hex Should be in 0..9A..F or throws an exception
+   * @throw Wrong_format_exception
+   * @return int hex
+   */
+  int int_hex_from_char(char hex);
+
+public:
+  /**
+   * @class Wrong_format_exception
+   * @brief Exception for wrong format
+   */
+  class Wrong_format_exception : public std::runtime_error {
+  public:
+    /**
+     * @brief Constructor with message
+     * @param msg 
+     */
+    Wrong_format_exception(std::string msg);
+  };
+
   //TODO
-  void move_left();
+  void move_left(int n);
   //TODO
-  void move_right();
-  //TODO
+  void move_right(int n);
+  /**
+   * @brief Is number even
+   * @return 1 if even, else 0
+   */
   bool evenness();
   /**
    * @brief Input str from istream and convert it to Hex_num

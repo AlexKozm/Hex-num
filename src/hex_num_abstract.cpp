@@ -34,18 +34,14 @@ Hex_num::Wrong_format_exception::Wrong_format_exception(std::string msg)
     : std::runtime_error(msg){};
 //-------------------------------------------------------------
 
-char Hex_num::hex_remains_to_char(int hex) {
-  hex %= 16;
-  if (hex < 10) {
-    return '0' + hex;
-  } else {
-    return 'A' + hex - 10;
-  }
-}
+//-----------------Protected methods---------------------------
 
 // as an example -1A3F, len = 5
 void Hex_num::str_to_arr(string str) {
   size_t len = str.length();
+  if (len == 0) {
+    throw Wrong_format_exception("Empty string");
+  }
   if (str.length() > 1 && str[0] == '-') {
     arr->set_minus();
     --len;
@@ -61,9 +57,37 @@ void Hex_num::str_to_arr(string str) {
   }
 }
 
-void Hex_num::move_left() {}
-void Hex_num::move_right() {}
-bool Hex_num::evenness() {}
+char Hex_num::hex_remains_to_char(int hex) {
+  hex %= 16;
+  if (hex < 10) {
+    return '0' + hex;
+  } else {
+    return 'A' + hex - 10;
+  }
+}
+
+int Hex_num::int_hex_from_char(char hex) {
+  if ('0' <= hex && hex <= '9') {
+    return hex;
+  } else if ('A' <= hex && hex <= 'F') {
+    return 'A' + hex - 10;
+  } else {
+    throw Wrong_format_exception("Wrong format in converting char to arr");
+  }
+}
+
+//-------------------------------------------------------------
+
+void Hex_num::move_left(int n) {}
+void Hex_num::move_right(int n) {}
+
+bool Hex_num::evenness() {
+  if (int_hex_from_char(arr->get(0)) % 2 == 0) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
 
 void Hex_num::input(std::istream &is) {
   string inp;
@@ -72,13 +96,16 @@ void Hex_num::input(std::istream &is) {
 }
 
 void Hex_num::output(std::ostream &os) {
-  // int i = arr->get_len() - 1;
-  // char a = arr->get(arr->get_len() - 1);
-  // if (a == '8' || a == '9' || ('A' <= a && a <= 'F')) {
-  //   os << '-';
-  //   --i;
-  // }
-  // os << endl;
+  int i = arr->get_len() - 1;
+  int a = int_hex_from_char(arr->get(i));
+  if (a == '8' || a == '9' || ('A' <= a && a <= 'F')) {
+    os << '-';
+    --i;
+  }
+  for (; i >= 0; --i) {
+    os << arr->get(i);
+  }
+  os << endl;
 }
 
 void Hex_num::print_container(std::ostream &out) {
@@ -88,6 +115,10 @@ void Hex_num::print_container(std::ostream &out) {
   out << endl;
 }
 
-static bool equal(Hex_num const &a, Hex_num const &b) {}
-static Hex_num *sum(Hex_num const &a, Hex_num const &b) {}
-static Hex_num *dif(Hex_num const &a, Hex_num const &b) {}
+bool Hex_num::equal(Hex_num const &a, Hex_num const &b) {}
+Hex_num *Hex_num::sum(Hex_num const &a, Hex_num const &b) {}
+Hex_num *Hex_num::dif(Hex_num const &a, Hex_num const &b) {}
+
+// Hex_num::~Hex_num() {
+//   free()
+// }

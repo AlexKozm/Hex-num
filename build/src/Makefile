@@ -130,30 +130,6 @@ lab3_run/fast:
 	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/build
 .PHONY : lab3_run/fast
 
-hex_num.o: hex_num.cpp.o
-.PHONY : hex_num.o
-
-# target to build an object file
-hex_num.cpp.o:
-	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/hex_num.cpp.o
-.PHONY : hex_num.cpp.o
-
-hex_num.i: hex_num.cpp.i
-.PHONY : hex_num.i
-
-# target to preprocess a source file
-hex_num.cpp.i:
-	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/hex_num.cpp.i
-.PHONY : hex_num.cpp.i
-
-hex_num.s: hex_num.cpp.s
-.PHONY : hex_num.s
-
-# target to generate assembly for a file
-hex_num.cpp.s:
-	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/hex_num.cpp.s
-.PHONY : hex_num.cpp.s
-
 hex_num_abstract.o: hex_num_abstract.cpp.o
 .PHONY : hex_num_abstract.o
 
@@ -202,6 +178,30 @@ main.cpp.s:
 	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+stat_hex_num.o: stat_hex_num.cpp.o
+.PHONY : stat_hex_num.o
+
+# target to build an object file
+stat_hex_num.cpp.o:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/stat_hex_num.cpp.o
+.PHONY : stat_hex_num.cpp.o
+
+stat_hex_num.i: stat_hex_num.cpp.i
+.PHONY : stat_hex_num.i
+
+# target to preprocess a source file
+stat_hex_num.cpp.i:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/stat_hex_num.cpp.i
+.PHONY : stat_hex_num.cpp.i
+
+stat_hex_num.s: stat_hex_num.cpp.s
+.PHONY : stat_hex_num.s
+
+# target to generate assembly for a file
+stat_hex_num.cpp.s:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/stat_hex_num.cpp.s
+.PHONY : stat_hex_num.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -211,15 +211,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lab3_run"
-	@echo "... hex_num.o"
-	@echo "... hex_num.i"
-	@echo "... hex_num.s"
 	@echo "... hex_num_abstract.o"
 	@echo "... hex_num_abstract.i"
 	@echo "... hex_num_abstract.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... stat_hex_num.o"
+	@echo "... stat_hex_num.i"
+	@echo "... stat_hex_num.s"
 .PHONY : help
 
 

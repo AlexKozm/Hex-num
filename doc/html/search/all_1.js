@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['get_1',['get',['../classstatic__hex_1_1_container.html#a74cfe2911c36542f7cd2337660423834',1,'static_hex::Container::get()'],['../classhex__num_1_1_container.html#a5dc2afc45c0a0d76e8c33518ad85f7fe',1,'hex_num::Container::get()']]],
-  ['get_5flen_2',['get_len',['../classhex__num_1_1_container.html#a7460a02575f693edbea7e44d08c4f290',1,'hex_num::Container']]]
+  ['evenness_1',['evenness',['../classhex__num_1_1_hex__num.html#acddc9ead823f7fb6af1daeeaaa671adb',1,'hex_num::Hex_num']]]
 ];

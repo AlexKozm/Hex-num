@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hex_5fnum_3',['Hex_num',['../classstatic__hex_1_1_hex__num.html',1,'static_hex::Hex_num'],['../classhex__num_1_1_hex__num.html',1,'hex_num::Hex_num'],['../classhex__num_1_1_hex__num.html#a908fa5189bba2cee49b1ac19decd1d01',1,'hex_num::Hex_num::Hex_num(Container *arr)'],['../classhex__num_1_1_hex__num.html#ad5fee34cec85fb74c380e306b6596301',1,'hex_num::Hex_num::Hex_num(Container *arr, int hex)'],['../classhex__num_1_1_hex__num.html#ab624d59d214164f57dab003ef70c816f',1,'hex_num::Hex_num::Hex_num(Container *arr, std::string hex)']]],
-  ['hex_5fremains_5fto_5fchar_4',['hex_remains_to_char',['../classhex__num_1_1_hex__num.html#a500692867c9006d2f1140f4d75adbc88',1,'hex_num::Hex_num']]]
+  ['get_2',['get',['../classhex__num_1_1_container.html#a5dc2afc45c0a0d76e8c33518ad85f7fe',1,'hex_num::Container::get()'],['../classstatic__hex_1_1_container.html#a74cfe2911c36542f7cd2337660423834',1,'static_hex::Container::get()']]],
+  ['get_5flen_3',['get_len',['../classhex__num_1_1_container.html#a7460a02575f693edbea7e44d08c4f290',1,'hex_num::Container']]]
 ];

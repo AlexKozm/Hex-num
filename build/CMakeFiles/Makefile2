@@ -64,14 +64,17 @@ CMAKE_BINARY_DIR = /home/alex/Mephi/sem3/Infa/lab3/build
 
 # The main recursive "all" target.
 all: src/all
+all: tst/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: src/preinstall
+preinstall: tst/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: src/clean
+clean: tst/clean
 .PHONY : clean
 
 #=============================================================================
@@ -88,6 +91,21 @@ src/preinstall:
 # Recursive "clean" directory target.
 src/clean: src/CMakeFiles/lab3_run.dir/clean
 .PHONY : src/clean
+
+#=============================================================================
+# Directory level rules for directory tst
+
+# Recursive "all" directory target.
+tst/all: tst/CMakeFiles/tests.dir/all
+.PHONY : tst/all
+
+# Recursive "preinstall" directory target.
+tst/preinstall:
+.PHONY : tst/preinstall
+
+# Recursive "clean" directory target.
+tst/clean: tst/CMakeFiles/tests.dir/clean
+.PHONY : tst/clean
 
 #=============================================================================
 # Target rules for target src/CMakeFiles/lab3_run.dir
@@ -114,6 +132,32 @@ lab3_run: src/CMakeFiles/lab3_run.dir/rule
 src/CMakeFiles/lab3_run.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/clean
 .PHONY : src/CMakeFiles/lab3_run.dir/clean
+
+#=============================================================================
+# Target rules for target tst/CMakeFiles/tests.dir
+
+# All Build rule for target.
+tst/CMakeFiles/tests.dir/all:
+	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/tests.dir/build.make tst/CMakeFiles/tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/tests.dir/build.make tst/CMakeFiles/tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=5,6,7,8 "Built target tests"
+.PHONY : tst/CMakeFiles/tests.dir/all
+
+# Build rule for subdir invocation for target.
+tst/CMakeFiles/tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tst/CMakeFiles/tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 0
+.PHONY : tst/CMakeFiles/tests.dir/rule
+
+# Convenience name for target.
+tests: tst/CMakeFiles/tests.dir/rule
+.PHONY : tests
+
+# clean rule for target.
+tst/CMakeFiles/tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/tests.dir/build.make tst/CMakeFiles/tests.dir/clean
+.PHONY : tst/CMakeFiles/tests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

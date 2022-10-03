@@ -103,21 +103,19 @@ Collaboration diagram for hex_num::Hex_num:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_hex__num_1_1_wrong__format__exception.html">Wrong_format_exception</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception for wrong format.  <a href="classhex__num_1_1_hex__num_1_1_wrong__format__exception.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a500692867c9006d2f1140f4d75adbc88"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_hex__num.html#a500692867c9006d2f1140f4d75adbc88">hex_remains_to_char</a> (int hex)</td></tr>
-<tr class="memdesc:a500692867c9006d2f1140f4d75adbc88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hex as a char.  <a href="classhex__num_1_1_hex__num.html#a500692867c9006d2f1140f4d75adbc88">More...</a><br /></td></tr>
-<tr class="separator:a500692867c9006d2f1140f4d75adbc88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5685f8cb931775c3e234d5065f64af6a"><td class="memItemLeft" align="right" valign="top"><a id="a5685f8cb931775c3e234d5065f64af6a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>move_left</b> ()</td></tr>
-<tr class="separator:a5685f8cb931775c3e234d5065f64af6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51c992a712dfb2e071ee3cd7148dd8cf"><td class="memItemLeft" align="right" valign="top"><a id="a51c992a712dfb2e071ee3cd7148dd8cf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>move_right</b> ()</td></tr>
-<tr class="separator:a51c992a712dfb2e071ee3cd7148dd8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acddc9ead823f7fb6af1daeeaaa671adb"><td class="memItemLeft" align="right" valign="top"><a id="acddc9ead823f7fb6af1daeeaaa671adb"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>evenness</b> ()</td></tr>
+<tr class="memitem:a4c19beb452bf042e2b29de114040138f"><td class="memItemLeft" align="right" valign="top"><a id="a4c19beb452bf042e2b29de114040138f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>move_left</b> (int n)</td></tr>
+<tr class="separator:a4c19beb452bf042e2b29de114040138f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa404bdb0d22c6254e9ff8378ad8ee1c"><td class="memItemLeft" align="right" valign="top"><a id="afa404bdb0d22c6254e9ff8378ad8ee1c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>move_right</b> (int n)</td></tr>
+<tr class="separator:afa404bdb0d22c6254e9ff8378ad8ee1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acddc9ead823f7fb6af1daeeaaa671adb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_hex__num.html#acddc9ead823f7fb6af1daeeaaa671adb">evenness</a> ()</td></tr>
+<tr class="memdesc:acddc9ead823f7fb6af1daeeaaa671adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is number even.  <a href="classhex__num_1_1_hex__num.html#acddc9ead823f7fb6af1daeeaaa671adb">More...</a><br /></td></tr>
 <tr class="separator:acddc9ead823f7fb6af1daeeaaa671adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0f82a02a794f758403788fd1bf7ba12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_hex__num.html#aa0f82a02a794f758403788fd1bf7ba12">input</a> (std::istream &amp;inp)</td></tr>
 <tr class="memdesc:aa0f82a02a794f758403788fd1bf7ba12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input str from istream and convert it to <a class="el" href="classhex__num_1_1_hex__num.html" title="Class with abstract container.">Hex_num</a>.  <a href="classhex__num_1_1_hex__num.html#aa0f82a02a794f758403788fd1bf7ba12">More...</a><br /></td></tr>
@@ -131,15 +129,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>output</b> (std::ostr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6660f7c666d64029c661cb06397df637"><td class="memItemLeft" align="right" valign="top"><a id="a6660f7c666d64029c661cb06397df637"></a>
+<tr class="memitem:aa461cf0c2eca3b5fe659a5f0d3542f03"><td class="memItemLeft" align="right" valign="top"><a id="aa461cf0c2eca3b5fe659a5f0d3542f03"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>equal</b> (<a class="el" href="classhex__num_1_1_hex__num.html">Hex_num</a> const &amp;a, <a class="el" href="classhex__num_1_1_hex__num.html">Hex_num</a> const &amp;b)</td></tr>
-<tr class="separator:a6660f7c666d64029c661cb06397df637"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac543b26f0227e948bdd925af7547499d"><td class="memItemLeft" align="right" valign="top"><a id="ac543b26f0227e948bdd925af7547499d"></a>
+<tr class="separator:aa461cf0c2eca3b5fe659a5f0d3542f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3fb7af6549a4ce17a99617dfc34f97"><td class="memItemLeft" align="right" valign="top"><a id="aeb3fb7af6549a4ce17a99617dfc34f97"></a>
 static <a class="el" href="classhex__num_1_1_hex__num.html">Hex_num</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>sum</b> (<a class="el" href="classhex__num_1_1_hex__num.html">Hex_num</a> const &amp;a, <a class="el" href="classhex__num_1_1_hex__num.html">Hex_num</a> const &amp;b)</td></tr>
-<tr class="separator:ac543b26f0227e948bdd925af7547499d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6775f8c6bf96e07fc2f02a3cb37ce5de"><td class="memItemLeft" align="right" valign="top"><a id="a6775f8c6bf96e07fc2f02a3cb37ce5de"></a>
+<tr class="separator:aeb3fb7af6549a4ce17a99617dfc34f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ee8115c9e43ce23ecc4131671128ee"><td class="memItemLeft" align="right" valign="top"><a id="a98ee8115c9e43ce23ecc4131671128ee"></a>
 static <a class="el" href="classhex__num_1_1_hex__num.html">Hex_num</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>dif</b> (<a class="el" href="classhex__num_1_1_hex__num.html">Hex_num</a> const &amp;a, <a class="el" href="classhex__num_1_1_hex__num.html">Hex_num</a> const &amp;b)</td></tr>
-<tr class="separator:a6775f8c6bf96e07fc2f02a3cb37ce5de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a98ee8115c9e43ce23ecc4131671128ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -152,11 +150,20 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ab624d59d214164f57dab003ef70c816f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_hex__num.html#ab624d59d214164f57dab003ef70c816f">Hex_num</a> (<a class="el" href="classhex__num_1_1_container.html">Container</a> *arr, std::string hex)</td></tr>
 <tr class="memdesc:ab624d59d214164f57dab003ef70c816f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create <a class="el" href="classhex__num_1_1_hex__num.html" title="Class with abstract container.">Hex_num</a> with given <a class="el" href="classhex__num_1_1_container.html" title="Abstract class for container.">Container</a> arr and init it with string or throw an error.  <a href="classhex__num_1_1_hex__num.html#ab624d59d214164f57dab003ef70c816f">More...</a><br /></td></tr>
 <tr class="separator:ab624d59d214164f57dab003ef70c816f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acca92379e001ae9ec5e3cd4f9c84bb03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_hex__num.html#acca92379e001ae9ec5e3cd4f9c84bb03">str_to_arr</a> (std::string str)</td></tr>
+<tr class="memdesc:acca92379e001ae9ec5e3cd4f9c84bb03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert string to arr.  <a href="classhex__num_1_1_hex__num.html#acca92379e001ae9ec5e3cd4f9c84bb03">More...</a><br /></td></tr>
+<tr class="separator:acca92379e001ae9ec5e3cd4f9c84bb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500692867c9006d2f1140f4d75adbc88"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_hex__num.html#a500692867c9006d2f1140f4d75adbc88">hex_remains_to_char</a> (int hex)</td></tr>
+<tr class="memdesc:a500692867c9006d2f1140f4d75adbc88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hex as a char.  <a href="classhex__num_1_1_hex__num.html#a500692867c9006d2f1140f4d75adbc88">More...</a><br /></td></tr>
+<tr class="separator:a500692867c9006d2f1140f4d75adbc88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab24c1f1911ce0b874f0d96599e46c733"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_hex__num.html#ab24c1f1911ce0b874f0d96599e46c733">int_hex_from_char</a> (char hex)</td></tr>
+<tr class="memdesc:ab24c1f1911ce0b874f0d96599e46c733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hex char as int.  <a href="classhex__num_1_1_hex__num.html#ab24c1f1911ce0b874f0d96599e46c733">More...</a><br /></td></tr>
+<tr class="separator:ab24c1f1911ce0b874f0d96599e46c733"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aa834be4f01830f12cc010f3d9b82b882"><td class="memItemLeft" align="right" valign="top"><a id="aa834be4f01830f12cc010f3d9b82b882"></a>
-<a class="el" href="classhex__num_1_1_container.html">Container</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>arr</b></td></tr>
+<a class="el" href="classhex__num_1_1_container.html">Container</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>arr</b> = nullptr</td></tr>
 <tr class="separator:aa834be4f01830f12cc010f3d9b82b882"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -288,11 +295,34 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="acddc9ead823f7fb6af1daeeaaa671adb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acddc9ead823f7fb6af1daeeaaa671adb">&#9670;&nbsp;</a></span>evenness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Hex_num::evenness </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Is number even. </p>
+<dl class="section return"><dt>Returns</dt><dd>1 if even, else 0 </dd></dl>
+
+</div>
+</div>
 <a id="a500692867c9006d2f1140f4d75adbc88"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a500692867c9006d2f1140f4d75adbc88">&#9670;&nbsp;</a></span>hex_remains_to_char()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">char Hex_num::hex_remains_to_char </td>
@@ -302,6 +332,11 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Return hex as a char. </p>
@@ -334,7 +369,7 @@ Protected Attributes</h2></td></tr>
 <p>Input str from istream and convert it to <a class="el" href="classhex__num_1_1_hex__num.html" title="Class with abstract container.">Hex_num</a>. </p>
 <p>Input str from istream and convert it to <a class="el" href="classhex__num_1_1_hex__num.html" title="Class with abstract container.">Hex_num</a>. In case of error throws an exception and object stays in undefined state </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classhex__num_1_1_hex__num_1_1_wrong__format__exception.html">Wrong_format_exception</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="classhex__num_1_1_hex__num_1_1_wrong__format__exception.html" title="Exception for wrong format.">Wrong_format_exception</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -344,6 +379,47 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ab24c1f1911ce0b874f0d96599e46c733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab24c1f1911ce0b874f0d96599e46c733">&#9670;&nbsp;</a></span>int_hex_from_char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Hex_num::int_hex_from_char </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>hex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return hex char as int. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hex</td><td>Should be in 0..9A..F or throws an exception </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classhex__num_1_1_hex__num_1_1_wrong__format__exception.html" title="Exception for wrong format.">Wrong_format_exception</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int hex </dd></dl>
 
 </div>
 </div>
@@ -367,6 +443,46 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">out</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acca92379e001ae9ec5e3cd4f9c84bb03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acca92379e001ae9ec5e3cd4f9c84bb03">&#9670;&nbsp;</a></span>str_to_arr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Hex_num::str_to_arr </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert string to arr. </p>
+<p>Convert string to arr. In case of error throws an exception and object stays in undefined state </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classhex__num_1_1_hex__num_1_1_wrong__format__exception.html" title="Exception for wrong format.">Wrong_format_exception</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td></td></tr>
   </table>
   </dd>
 </dl>

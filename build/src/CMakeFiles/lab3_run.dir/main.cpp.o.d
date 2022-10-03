@@ -142,5 +142,5 @@ src/CMakeFiles/lab3_run.dir/main.cpp.o: \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
- /home/alex/Mephi/sem3/Infa/lab3/src/hex_num.h \
+ /home/alex/Mephi/sem3/Infa/lab3/src/stat_hex_num.h \
  /home/alex/Mephi/sem3/Infa/lab3/src/hex_num_abstract.h

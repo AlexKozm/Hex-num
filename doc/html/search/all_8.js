@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wrong_5fformat_5fexception_12',['Wrong_format_exception',['../classhex__num_1_1_hex__num_1_1_wrong__format__exception.html',1,'hex_num::Hex_num']]]
+  ['unset_5fminus_14',['unset_minus',['../classhex__num_1_1_container.html#afa27ccadbb192ea1b7c82e6211caf244',1,'hex_num::Container::unset_minus()'],['../classstatic__hex_1_1_container.html#a3ff190db0b22dd9af1789a6f3a812f6c',1,'static_hex::Container::unset_minus()']]]
 ];
