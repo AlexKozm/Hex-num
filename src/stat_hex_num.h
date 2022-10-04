@@ -23,8 +23,8 @@ public:
   char get(int pos) override;
   //TODO
   void set(int pos, char val) override;
-  //TODO
-  void set_minus() override;
+  // //TODO
+  // void set_minus() override;
   //TODO
   void unset_minus() override;
   //TODO

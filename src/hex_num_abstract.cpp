@@ -16,7 +16,7 @@ Hex_num::Hex_num(Container *arr) : arr(arr) {}
 
 Hex_num::Hex_num(Container *arr, int hex) : arr(arr) {
   if (hex < 0) {
-    arr->set_minus();
+    set_minus();
     hex = -hex;
   }
   int i = 0;
@@ -43,7 +43,7 @@ void Hex_num::str_to_arr(string str) {
     throw Wrong_format_exception("Empty string");
   }
   if (str.length() > 1 && str[0] == '-') {
-    arr->set_minus();
+    set_minus();
     --len;
   }
   for (size_t i = 0; i < len; ++i) {
@@ -77,6 +77,12 @@ int Container::int_hex_from_char(char hex) {
   }
 }
 //-------------------------------------------------------------
+void Hex_num::set_minus() {
+  char val = arr->get(arr->get_len() - 1);
+  if (val < '8') {
+    arr->set(arr->get_len() - 1, val + 8);
+  } //else it has minus already
+};
 
 void Hex_num::move_left(int n) {}
 void Hex_num::move_right(int n) {}

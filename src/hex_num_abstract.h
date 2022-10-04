@@ -52,10 +52,6 @@ public:
    */
   virtual void set(int pos, char val) = 0;
   /**
-   * @brief Make num negative
-   */
-  virtual void set_minus() = 0;
-  /**
    * @brief Make num positive
    */
   virtual void unset_minus() = 0;
@@ -100,6 +96,10 @@ protected:
    * @param str
    */
   void str_to_arr(std::string str);
+  /**
+   * @brief Make num negative
+   */
+  void set_minus();
 
 public:
   /**

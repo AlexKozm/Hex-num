@@ -28,11 +28,16 @@ void Container::set(int pos, char val) {
   }
   arr[pos] = val; 
 }
-void Container::set_minus() {
-  if (arr[get_len() - 1] < '8') {
-    arr[get_len() - 1] += 8;
-  }
-};
+// void Container::set_minus() {
+//   char val = get(get_len() - 1);
+//   if (val < '8') {
+//     set(get_len() - 1, val + 8);
+//   } //else it has minus already
+//
+//   // if (arr[get_len() - 1] < '8') {
+//   //   arr[get_len() - 1] += 8;
+//   // }
+// };
 void Container::unset_minus() {};
 hex_num::Container *Container::get_new() {}
 
