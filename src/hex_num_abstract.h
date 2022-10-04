@@ -133,7 +133,10 @@ public:
    * @param inp
    */
   void input(std::istream &inp);
-  // TODO
+  /**
+   * @brief Output string representation in hex format to stream
+   * @param out 
+   */
   void output(std::ostream &out);
   /**
    * @brief Print Hex_num in direct code with hex num
