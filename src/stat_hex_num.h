@@ -25,8 +25,8 @@ public:
   void set(int pos, char val) override;
   // //TODO
   // void set_minus() override;
-  //TODO
-  void unset_minus() override;
+  // //TODO
+  // void unset_minus() override;
   //TODO
   hex_num::Container *get_new() override;
 };

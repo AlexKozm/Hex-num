@@ -51,10 +51,6 @@ public:
    * @param val
    */
   virtual void set(int pos, char val) = 0;
-  /**
-   * @brief Make num positive
-   */
-  virtual void unset_minus() = 0;
   // TODO write a doc. Will be done at sum and dif realization
   virtual Container *get_new() = 0;
 };
@@ -100,6 +96,10 @@ protected:
    * @brief Make num negative
    */
   void set_minus();
+  /**
+   * @brief Make num positive
+   */
+  void unset_minus();
 
 public:
   /**

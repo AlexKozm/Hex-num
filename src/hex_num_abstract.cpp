@@ -76,7 +76,7 @@ int Container::int_hex_from_char(char hex) {
         "Wrong format in converting char to arr");
   }
 }
-//-------------------------------------------------------------
+
 void Hex_num::set_minus() {
   char val = arr->get(arr->get_len() - 1);
   if (val < '8') {
@@ -84,6 +84,8 @@ void Hex_num::set_minus() {
   } //else it has minus already
 };
 
+void Hex_num::unset_minus() {};
+//-------------------------------------------------------------
 void Hex_num::move_left(int n) {}
 void Hex_num::move_right(int n) {}
 

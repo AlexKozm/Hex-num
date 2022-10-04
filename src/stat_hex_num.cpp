@@ -38,7 +38,6 @@ void Container::set(int pos, char val) {
 //   //   arr[get_len() - 1] += 8;
 //   // }
 // };
-void Container::unset_minus() {};
 hex_num::Container *Container::get_new() {}
 
 Hex_num::Hex_num() : hex_num::Hex_num::Hex_num(new Container) {}
