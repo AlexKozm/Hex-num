@@ -241,43 +241,69 @@ TEST_CASE("From additional code to reverse") {
   }
 }
 
-// for static arr with len = 31
-// TEST_CASE("Constructors") {
-//   SECTION("Empty") {
-//     REQUIRE_NOTHROW(Hex_num());
-//   }
-//
-//   SECTION("Int") {
-//     REQUIRE_NOTHROW(Hex_num(0xFFFFFFFF));
-//     REQUIRE_NOTHROW(Hex_num(0x123AF));
-//     REQUIRE_NOTHROW(Hex_num(100000));
-//     REQUIRE_NOTHROW(Hex_num(0));
-//     REQUIRE_NOTHROW(Hex_num(-100000));
-//     REQUIRE_NOTHROW(Hex_num(-0x123AF));
-//     REQUIRE_NOTHROW(Hex_num(-0xFFFFFFFF));
-//   }
-//
-//   SECTION("String") {
-//     REQUIRE_NOTHROW(Hex_num("FFFFFFFF"));
-//     REQUIRE_NOTHROW(Hex_num("123AF"));
-//     REQUIRE_NOTHROW(Hex_num("100000"));
-//     REQUIRE_NOTHROW(Hex_num("0"));
-//     REQUIRE_NOTHROW(Hex_num("-0"));
-//     REQUIRE_NOTHROW(Hex_num("-100000"));
-//     REQUIRE_NOTHROW(Hex_num("-123AE"));
-//     REQUIRE_NOTHROW(Hex_num("-FFFFFFFF"));
-//   }
-//   SECTION("Wrong format") {
-//     REQUIRE_THROWS_AS(Hex_num(""), hex_num::Hex_num::Wrong_format_exception);
-//     REQUIRE_THROWS_AS(Hex_num("-"),
-//     hex_num::Hex_num::Wrong_format_exception);
-//     REQUIRE_THROWS_AS(Hex_num("123o123"),
-//     hex_num::Hex_num::Wrong_format_exception);
-//     REQUIRE_THROWS_AS(Hex_num("-123o123"),
-//     hex_num::Hex_num::Wrong_format_exception);
-//     REQUIRE_THROWS_AS(Hex_num("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"),
-//                       std::overflow_error);
-//     REQUIRE_THROWS_AS(Hex_num("-FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"),
-//                       std::overflow_error);
-//   }
-// }
+TEST_CASE("From additional to additional throw all") {
+  std::stringstream str;
+  SECTION("7FFFFFF") {
+    Hex_num("7FFFFFF")
+        .to_reverse_code()
+        ->to_additional_code()
+        ->from_add_to_rev_code()
+        ->to_reverse_code()
+        ->print_container(str);
+    CHECK(str.str() == "7FFFFFF\n");
+  }
+  SECTION("A10") {
+    Hex_num("A10")
+        .to_reverse_code()
+        ->to_additional_code()
+        ->from_add_to_rev_code()
+        ->to_reverse_code()
+        ->print_container(str);
+    CHECK(str.str() == "0000A10\n");
+  }
+  SECTION("1") {
+    Hex_num("1")
+        .to_reverse_code()
+        ->to_additional_code()
+        ->from_add_to_rev_code()
+        ->to_reverse_code()
+        ->print_container(str);
+    CHECK(str.str() == "0000001\n");
+  }
+  SECTION("0") {
+    Hex_num("0")
+        .to_reverse_code()
+        ->to_additional_code()
+        ->from_add_to_rev_code()
+        ->to_reverse_code()
+        ->print_container(str);
+    CHECK(str.str() == "0000000\n");
+  }
+  SECTION("-1") {
+    Hex_num("-1")
+        .to_reverse_code()
+        ->to_additional_code()
+        ->from_add_to_rev_code()
+        ->to_reverse_code()
+        ->print_container(str);
+    CHECK(str.str() == "8000001\n");
+  }
+  SECTION("-A10") {
+    Hex_num("-A10")
+        .to_reverse_code()
+        ->to_additional_code()
+        ->from_add_to_rev_code()
+        ->to_reverse_code()
+        ->print_container(str);
+    CHECK(str.str() == "8000A10\n");
+  }
+  SECTION("-7FFFFFF") {
+    Hex_num("-7FFFFFF")
+        .to_reverse_code()
+        ->to_additional_code()
+        ->from_add_to_rev_code()
+        ->to_reverse_code()
+        ->print_container(str);
+    CHECK(str.str() == "FFFFFFF\n");
+  }
+}

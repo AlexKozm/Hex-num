@@ -227,13 +227,14 @@ Hex_num Hex_num::sum_of_additonals(const Hex_num &a, const Hex_num &b) {
     int s1 = a.arr->get(i);
     int s2 = b.arr->get(i);
     int res = s1 + s2 + from_prev;
+    from_prev = 0;
     if (res >= 16) {
       from_prev = 1;
       ans.arr->set(i, Container::int_hex_to_char(res % 16));
       ++i;
     } else {
       ans.arr->set(i, Container::int_hex_to_char(res));
-      break;
+      ++i;
     }
   }
   return ans;
@@ -246,6 +247,8 @@ Hex_num Hex_num::sum(const Hex_num &a, const Hex_num &b) {
   b_add.to_reverse_code()->to_additional_code();
 
   Hex_num ans = sum_of_additonals(a_add, b_add);
+  ans.from_add_to_rev_code()->to_reverse_code();
+  return ans;
 }
 Hex_num *Hex_num::dif(Hex_num const &a, Hex_num const &b) {}
 
