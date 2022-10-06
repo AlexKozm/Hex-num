@@ -11,7 +11,7 @@ namespace static_hex {
 
 //TODO
 class Container : public hex_num::Container {
-  const static size_t stat_len = 31;
+  const static size_t stat_len = 7;
   char arr[stat_len] = {};
 
 public:
@@ -19,16 +19,22 @@ public:
    * @brief Init container with 0's
    */
   Container();
+  // TODO
+  void set_zeros() override;
   //TODO
-  char get(int pos) override;
+  char get(int pos) const override;
   //TODO
   void set(int pos, char val) override;
+  // TODO
+  void set_minus() override;
   // //TODO
   // void set_minus() override;
   // //TODO
   // void unset_minus() override;
   //TODO
-  hex_num::Container *get_new() override;
+  hex_num::Container *get_new() const override;
+  //TODO
+  hex_num::Container *get_copy() const override;
 };
 
 class Hex_num : public hex_num::Hex_num {

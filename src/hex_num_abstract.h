@@ -19,32 +19,24 @@ public:
    * @brief Get len of the Container
    * @return Length
    */
-  size_t get_len();
+  size_t get_len() const;
   /**
    * @brief Set len of the container
    * @param len
    */
   void set_len(size_t len);
+  // TODO
+  virtual void set_zeros() = 0;
   /**
-   * @brief Return hex as a char
-   * @details Return (hex % 16) and cast ro right char symbol
-   * @param hex Should be >= 0
-   * @return Hex as a char
+   * @brief Make num negative
    */
-  static char hex_remains_to_char(int hex);
-  /**
-   * @brief Return hex char as int
-   * @param hex Should be in 0..9A..F or throws an exception
-   * @throw Wrong_format_exception
-   * @return int hex
-   */
-  static int int_hex_from_char(char hex);
+  virtual void set_minus() = 0;
   /**
    * @brief Get char on pos in container
    * @param pos
    * @return Char on pos in container
    */
-  virtual char get(int pos) = 0;
+  virtual char get(int pos) const = 0;
   /**
    * @brief Set val
    * @param pos
@@ -52,7 +44,23 @@ public:
    */
   virtual void set(int pos, char val) = 0;
   // TODO write a doc. Will be done at sum and dif realization
-  virtual Container *get_new() = 0;
+  virtual Container *get_new() const = 0;
+  // TODO
+  virtual Container *get_copy() const = 0;
+  /**
+   * @brief Return hex as a char
+   * @details Return (hex % 16) and cast ro right char symbol
+   * @param hex Should be >= 0
+   * @return Hex as a char
+   */
+  static char int_hex_to_char(int hex);
+  /**
+   * @brief Return hex char as int
+   * @param hex Should be in 0..9A..F or throws an exception
+   * @throw Wrong_format_exception
+   * @return int hex
+   */
+  static int char_hex_to_int(char hex);
 };
 
 /**
@@ -93,10 +101,6 @@ protected:
    */
   void str_to_arr(std::string str);
   /**
-   * @brief Make num negative
-   */
-  void set_minus();
-  /**
    * @brief Make num positive
    */
   void unset_minus();
@@ -135,7 +139,7 @@ public:
   void input(std::istream &inp);
   /**
    * @brief Output string representation in hex format to stream
-   * @param out 
+   * @param out
    */
   void output(std::ostream &out);
   /**
@@ -144,9 +148,17 @@ public:
    */
   void print_container(std::ostream &out);
   // TODO
-  static bool equal(Hex_num const &a, Hex_num const &b);
+  Hex_num *to_additional_code();
   // TODO
-  static Hex_num *sum(Hex_num const &a, Hex_num const &b);
+  Hex_num *to_reverse_code();
+  // TODO
+  Hex_num *from_add_to_rev_code();
+  // TODO
+  static Hex_num sum_of_additonals(const Hex_num &a, const Hex_num &b);
+  // TODO
+  static bool equal(const Hex_num &a, const Hex_num &b);
+  // TODO
+  static Hex_num sum(const Hex_num &a, const Hex_num &b);
   // TODO
   static Hex_num *dif(Hex_num const &a, Hex_num const &b);
 

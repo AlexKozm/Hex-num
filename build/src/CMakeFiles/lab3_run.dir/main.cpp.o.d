@@ -1,5 +1,6 @@
 src/CMakeFiles/lab3_run.dir/main.cpp.o: \
  /home/alex/Mephi/sem3/Infa/lab3/src/main.cpp /usr/include/stdc-predef.h \
+ /home/alex/Mephi/sem3/Infa/lab3/src/stat_hex_num.h \
  /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -142,5 +143,4 @@ src/CMakeFiles/lab3_run.dir/main.cpp.o: \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
- /home/alex/Mephi/sem3/Infa/lab3/src/stat_hex_num.h \
  /home/alex/Mephi/sem3/Infa/lab3/src/hex_num_abstract.h
