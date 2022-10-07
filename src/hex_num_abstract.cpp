@@ -56,6 +56,15 @@ Hex_num::Hex_num(Container *arr, std::string hex) : arr(arr) {
 
 Hex_num::Wrong_format_exception::Wrong_format_exception(std::string msg)
     : std::runtime_error(msg){};
+
+Hex_num::Hex_num(const Hex_num &that) {
+  arr = that.arr->get_copy();
+}
+Hex_num::~Hex_num() {
+  free(arr);
+  arr = nullptr;
+  std::cout << "Abstact container destructor" << std::endl;
+}
 //-------------------------------------------------------------
 
 //-----------------Protected methods---------------------------
@@ -200,12 +209,12 @@ Hex_num *Hex_num::from_add_to_rev_code() {
         int bit = static_cast<int>(pow(2, j));
         if ((arr->char_hex_to_int(arr->get(i)) / bit) % 2 == 1) {
           val -= bit;
-          for(--j; j >= 0; --j) {
+          for (--j; j >= 0; --j) {
             bit = static_cast<int>(pow(2, i));
             val += bit;
           }
           break;
-        }       
+        }
       }
       arr->set(i, Container::int_hex_to_char(val));
       --i;
@@ -220,32 +229,44 @@ Hex_num *Hex_num::from_add_to_rev_code() {
 bool Hex_num::equal(Hex_num const &a, Hex_num const &b) {}
 
 Hex_num Hex_num::sum_of_additonals(const Hex_num &a, const Hex_num &b) {
-  Hex_num ans = Hex_num(a.arr->get_new());
+  Hex_num ans(a.arr->get_new());
   int i = 0;
   int from_prev = 0;
-  while (1) {
-    int s1 = a.arr->get(i);
-    int s2 = b.arr->get(i);
+  while (i < a.arr->get_len() && i < b.arr->get_len()) {
+    int s1 = Container::char_hex_to_int(a.arr->get(i));
+    int s2 = Container::char_hex_to_int(b.arr->get(i));
     int res = s1 + s2 + from_prev;
     from_prev = 0;
     if (res >= 16) {
       from_prev = 1;
-      ans.arr->set(i, Container::int_hex_to_char(res % 16));
+      ans.arr->force_set(i, Container::int_hex_to_char(res % 16));
       ++i;
     } else {
-      ans.arr->set(i, Container::int_hex_to_char(res));
+      ans.arr->force_set(i, Container::int_hex_to_char(res));
       ++i;
+    }
+  }
+  if (from_prev != 0) {
+    if (Container::char_hex_to_int(a.arr->get(a.arr->get_len() - 1)) >= 8 &&
+        Container::char_hex_to_int(b.arr->get(b.arr->get_len() - 1)) >= 8) {
+
+    } else {
+      ans.arr->force_set(i++, '1');
     }
   }
   return ans;
 }
 
 Hex_num Hex_num::sum(const Hex_num &a, const Hex_num &b) {
-  Hex_num a_add = Hex_num(a.arr->get_copy());
+  Hex_num a_add(a);
   a_add.to_reverse_code()->to_additional_code();
-  Hex_num b_add = Hex_num(b.arr->get_copy());
+  Hex_num b_add(b);
   b_add.to_reverse_code()->to_additional_code();
 
+  a_add.print_container(cout << "a in additional: ");
+  b_add.print_container(cout << "b in additional: ");
+  //
+  // cout << "HERE" << endl;
   Hex_num ans = sum_of_additonals(a_add, b_add);
   ans.from_add_to_rev_code()->to_reverse_code();
   return ans;

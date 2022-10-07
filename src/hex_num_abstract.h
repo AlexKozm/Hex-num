@@ -43,6 +43,9 @@ public:
    * @param val
    */
   virtual void set(int pos, char val) = 0;
+  // call only in sum. 
+  // TODO
+  virtual void force_set(int pos, char val) = 0;
   // TODO write a doc. Will be done at sum and dif realization
   virtual Container *get_new() const = 0;
   // TODO
@@ -92,6 +95,8 @@ protected:
    * @param hex
    */
   Hex_num(Container *arr, std::string hex);
+  // TODO
+  Hex_num(const Hex_num &that);
   /**
    * @brief Convert string to arr
    * @details Convert string to arr. In case of error throws an exception
@@ -162,7 +167,7 @@ public:
   // TODO
   static Hex_num *dif(Hex_num const &a, Hex_num const &b);
 
-  // virtual ~Hex_num() = 0;
+  virtual ~Hex_num();
 };
 
 } // namespace hex_num

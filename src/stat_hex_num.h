@@ -26,6 +26,8 @@ public:
   //TODO
   void set(int pos, char val) override;
   // TODO
+  void force_set(int pos, char val) override;
+  // TODO
   void set_minus() override;
   // //TODO
   // void set_minus() override;

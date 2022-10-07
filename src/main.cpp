@@ -5,11 +5,17 @@ using namespace static_hex;
 
 int main() {
   cout << "Start" << endl;
-  Hex_num h("-A10");
-  h.to_reverse_code()
-      ->to_additional_code()
-      ->print_container(cout);
-  h.from_add_to_rev_code()->print_container(cout);
+  Hex_num a("-7FFFFFE"), b("-1");
+  a.print_container(cout << "a direct: ");
+  b.print_container(cout << "b direct: ");
+  Hex_num::sum(a, b).output(cout);
+
+  cout << "End" << endl;
+  // Hex_num h("-A10");
+  // h.to_reverse_code()
+  //     ->to_additional_code()
+  //     ->print_container(cout);
+  // h.from_add_to_rev_code()->print_container(cout);
   // Hex_num h("-7FFFFFF");
   // Hex_num h("-B123");
   // h.print_container(cout);

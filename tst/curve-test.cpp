@@ -307,3 +307,17 @@ TEST_CASE("From additional to additional throw all") {
     CHECK(str.str() == "FFFFFFF\n");
   }
 }
+
+TEST_CASE("Sum") {
+  std::stringstream str;
+  SECTION("1 + 1") {
+    Hex_num a("1"), b("1");
+    Hex_num::sum(a, b).output(str);
+    CHECK(str.str() == "2\n");
+  }
+  SECTION("12 + F9") {
+    Hex_num a("12"), b("F9");
+    Hex_num::sum(a, b).output(str);
+    CHECK(str.str() == "10B\n");
+  }
+}
