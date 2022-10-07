@@ -13,7 +13,7 @@ Container::Container() {
   // std::cout << "Static container constructor" << std::endl;
 }
 
-Container::~Container(){}
+Container::~Container() {}
 
 void Container::set_zeros() {
   set_len(stat_len);
@@ -28,11 +28,11 @@ char Container::get(int pos) const {
 }
 
 void Container::set(int pos, char val) {
-  if (pos >= get_len() || (pos == get_len() - 1 && char_hex_to_int(val) >= 8)) {
+  if (pos >= get_len() || (pos == get_len() - 1 && char_to_int(val) >= 8)) {
     throw std::overflow_error("Out of index");
   }
-  if ((pos == get_len() - 1) && (char_hex_to_int(arr[pos]) >= 8)) {
-    arr[pos] = int_hex_to_char(char_hex_to_int(val) + 8);
+  if ((pos == get_len() - 1) && (char_to_int(arr[pos]) >= 8)) {
+    arr[pos] = int_to_char(char_to_int(val) + 8);
   } else {
     arr[pos] = val;
   }
@@ -52,11 +52,9 @@ hex_num::Container *Container::get_copy() const {
   for (int i = 0; i < get_len() - 1; ++i) {
     cont->set(i, get(i));
   }
-  if (Container::char_hex_to_int(get(get_len() - 1)) >= 8) {
+  if (char_to_int(get(get_len() - 1)) >= 8) {
     cont->set_minus();
-    cont->set(get_len() - 1,
-              Container::int_hex_to_char(
-                  Container::char_hex_to_int(get(get_len() - 1)) - 8));
+    cont->set(get_len() - 1, int_to_char(char_to_int(get(get_len() - 1)) - 8));
   } else {
     cont->set(get_len() - 1, get(get_len() - 1));
   }
@@ -69,6 +67,8 @@ void Container::set_minus() {
     arr[get_len() - 1] += 8;
   } // else it has minus already
 };
+
+void Container::unset_minus(){};
 //-------------------------------------------------------------
 
 Hex_num::Hex_num() : hex_num::Hex_num::Hex_num(new Container) {}

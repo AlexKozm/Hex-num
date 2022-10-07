@@ -8,12 +8,13 @@
 
 using namespace hex_num;
 using namespace std;
+typedef Container C;
 
 //-----------------Container-----------------------------------
-size_t Container::get_len() const { return len; }
-void Container::set_len(size_t len) { this->len = len; }
+size_t C::get_len() const { return len; }
+void C::set_len(size_t len) { this->len = len; }
 
-char Container::int_hex_to_char(int hex) {
+char C::int_to_char(int hex) {
   hex %= 16;
   if (hex < 10) {
     return '0' + hex;
@@ -22,7 +23,7 @@ char Container::int_hex_to_char(int hex) {
   }
 }
 
-int Container::char_hex_to_int(char hex) {
+int C::char_to_int(char hex) {
   // cout << "Befor throw: " << (char)hex << endl;
   if ('0' <= hex && hex <= '9') {
     return hex - '0';
@@ -34,36 +35,34 @@ int Container::char_hex_to_int(char hex) {
   }
 }
 
-Container::~Container() {}
+C::~Container() {}
 //-------------------------------------------------------------
 
 //-----------------Hex_num constructors------------------------
-Hex_num::Hex_num(Container *arr) : arr(arr) {}
+Hex_num::Hex_num(C *arr) : arr(arr) {}
 
-Hex_num::Hex_num(Container *arr, int hex) : arr(arr) {
+Hex_num::Hex_num(C *arr, int hex) : arr(arr) {
   if (hex < 0) {
     arr->set_minus();
     hex = -hex;
   }
   int i = 0;
   while (hex > 0) {
-    arr->set(i++, Container::int_hex_to_char(hex));
+    arr->set(i++, C::int_to_char(hex));
     hex /= 16;
   }
 }
 
-Hex_num::Hex_num(Container *arr, std::string hex) : arr(arr) {
-  str_to_arr(hex);
-}
+Hex_num::Hex_num(C *arr, string hex) : arr(arr) { str_to_arr(hex); }
 
-Hex_num::Wrong_format_exception::Wrong_format_exception(std::string msg)
-    : std::runtime_error(msg){};
+Hex_num::Wrong_format_exception::Wrong_format_exception(string msg)
+    : runtime_error(msg){};
 
 Hex_num::Hex_num(const Hex_num &that) { arr = that.arr->get_copy(); }
 Hex_num::~Hex_num() {
   delete arr;
   arr = nullptr;
-  // std::cout << "Abstact container destructor" << std::endl;
+  // cout << "Abstact container destructor" << endl;
 }
 //-------------------------------------------------------------
 
@@ -90,44 +89,44 @@ void Hex_num::str_to_arr(string str) {
   }
 }
 
-void Hex_num::unset_minus(){};
+// void Hex_num::unset_minus(){};
 //-------------------------------------------------------------
 void Hex_num::move_left(int n) {}
 void Hex_num::move_right(int n) {}
 
 bool Hex_num::evenness() {
-  if (Container::char_hex_to_int(arr->get(0)) % 2 == 0) {
+  if (C::char_to_int(arr->get(0)) % 2 == 0) {
     return 1;
   } else {
     return 0;
   }
 }
 
-void Hex_num::input(std::istream &is) {
+void Hex_num::input(istream &is) {
   string inp;
-  std::getline(is, inp);
+  getline(is, inp);
   arr->set_zeros();
   str_to_arr(inp);
 }
 
-void Hex_num::output(std::ostream &os) {
+void Hex_num::output(ostream &os) {
   bool started = 0;
   int i = arr->get_len() - 1;
-  int a = Container::char_hex_to_int(arr->get(i));
+  int a = C::char_to_int(arr->get(i));
   if (a >= 8) {
     os << '-';
     if (a > 8) {
-      os << Container::int_hex_to_char(a - 8);
+      os << C::int_to_char(a - 8);
     }
     --i;
   }
   for (; i >= 0; --i) {
-    a = Container::char_hex_to_int(arr->get(i));
+    a = C::char_to_int(arr->get(i));
     if (a != 0) {
-      os << Container::int_hex_to_char(a);
+      os << C::int_to_char(a);
       started = 1;
     } else if (started) {
-      os << Container::int_hex_to_char(a);
+      os << C::int_to_char(a);
     }
   }
   if (started == 0) {
@@ -136,7 +135,7 @@ void Hex_num::output(std::ostream &os) {
   os << endl;
 }
 
-void Hex_num::print_container(std::ostream &out) {
+void Hex_num::print_container(ostream &out) {
   for (int i = arr->get_len() - 1; i >= 0; --i) {
     out << arr->get(i);
   }
@@ -144,7 +143,7 @@ void Hex_num::print_container(std::ostream &out) {
 }
 
 Hex_num *Hex_num::to_reverse_code() {
-  int val = arr->char_hex_to_int(arr->get(arr->get_len() - 1));
+  int val = C::char_to_int(arr->get(arr->get_len() - 1));
   if (val >= 8) {
     val -= 8;
     for (int i = 0; i < 3; ++i) {
@@ -158,34 +157,34 @@ Hex_num *Hex_num::to_reverse_code() {
       }
     }
     // cout << "val s = " << val << endl;
-    arr->set(arr->get_len() - 1, arr->int_hex_to_char(val));
+    arr->set(arr->get_len() - 1, C::int_to_char(val));
 
     for (int j = arr->get_len() - 2; j >= 0; --j) {
-      int val = arr->char_hex_to_int(arr->get(j));
+      int val = C::char_to_int(arr->get(j));
       for (int i = 0; i < 4; ++i) {
         int bit = static_cast<int>(pow(2, i));
-        if ((arr->char_hex_to_int(arr->get(j)) / bit) % 2 == 0) {
+        if ((C::char_to_int(arr->get(j)) / bit) % 2 == 0) {
           val += bit;
         } else {
           val -= bit;
         }
       }
-      arr->set(j, arr->int_hex_to_char(val));
+      arr->set(j, C::int_to_char(val));
     }
   }
   return this;
 }
 
 Hex_num *Hex_num::to_additional_code() {
-  int val = arr->char_hex_to_int(arr->get(arr->get_len() - 1));
+  int val = C::char_to_int(arr->get(arr->get_len() - 1));
   if (val >= 8) {
     for (int i = 0; i < arr->get_len() - 2; ++i) {
-      val = arr->char_hex_to_int(arr->get(i));
+      val = C::char_to_int(arr->get(i));
       val += 1;
       if (val == 16) {
-        arr->set(i, arr->int_hex_to_char(0));
+        arr->set(i, C::int_to_char(0));
       } else {
-        arr->set(i, arr->int_hex_to_char(val));
+        arr->set(i, C::int_to_char(val));
         break;
       }
     }
@@ -194,20 +193,20 @@ Hex_num *Hex_num::to_additional_code() {
 }
 
 Hex_num *Hex_num::from_add_to_rev_code() {
-  if (Container::char_hex_to_int(arr->get(arr->get_len() - 1)) >= 8) {
+  if (C::char_to_int(arr->get(arr->get_len() - 1)) >= 8) {
     int i = 0;
-    int val = Container::char_hex_to_int(arr->get(i));
+    int val = C::char_to_int(arr->get(i));
     while (val == 0 && i < arr->get_len()) {
       ++i;
-      val = Container::char_hex_to_int(arr->get(i));
+      val = C::char_to_int(arr->get(i));
     }
     if (i == arr->get_len() - 1 && val == 8) {
-      throw std::overflow_error(
+      throw overflow_error(
           "Such additional code can't be represented as a reversed code");
     } else {
       for (int j = 0; j < 4; ++j) {
         int bit = static_cast<int>(pow(2, j));
-        if ((arr->char_hex_to_int(arr->get(i)) / bit) % 2 == 1) {
+        if ((C::char_to_int(arr->get(i)) / bit) % 2 == 1) {
           val -= bit;
           for (--j; j >= 0; --j) {
             bit = static_cast<int>(pow(2, i));
@@ -216,7 +215,7 @@ Hex_num *Hex_num::from_add_to_rev_code() {
           break;
         }
       }
-      arr->set(i, Container::int_hex_to_char(val));
+      arr->set(i, C::int_to_char(val));
       --i;
     }
     for (; i >= 0; --i) {
@@ -233,34 +232,31 @@ Hex_num Hex_num::sum_of_additonals(const Hex_num &a, const Hex_num &b) {
   int i = 0;
   int from_prev = 0;
   while (i < a.arr->get_len() && i < b.arr->get_len()) {
-    int s1 = Container::char_hex_to_int(a.arr->get(i));
-    int s2 = Container::char_hex_to_int(b.arr->get(i));
+    int s1 = C::char_to_int(a.arr->get(i));
+    int s2 = C::char_to_int(b.arr->get(i));
     int res = s1 + s2 + from_prev;
     from_prev = 0;
     if (res >= 16) {
       from_prev = 1;
-      ans.arr->force_set(i, Container::int_hex_to_char(res % 16));
+      ans.arr->force_set(i, C::int_to_char(res % 16));
       ++i;
     } else {
-      ans.arr->force_set(i, Container::int_hex_to_char(res));
+      ans.arr->force_set(i, C::int_to_char(res));
       ++i;
     }
   }
-      // cout << Container::char_hex_to_int(ans.arr->get(ans.arr->get_len() - 1));
-  if (Container::char_hex_to_int(a.arr->get(a.arr->get_len() - 1)) >= 8 &&
-      Container::char_hex_to_int(b.arr->get(b.arr->get_len() - 1)) >= 8 &&
-      Container::char_hex_to_int(ans.arr->get(ans.arr->get_len() - 1)) / 8 % 2 == 0) {
+  if (C::char_to_int(a.arr->get(a.arr->get_len() - 1)) >= 8 &&
+      C::char_to_int(b.arr->get(b.arr->get_len() - 1)) >= 8 &&
+      C::char_to_int(ans.arr->get(ans.arr->get_len() - 1)) / 8 % 2 == 0) {
     throw overflow_error("<0 + <0 = >0");
-  } else if (Container::char_hex_to_int(a.arr->get(a.arr->get_len() - 1)) < 8 &&
-      Container::char_hex_to_int(b.arr->get(b.arr->get_len() - 1)) < 8 &&
-      Container::char_hex_to_int(ans.arr->get(ans.arr->get_len() - 1)) / 8 % 2 == 1) {
+  } else if (C::char_to_int(a.arr->get(a.arr->get_len() - 1)) < 8 &&
+             C::char_to_int(b.arr->get(b.arr->get_len() - 1)) < 8 &&
+             C::char_to_int(ans.arr->get(ans.arr->get_len() - 1)) / 8 % 2 ==
+                 1) {
     throw overflow_error(">0 + >0 = <0");
-  } else if (Container::char_hex_to_int(a.arr->get(a.arr->get_len() - 1)) >=
-                 8 ||
-             Container::char_hex_to_int(b.arr->get(b.arr->get_len() - 1)) >=
-                 8) {
-
-  } 
+  } else if (C::char_to_int(a.arr->get(a.arr->get_len() - 1)) >= 8 ||
+             C::char_to_int(b.arr->get(b.arr->get_len() - 1)) >= 8) {
+  }
   return ans;
 }
 

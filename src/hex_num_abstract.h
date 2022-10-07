@@ -31,6 +31,7 @@ public:
    * @brief Make num negative
    */
   virtual void set_minus() = 0;
+  virtual void unset_minus() = 0;
   /**
    * @brief Get char on pos in container
    * @param pos
@@ -56,14 +57,14 @@ public:
    * @param hex Should be >= 0
    * @return Hex as a char
    */
-  static char int_hex_to_char(int hex);
+  static char int_to_char(int hex);
   /**
    * @brief Return hex char as int
    * @param hex Should be in 0..9A..F or throws an exception
    * @throw Wrong_format_exception
    * @return int hex
    */
-  static int char_hex_to_int(char hex);
+  static int char_to_int(char hex);
   // TODO
   virtual ~Container();
 };
