@@ -91,8 +91,30 @@ void Hex_num::str_to_arr(string str) {
 
 // void Hex_num::unset_minus(){};
 //-------------------------------------------------------------
-void Hex_num::move_left(int n) {}
-void Hex_num::move_right(int n) {}
+void Hex_num::move_left(int n) {
+  bool sign = arr->get_sign();
+  for (int i = arr->get_len(); i >= 0; ++i) {
+    arr->force_set(i, arr->get(i - 1));
+  }
+  arr->force_set(0, '0');
+  if (sign) {
+    arr->unset_minus();
+  } else {
+    arr->set_minus();
+  }
+}
+
+void Hex_num::move_right(int n) {
+  for (int i = 1; i < arr->get_len(); ++i) {
+    arr->set(i - 1, arr->weak_get(i, '0'));
+  }
+  if (arr->get_sign()) {
+    arr->force_set(arr->get_len() - 1, '0');
+  } else {
+    arr->force_set(arr->get_len() - 1, '0');
+    arr->set_minus();
+  }
+}
 
 bool Hex_num::evenness() {
   if (C::char_to_int(arr->get(0)) % 2 == 0) {
@@ -225,7 +247,17 @@ Hex_num *Hex_num::from_add_to_rev_code() {
   return this;
 }
 
-bool Hex_num::equal(Hex_num const &a, Hex_num const &b) {}
+bool Hex_num::equal(Hex_num const &a, Hex_num const &b) {
+  if (a.arr->get_sign() != a.arr->get_sign()) {
+    return 0;
+  }
+  for (int i = 0; i < max(a.arr->get_len(), b.arr->get_len()); ++i) {
+    if (a.arr->weak_get(i, '0') != b.arr->weak_get(i, '0')) {
+      return 0;
+    }
+  }
+  return 1;
+}
 
 Hex_num Hex_num::sum_of_additonals(const Hex_num &a, const Hex_num &b) {
   Hex_num ans(a.arr->get_new());
@@ -276,7 +308,14 @@ Hex_num Hex_num::sum(const Hex_num &a, const Hex_num &b) {
   ans.from_add_to_rev_code()->reverse_code();
   return ans;
 }
-Hex_num *Hex_num::dif(Hex_num const &a, Hex_num const &b) {}
+Hex_num Hex_num::dif(Hex_num const &a, Hex_num const &b) {
+  if (b.arr->get_sign()) {
+    b.arr->set_minus();
+  } else {
+    b.arr->unset_minus();
+  }
+  return sum(a, b);
+}
 
 // Hex_num::~Hex_num() {
 //   free()

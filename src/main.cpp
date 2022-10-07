@@ -10,10 +10,10 @@ int main() {
   a.input(cin);
   a.print_container(cout << "Container: ");
   a.reverse_code()->print_container(cout << "Reversed: ");
-  a.to_additional_code()->print_container(cout << "Additional: ");
   a.reverse_code()->print_container(cout << "Reversed: ");
+  a.to_additional_code()->print_container(cout << "Additional: ");
 
-  // Hex_num a("7FFFFFE"), b("3");
+  // Hex_num a("-10"), b("-F");
   // a.print_container(cout);
   // b.print_container(cout);
   // a.print_container(cout << "a direct: ");

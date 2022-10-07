@@ -25,7 +25,6 @@ public:
    * @param len New length of the container
    */
   void set_len(size_t len);
-
   /**
    * @brief Set to all container cells '0' value
    */
@@ -40,7 +39,7 @@ public:
   virtual void unset_minus() = 0;
   /**
    * @brief Return sign
-   * @return Return 0 if sing is + or zero and return 1 if sign is -
+   * @return Return 0 if sing is + or 0 and return 1 if sign is -
    */
   virtual bool get_sign() const = 0;
   /**
@@ -62,12 +61,15 @@ public:
   virtual char weak_get(int pos, char def) const = 0;
   /**
    * @brief Set val but not sign
+     @details Set val if it does not touch sign bit else throw an exception
    * @param pos
    * @param val
    */
   virtual void set(int pos, char val) = 0;
   /**
    * @brief Set val to pos even if it touchs number sign
+     @details Set val to pos even if it touchs number sign, does nothing if
+              container has not cell with such pos
    * @param pos
    * @param val
    */
@@ -193,7 +195,7 @@ public:
   // TODO
   static Hex_num sum(const Hex_num &a, const Hex_num &b);
   // TODO
-  static Hex_num *dif(Hex_num const &a, Hex_num const &b);
+  static Hex_num dif(Hex_num const &a, Hex_num const &b);
 
   virtual ~Hex_num();
 };

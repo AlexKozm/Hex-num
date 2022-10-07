@@ -151,8 +151,7 @@ TEST_CASE("To additional code") {
     CHECK(str.str() == "7FFFFFF\n");
   }
   SECTION("A10") {
-    Hex_num("A10").reverse_code()->to_additional_code()->print_container(
-        str);
+    Hex_num("A10").reverse_code()->to_additional_code()->print_container(str);
     CHECK(str.str() == "0000A10\n");
   }
   SECTION("1") {
@@ -168,8 +167,7 @@ TEST_CASE("To additional code") {
     CHECK(str.str() == "FFFFFFF\n");
   }
   SECTION("-A10") {
-    Hex_num("-A10").reverse_code()->to_additional_code()->print_container(
-        str);
+    Hex_num("-A10").reverse_code()->to_additional_code()->print_container(str);
     CHECK(str.str() == "FFFF5F0\n");
   }
   SECTION("-7FFFFFF") {
@@ -179,6 +177,7 @@ TEST_CASE("To additional code") {
         ->print_container(str);
     CHECK(str.str() == "8000001\n");
   }
+  // not sure that this test is right
   // SECTION("-0100001") {
   //   Hex_num("-1FFFFFF")
   //       .reverse_code()
@@ -312,6 +311,25 @@ TEST_CASE("From additional to additional throw all") {
         ->reverse_code()
         ->print_container(str);
     CHECK(str.str() == "FFFFFFF\n");
+  }
+}
+
+TEST_CASE("Equality") {
+  SECTION("1 == 1") {
+    Hex_num a("1"), b("1");
+    CHECK(Hex_num::equal(a, b) == 1);
+  }
+  SECTION("1 != 2") {
+    Hex_num a("1"), b("2");
+    CHECK(Hex_num::equal(a, b) == 0);
+  }
+  SECTION("-1 != 1") {
+    Hex_num a("-1"), b("2");
+    CHECK(Hex_num::equal(a, b) == 0);
+  }
+  SECTION("0 == 0") {
+    Hex_num a("0"), b("0");
+    CHECK(Hex_num::equal(a, b) == 1);
   }
 }
 

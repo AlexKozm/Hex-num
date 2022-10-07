@@ -89,7 +89,11 @@ void Container::set_minus() {
 void Container::unset_minus(){};
 
 bool Container::get_sign() const {
-
+  if (char_to_int(arr[get_len() - 1]) >= 8) {
+    return 1;
+  } else {
+    return 0;
+  }
 }
 //-------------------------------------------------------------
 
