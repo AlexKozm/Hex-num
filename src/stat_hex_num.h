@@ -37,6 +37,8 @@ public:
   hex_num::Container *get_new() const override;
   //TODO
   hex_num::Container *get_copy() const override;
+  // TODO
+  ~Container() override;
 };
 
 class Hex_num : public hex_num::Hex_num {

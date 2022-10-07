@@ -64,6 +64,8 @@ public:
    * @return int hex
    */
   static int char_hex_to_int(char hex);
+  // TODO
+  virtual ~Container();
 };
 
 /**

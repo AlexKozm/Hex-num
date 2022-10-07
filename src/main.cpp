@@ -6,8 +6,10 @@ using namespace static_hex;
 int main() {
   cout << "Start" << endl;
   Hex_num a("-7FFFFFE"), b("-1");
-  a.print_container(cout << "a direct: ");
-  b.print_container(cout << "b direct: ");
+  a.print_container(cout);
+  b.print_container(cout);
+  // a.print_container(cout << "a direct: ");
+  // b.print_container(cout << "b direct: ");
   Hex_num::sum(a, b).output(cout);
 
   cout << "End" << endl;

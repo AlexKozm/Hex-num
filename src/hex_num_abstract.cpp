@@ -33,6 +33,7 @@ int Container::char_hex_to_int(char hex) {
   }
 }
 
+Container::~Container(){}
 //-------------------------------------------------------------
 
 //-----------------Hex_num constructors------------------------
@@ -61,7 +62,7 @@ Hex_num::Hex_num(const Hex_num &that) {
   arr = that.arr->get_copy();
 }
 Hex_num::~Hex_num() {
-  free(arr);
+  delete arr;
   arr = nullptr;
   std::cout << "Abstact container destructor" << std::endl;
 }
@@ -263,9 +264,11 @@ Hex_num Hex_num::sum(const Hex_num &a, const Hex_num &b) {
   Hex_num b_add(b);
   b_add.to_reverse_code()->to_additional_code();
 
-  a_add.print_container(cout << "a in additional: ");
-  b_add.print_container(cout << "b in additional: ");
-  //
+  // a_add.print_container(cout << "a in additional: ");
+  // b_add.print_container(cout << "b in additional: ");
+  a_add.print_container(cout);
+  b_add.print_container(cout);
+
   // cout << "HERE" << endl;
   Hex_num ans = sum_of_additonals(a_add, b_add);
   ans.from_add_to_rev_code()->to_reverse_code();

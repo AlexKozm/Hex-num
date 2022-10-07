@@ -13,6 +13,8 @@ Container::Container() {
   std::cout << "Static container constructor" << std::endl;
 }
 
+Container::~Container(){}
+
 void Container::set_zeros() {
   set_len(stat_len);
   std::fill_n(arr, get_len(), '0');
@@ -73,7 +75,7 @@ Hex_num::Hex_num() : hex_num::Hex_num::Hex_num(new Container) {}
 Hex_num::Hex_num(int hex) : hex_num::Hex_num(new Container, hex) {}
 Hex_num::Hex_num(std::string hex) : hex_num::Hex_num(new Container, hex) {}
 Hex_num::~Hex_num() {
-  free(arr);
+  delete arr;
   arr = nullptr;
   std::cout << "Static container destructor" << std::endl;
 };
