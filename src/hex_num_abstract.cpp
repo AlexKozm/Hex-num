@@ -1,6 +1,7 @@
 #include "hex_num_abstract.h"
 #include "string"
 #include <functional>
+#include <iostream>
 #include <math.h>
 #include <stdexcept>
 #include <string>
@@ -33,7 +34,7 @@ int Container::char_hex_to_int(char hex) {
   }
 }
 
-Container::~Container(){}
+Container::~Container() {}
 //-------------------------------------------------------------
 
 //-----------------Hex_num constructors------------------------
@@ -58,13 +59,11 @@ Hex_num::Hex_num(Container *arr, std::string hex) : arr(arr) {
 Hex_num::Wrong_format_exception::Wrong_format_exception(std::string msg)
     : std::runtime_error(msg){};
 
-Hex_num::Hex_num(const Hex_num &that) {
-  arr = that.arr->get_copy();
-}
+Hex_num::Hex_num(const Hex_num &that) { arr = that.arr->get_copy(); }
 Hex_num::~Hex_num() {
   delete arr;
   arr = nullptr;
-  std::cout << "Abstact container destructor" << std::endl;
+  // std::cout << "Abstact container destructor" << std::endl;
 }
 //-------------------------------------------------------------
 
@@ -247,14 +246,21 @@ Hex_num Hex_num::sum_of_additonals(const Hex_num &a, const Hex_num &b) {
       ++i;
     }
   }
-  if (from_prev != 0) {
-    if (Container::char_hex_to_int(a.arr->get(a.arr->get_len() - 1)) >= 8 &&
-        Container::char_hex_to_int(b.arr->get(b.arr->get_len() - 1)) >= 8) {
+      // cout << Container::char_hex_to_int(ans.arr->get(ans.arr->get_len() - 1));
+  if (Container::char_hex_to_int(a.arr->get(a.arr->get_len() - 1)) >= 8 &&
+      Container::char_hex_to_int(b.arr->get(b.arr->get_len() - 1)) >= 8 &&
+      Container::char_hex_to_int(ans.arr->get(ans.arr->get_len() - 1)) / 8 % 2 == 0) {
+    throw overflow_error("<0 + <0 = >0");
+  } else if (Container::char_hex_to_int(a.arr->get(a.arr->get_len() - 1)) < 8 &&
+      Container::char_hex_to_int(b.arr->get(b.arr->get_len() - 1)) < 8 &&
+      Container::char_hex_to_int(ans.arr->get(ans.arr->get_len() - 1)) / 8 % 2 == 1) {
+    throw overflow_error(">0 + >0 = <0");
+  } else if (Container::char_hex_to_int(a.arr->get(a.arr->get_len() - 1)) >=
+                 8 ||
+             Container::char_hex_to_int(b.arr->get(b.arr->get_len() - 1)) >=
+                 8) {
 
-    } else {
-      ans.arr->force_set(i++, '1');
-    }
-  }
+  } 
   return ans;
 }
 
@@ -264,10 +270,10 @@ Hex_num Hex_num::sum(const Hex_num &a, const Hex_num &b) {
   Hex_num b_add(b);
   b_add.to_reverse_code()->to_additional_code();
 
-  // a_add.print_container(cout << "a in additional: ");
-  // b_add.print_container(cout << "b in additional: ");
-  a_add.print_container(cout);
-  b_add.print_container(cout);
+  a_add.print_container(cout << "a in additional: ");
+  b_add.print_container(cout << "b in additional: ");
+  // a_add.print_container(cout);
+  // b_add.print_container(cout);
 
   // cout << "HERE" << endl;
   Hex_num ans = sum_of_additonals(a_add, b_add);

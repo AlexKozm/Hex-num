@@ -10,7 +10,7 @@ using namespace static_hex;
 //-----------------Container-----------------------------------
 Container::Container() {
   set_zeros();
-  std::cout << "Static container constructor" << std::endl;
+  // std::cout << "Static container constructor" << std::endl;
 }
 
 Container::~Container(){}
@@ -77,5 +77,5 @@ Hex_num::Hex_num(std::string hex) : hex_num::Hex_num(new Container, hex) {}
 Hex_num::~Hex_num() {
   delete arr;
   arr = nullptr;
-  std::cout << "Static container destructor" << std::endl;
+  // std::cout << "Static container destructor" << std::endl;
 };

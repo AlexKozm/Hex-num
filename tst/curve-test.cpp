@@ -320,4 +320,50 @@ TEST_CASE("Sum") {
     Hex_num::sum(a, b).output(str);
     CHECK(str.str() == "10B\n");
   }
+  SECTION("-1 + -1") {
+    Hex_num a("-1"), b("-1");
+    Hex_num::sum(a, b).output(str);
+    CHECK(str.str() == "-2\n");
+  }
+  SECTION("-12 + -F9") {
+    Hex_num a("-12"), b("-F9");
+    Hex_num::sum(a, b).output(str);
+    CHECK(str.str() == "-10B\n");
+  }
+  SECTION("1 + -1") {
+    Hex_num a("1"), b("-1");
+    Hex_num::sum(a, b).output(str);
+    CHECK(str.str() == "0\n");
+  }
+  SECTION("12 + -F9") {
+    Hex_num a("12"), b("-F9");
+    Hex_num::sum(a, b).output(str);
+    CHECK(str.str() == "-E7\n");
+  }
+  SECTION("7FFFFFE + 1") {
+    Hex_num a("7FFFFFE"), b("1");
+    Hex_num::sum(a, b).output(str);
+    CHECK(str.str() == "7FFFFFF\n");
+  }
+  SECTION("7FFFFFE + 2 |overflow_error") {
+    Hex_num a("7FFFFFE"), b("2");
+    REQUIRE_THROWS(Hex_num::sum(a, b));
+  }
+  SECTION("7FFFFFE + 3 |overflow_error") {
+    Hex_num a("7FFFFFE"), b("3");
+    REQUIRE_THROWS(Hex_num::sum(a, b));
+  }
+  SECTION("-7FFFFFE + -1") {
+    Hex_num a("-7FFFFFE"), b("-1");
+    Hex_num::sum(a, b).output(str);
+    CHECK(str.str() == "-7FFFFFF\n");
+  }
+  SECTION("-7FFFFFE + -2 |overflow_error") {
+    Hex_num a("-7FFFFFE"), b("-2");
+    REQUIRE_THROWS(Hex_num::sum(a, b));
+  }
+  SECTION("-7FFFFFE + -3 |overflow_error") {
+    Hex_num a("-7FFFFFE"), b("-3");
+    REQUIRE_THROWS(Hex_num::sum(a, b));
+  }
 }

@@ -5,7 +5,7 @@ using namespace static_hex;
 
 int main() {
   cout << "Start" << endl;
-  Hex_num a("-7FFFFFE"), b("-1");
+  Hex_num a("7FFFFFE"), b("3");
   a.print_container(cout);
   b.print_container(cout);
   // a.print_container(cout << "a direct: ");
