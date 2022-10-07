@@ -5,14 +5,21 @@ using namespace static_hex;
 
 int main() {
   cout << "Start" << endl;
-  Hex_num a("7FFFFFE"), b("3");
-  a.print_container(cout);
-  b.print_container(cout);
+  
+  Hex_num a;
+  a.input(cin);
+  a.print_container(cout << "Container: ");
+  a.reverse_code()->print_container(cout << "Reversed: ");
+  a.to_additional_code()->print_container(cout << "Additional: ");
+  a.reverse_code()->print_container(cout << "Reversed: ");
+
+  // Hex_num a("7FFFFFE"), b("3");
+  // a.print_container(cout);
+  // b.print_container(cout);
   // a.print_container(cout << "a direct: ");
   // b.print_container(cout << "b direct: ");
-  Hex_num::sum(a, b).output(cout);
+  // Hex_num::sum(a, b).output(cout);
 
-  cout << "End" << endl;
   // Hex_num h("-A10");
   // h.to_reverse_code()
   //     ->to_additional_code()
@@ -27,5 +34,6 @@ int main() {
   // h.print_container(cout);
   // h.to_additional_code();
   // h.print_container(cout);
+  cout << "End" << endl;
   return 0;
 }

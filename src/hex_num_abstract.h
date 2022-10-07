@@ -22,16 +22,27 @@ public:
   size_t get_len() const;
   /**
    * @brief Set len of the container
-   * @param len
+   * @param len New length of the container
    */
   void set_len(size_t len);
-  // TODO
+
+  /**
+   * @brief Set to all container cells '0' value
+   */
   virtual void set_zeros() = 0;
   /**
    * @brief Make num negative
    */
   virtual void set_minus() = 0;
+  /**
+   * @brief Make num positive
+   */
   virtual void unset_minus() = 0;
+  /**
+   * @brief Return sign
+   * @return Return 0 if sing is + or zero and return 1 if sign is -
+   */
+  virtual bool get_sign() const = 0;
   /**
    * @brief Get char on pos in container
    * @param pos
@@ -39,13 +50,27 @@ public:
    */
   virtual char get(int pos) const = 0;
   /**
-   * @brief Set val
+   * @brief Return val on pos but without sign
+   * @details 1. Return val if it is in container.
+              2. Return val without sign bit if this cell store sign bit
+              3. Return def char if container has not cell with that pos
+   * @param pos
+     @param def - default value that will be returned if container has no cell
+                  on given pos
+   * @return
+   */
+  virtual char weak_get(int pos, char def) const = 0;
+  /**
+   * @brief Set val but not sign
    * @param pos
    * @param val
    */
   virtual void set(int pos, char val) = 0;
-  // call only in sum. 
-  // TODO
+  /**
+   * @brief Set val to pos even if it touchs number sign
+   * @param pos
+   * @param val
+   */
   virtual void force_set(int pos, char val) = 0;
   // TODO write a doc. Will be done at sum and dif realization
   virtual Container *get_new() const = 0;
@@ -158,7 +183,7 @@ public:
   // TODO
   Hex_num *to_additional_code();
   // TODO
-  Hex_num *to_reverse_code();
+  Hex_num *reverse_code();
   // TODO
   Hex_num *from_add_to_rev_code();
   // TODO

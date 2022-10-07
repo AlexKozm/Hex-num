@@ -9,20 +9,44 @@ using namespace static_hex;
 
 //-----------------Container-----------------------------------
 Container::Container() {
+  set_len(stat_len);
   set_zeros();
   // std::cout << "Static container constructor" << std::endl;
+}
+
+
+Container::Container(Container &that) {
+  set_len(that.get_len());
+  for (int i = 0; i < get_len(); ++i) {
+    arr[i] = that.arr[i];
+  }
 }
 
 Container::~Container() {}
 
 void Container::set_zeros() {
-  set_len(stat_len);
   std::fill_n(arr, get_len(), '0');
 }
 
 char Container::get(int pos) const {
   if (pos >= get_len()) {
     throw std::overflow_error("Out of index");
+  }
+  return arr[pos];
+}
+
+char Container::weak_get(int pos, char def) const {
+  if (pos < get_len() - 1) {
+    return arr[pos];
+  } else if (pos == get_len() - 1) {
+    int val = char_to_int(arr[pos]);
+    if (val >= 8) {
+      return int_to_char(val - 8);
+    } else {
+      return val;
+    }
+  } else if (pos >= get_len()) {
+    return def;
   }
   return arr[pos];
 }
@@ -49,14 +73,8 @@ hex_num::Container *Container::get_new() const { return new Container; }
 hex_num::Container *Container::get_copy() const {
   Container *cont = new Container;
   cont->set_len(get_len());
-  for (int i = 0; i < get_len() - 1; ++i) {
-    cont->set(i, get(i));
-  }
-  if (char_to_int(get(get_len() - 1)) >= 8) {
-    cont->set_minus();
-    cont->set(get_len() - 1, int_to_char(char_to_int(get(get_len() - 1)) - 8));
-  } else {
-    cont->set(get_len() - 1, get(get_len() - 1));
+  for (int i = 0; i < get_len(); ++i) {
+    cont->arr[i] = arr[i];
   }
   return cont;
 }
@@ -69,6 +87,10 @@ void Container::set_minus() {
 };
 
 void Container::unset_minus(){};
+
+bool Container::get_sign() const {
+
+}
 //-------------------------------------------------------------
 
 Hex_num::Hex_num() : hex_num::Hex_num::Hex_num(new Container) {}

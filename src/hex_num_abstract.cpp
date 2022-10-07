@@ -142,7 +142,7 @@ void Hex_num::print_container(ostream &out) {
   out << endl;
 }
 
-Hex_num *Hex_num::to_reverse_code() {
+Hex_num *Hex_num::reverse_code() {
   int val = C::char_to_int(arr->get(arr->get_len() - 1));
   if (val >= 8) {
     val -= 8;
@@ -262,9 +262,9 @@ Hex_num Hex_num::sum_of_additonals(const Hex_num &a, const Hex_num &b) {
 
 Hex_num Hex_num::sum(const Hex_num &a, const Hex_num &b) {
   Hex_num a_add(a);
-  a_add.to_reverse_code()->to_additional_code();
+  a_add.reverse_code()->to_additional_code();
   Hex_num b_add(b);
-  b_add.to_reverse_code()->to_additional_code();
+  b_add.reverse_code()->to_additional_code();
 
   a_add.print_container(cout << "a in additional: ");
   b_add.print_container(cout << "b in additional: ");
@@ -273,7 +273,7 @@ Hex_num Hex_num::sum(const Hex_num &a, const Hex_num &b) {
 
   // cout << "HERE" << endl;
   Hex_num ans = sum_of_additonals(a_add, b_add);
-  ans.from_add_to_rev_code()->to_reverse_code();
+  ans.from_add_to_rev_code()->reverse_code();
   return ans;
 }
 Hex_num *Hex_num::dif(Hex_num const &a, Hex_num const &b) {}

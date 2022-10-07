@@ -114,31 +114,31 @@ TEST_CASE("Output after init by constructors") {
 TEST_CASE("To reverse code") {
   std::stringstream str;
   SECTION("7FFFFFF") {
-    Hex_num("7FFFFFF").to_reverse_code()->print_container(str);
+    Hex_num("7FFFFFF").reverse_code()->print_container(str);
     CHECK(str.str() == "7FFFFFF\n");
   }
   SECTION("A10") {
-    Hex_num("A10").to_reverse_code()->print_container(str);
+    Hex_num("A10").reverse_code()->print_container(str);
     CHECK(str.str() == "0000A10\n");
   }
   SECTION("1") {
-    Hex_num("1").to_reverse_code()->print_container(str);
+    Hex_num("1").reverse_code()->print_container(str);
     CHECK(str.str() == "0000001\n");
   }
   SECTION("0") {
-    Hex_num("0").to_reverse_code()->print_container(str);
+    Hex_num("0").reverse_code()->print_container(str);
     CHECK(str.str() == "0000000\n");
   }
   SECTION("-1") {
-    Hex_num("-1").to_reverse_code()->print_container(str);
+    Hex_num("-1").reverse_code()->print_container(str);
     CHECK(str.str() == "FFFFFFE\n");
   }
   SECTION("-A10") {
-    Hex_num("-A10").to_reverse_code()->print_container(str);
+    Hex_num("-A10").reverse_code()->print_container(str);
     CHECK(str.str() == "FFFF5EF\n");
   }
   SECTION("-7FFFFFF") {
-    Hex_num("-7FFFFFF").to_reverse_code()->print_container(str);
+    Hex_num("-7FFFFFF").reverse_code()->print_container(str);
     CHECK(str.str() == "8000000\n");
   }
 }
@@ -146,46 +146,53 @@ TEST_CASE("To reverse code") {
 TEST_CASE("To additional code") {
   std::stringstream str;
   SECTION("7FFFFFF") {
-    Hex_num("7FFFFFF").to_reverse_code()->to_additional_code()->print_container(
+    Hex_num("7FFFFFF").reverse_code()->to_additional_code()->print_container(
         str);
     CHECK(str.str() == "7FFFFFF\n");
   }
   SECTION("A10") {
-    Hex_num("A10").to_reverse_code()->to_additional_code()->print_container(
+    Hex_num("A10").reverse_code()->to_additional_code()->print_container(
         str);
     CHECK(str.str() == "0000A10\n");
   }
   SECTION("1") {
-    Hex_num("1").to_reverse_code()->to_additional_code()->print_container(str);
+    Hex_num("1").reverse_code()->to_additional_code()->print_container(str);
     CHECK(str.str() == "0000001\n");
   }
   SECTION("0") {
-    Hex_num("0").to_reverse_code()->to_additional_code()->print_container(str);
+    Hex_num("0").reverse_code()->to_additional_code()->print_container(str);
     CHECK(str.str() == "0000000\n");
   }
   SECTION("-1") {
-    Hex_num("-1").to_reverse_code()->to_additional_code()->print_container(str);
+    Hex_num("-1").reverse_code()->to_additional_code()->print_container(str);
     CHECK(str.str() == "FFFFFFF\n");
   }
   SECTION("-A10") {
-    Hex_num("-A10").to_reverse_code()->to_additional_code()->print_container(
+    Hex_num("-A10").reverse_code()->to_additional_code()->print_container(
         str);
     CHECK(str.str() == "FFFF5F0\n");
   }
   SECTION("-7FFFFFF") {
     Hex_num("-7FFFFFF")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->print_container(str);
     CHECK(str.str() == "8000001\n");
   }
+  // SECTION("-0100001") {
+  //   Hex_num("-1FFFFFF")
+  //       .reverse_code()
+  //       ->to_additional_code()
+  //       ->print_container(str);
+  //   CHECK(str.str() == "8000001\n");
+  // }
 }
 
 TEST_CASE("From additional code to reverse") {
   std::stringstream str;
   SECTION("7FFFFFF") {
     Hex_num("7FFFFFF")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->from_add_to_rev_code()
         ->print_container(str);
@@ -193,7 +200,7 @@ TEST_CASE("From additional code to reverse") {
   }
   SECTION("A10") {
     Hex_num("A10")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->from_add_to_rev_code()
         ->print_container(str);
@@ -201,7 +208,7 @@ TEST_CASE("From additional code to reverse") {
   }
   SECTION("1") {
     Hex_num("1")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->from_add_to_rev_code()
         ->print_container(str);
@@ -209,7 +216,7 @@ TEST_CASE("From additional code to reverse") {
   }
   SECTION("0") {
     Hex_num("0")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->from_add_to_rev_code()
         ->print_container(str);
@@ -217,7 +224,7 @@ TEST_CASE("From additional code to reverse") {
   }
   SECTION("-1") {
     Hex_num("-1")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->from_add_to_rev_code()
         ->print_container(str);
@@ -225,7 +232,7 @@ TEST_CASE("From additional code to reverse") {
   }
   SECTION("-A10") {
     Hex_num("-A10")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->from_add_to_rev_code()
         ->print_container(str);
@@ -233,7 +240,7 @@ TEST_CASE("From additional code to reverse") {
   }
   SECTION("-7FFFFFF") {
     Hex_num("-7FFFFFF")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->from_add_to_rev_code()
         ->print_container(str);
@@ -245,64 +252,64 @@ TEST_CASE("From additional to additional throw all") {
   std::stringstream str;
   SECTION("7FFFFFF") {
     Hex_num("7FFFFFF")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->from_add_to_rev_code()
-        ->to_reverse_code()
+        ->reverse_code()
         ->print_container(str);
     CHECK(str.str() == "7FFFFFF\n");
   }
   SECTION("A10") {
     Hex_num("A10")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->from_add_to_rev_code()
-        ->to_reverse_code()
+        ->reverse_code()
         ->print_container(str);
     CHECK(str.str() == "0000A10\n");
   }
   SECTION("1") {
     Hex_num("1")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->from_add_to_rev_code()
-        ->to_reverse_code()
+        ->reverse_code()
         ->print_container(str);
     CHECK(str.str() == "0000001\n");
   }
   SECTION("0") {
     Hex_num("0")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->from_add_to_rev_code()
-        ->to_reverse_code()
+        ->reverse_code()
         ->print_container(str);
     CHECK(str.str() == "0000000\n");
   }
   SECTION("-1") {
     Hex_num("-1")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->from_add_to_rev_code()
-        ->to_reverse_code()
+        ->reverse_code()
         ->print_container(str);
     CHECK(str.str() == "8000001\n");
   }
   SECTION("-A10") {
     Hex_num("-A10")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->from_add_to_rev_code()
-        ->to_reverse_code()
+        ->reverse_code()
         ->print_container(str);
     CHECK(str.str() == "8000A10\n");
   }
   SECTION("-7FFFFFF") {
     Hex_num("-7FFFFFF")
-        .to_reverse_code()
+        .reverse_code()
         ->to_additional_code()
         ->from_add_to_rev_code()
-        ->to_reverse_code()
+        ->reverse_code()
         ->print_container(str);
     CHECK(str.str() == "FFFFFFF\n");
   }

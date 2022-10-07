@@ -23,6 +23,10 @@ public:
   void set_zeros() override;
   //TODO
   char get(int pos) const override;
+  // TODO 
+  char weak_get(int pos, char def) const override;
+  // TODO
+  bool get_sign() const override;
   //TODO
   void set(int pos, char val) override;
   // TODO
@@ -35,6 +39,8 @@ public:
   hex_num::Container *get_new() const override;
   //TODO
   hex_num::Container *get_copy() const override;
+  // TODO
+  Container(Container &that);
   // TODO
   ~Container() override;
 };
@@ -56,7 +62,7 @@ public:
    */
   Hex_num(std::string hex);
   //TODO
-  Hex_num(hex_num::Hex_num &base);
+  Hex_num(Hex_num &that);
   //TODO
   ~Hex_num();
 };
