@@ -97,12 +97,25 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#a1b0c5515d6863c1bc98cc93b65952f42">Container</a> ()</td></tr>
 <tr class="memdesc:a1b0c5515d6863c1bc98cc93b65952f42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init container with 0's. <br /></td></tr>
 <tr class="separator:a1b0c5515d6863c1bc98cc93b65952f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74cfe2911c36542f7cd2337660423834"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#a74cfe2911c36542f7cd2337660423834">get</a> (int pos) override</td></tr>
-<tr class="memdesc:a74cfe2911c36542f7cd2337660423834"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get char on pos in container.  <a href="classstatic__hex_1_1_container.html#a74cfe2911c36542f7cd2337660423834">More...</a><br /></td></tr>
-<tr class="separator:a74cfe2911c36542f7cd2337660423834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac07420631a50ba9e8c111ec04a77e7"><td class="memItemLeft" align="right" valign="top"><a id="abac07420631a50ba9e8c111ec04a77e7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#abac07420631a50ba9e8c111ec04a77e7">set_zeros</a> () override</td></tr>
+<tr class="memdesc:abac07420631a50ba9e8c111ec04a77e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to all container cells '0' value. <br /></td></tr>
+<tr class="separator:abac07420631a50ba9e8c111ec04a77e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a8032a02914a99de2e34b9874d6d35c"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#a1a8032a02914a99de2e34b9874d6d35c">get</a> (int pos, char def='0') const override</td></tr>
+<tr class="memdesc:a1a8032a02914a99de2e34b9874d6d35c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get char on pos in container.  <a href="classstatic__hex_1_1_container.html#a1a8032a02914a99de2e34b9874d6d35c">More...</a><br /></td></tr>
+<tr class="separator:a1a8032a02914a99de2e34b9874d6d35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812023ae82882a3bb11bb5ceb9505503"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#a812023ae82882a3bb11bb5ceb9505503">weak_get</a> (int pos, char def) const override</td></tr>
+<tr class="memdesc:a812023ae82882a3bb11bb5ceb9505503"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return val on pos but without sign.  <a href="classstatic__hex_1_1_container.html#a812023ae82882a3bb11bb5ceb9505503">More...</a><br /></td></tr>
+<tr class="separator:a812023ae82882a3bb11bb5ceb9505503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a9dbc746a87a6a68532641bd0012316"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#a5a9dbc746a87a6a68532641bd0012316">get_sign</a> () const override</td></tr>
+<tr class="memdesc:a5a9dbc746a87a6a68532641bd0012316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return sign.  <a href="classstatic__hex_1_1_container.html#a5a9dbc746a87a6a68532641bd0012316">More...</a><br /></td></tr>
+<tr class="separator:a5a9dbc746a87a6a68532641bd0012316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9c46d0d8cfcc11af06a278a83816d8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#ad9c46d0d8cfcc11af06a278a83816d8f">set</a> (int pos, char val) override</td></tr>
-<tr class="memdesc:ad9c46d0d8cfcc11af06a278a83816d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set val.  <a href="classstatic__hex_1_1_container.html#ad9c46d0d8cfcc11af06a278a83816d8f">More...</a><br /></td></tr>
+<tr class="memdesc:ad9c46d0d8cfcc11af06a278a83816d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set val but not sign.  <a href="classstatic__hex_1_1_container.html#ad9c46d0d8cfcc11af06a278a83816d8f">More...</a><br /></td></tr>
 <tr class="separator:ad9c46d0d8cfcc11af06a278a83816d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4379b42194126e7448888d08f982887e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#a4379b42194126e7448888d08f982887e">force_set</a> (int pos, char val) override</td></tr>
+<tr class="memdesc:a4379b42194126e7448888d08f982887e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set val to pos even if it touchs number sign.  <a href="classstatic__hex_1_1_container.html#a4379b42194126e7448888d08f982887e">More...</a><br /></td></tr>
+<tr class="separator:a4379b42194126e7448888d08f982887e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade5102c53129b321fccf8c80d4076e92"><td class="memItemLeft" align="right" valign="top"><a id="ade5102c53129b321fccf8c80d4076e92"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#ade5102c53129b321fccf8c80d4076e92">set_minus</a> () override</td></tr>
 <tr class="memdesc:ade5102c53129b321fccf8c80d4076e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make num negative. <br /></td></tr>
@@ -111,30 +124,87 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#a3ff190db0b22dd9af1789a6f3a812f6c">unset_minus</a> () override</td></tr>
 <tr class="memdesc:a3ff190db0b22dd9af1789a6f3a812f6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make num positive. <br /></td></tr>
 <tr class="separator:a3ff190db0b22dd9af1789a6f3a812f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4828e486de692851871fc3de1b17769"><td class="memItemLeft" align="right" valign="top"><a id="ae4828e486de692851871fc3de1b17769"></a>
-<a class="el" href="classhex__num_1_1_container.html">hex_num::Container</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_new</b> () override</td></tr>
-<tr class="separator:ae4828e486de692851871fc3de1b17769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea73b22d5176fca52a6a2937b086de2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhex__num_1_1_container.html">hex_num::Container</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#afea73b22d5176fca52a6a2937b086de2">get_new</a> () const override</td></tr>
+<tr class="memdesc:afea73b22d5176fca52a6a2937b086de2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return new <a class="el" href="classstatic__hex_1_1_container.html">Container</a>.  <a href="classstatic__hex_1_1_container.html#afea73b22d5176fca52a6a2937b086de2">More...</a><br /></td></tr>
+<tr class="separator:afea73b22d5176fca52a6a2937b086de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece6989fe9db58affa758fc69e489353"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhex__num_1_1_container.html">hex_num::Container</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#aece6989fe9db58affa758fc69e489353">get_copy</a> () const override</td></tr>
+<tr class="memdesc:aece6989fe9db58affa758fc69e489353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return copy of a <a class="el" href="classstatic__hex_1_1_container.html">Container</a>.  <a href="classstatic__hex_1_1_container.html#aece6989fe9db58affa758fc69e489353">More...</a><br /></td></tr>
+<tr class="separator:aece6989fe9db58affa758fc69e489353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a9c0748c74947c36a77382a4a41d69"><td class="memItemLeft" align="right" valign="top"><a id="a85a9c0748c74947c36a77382a4a41d69"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Container</b> (const <a class="el" href="classstatic__hex_1_1_container.html">Container</a> &amp;that)</td></tr>
+<tr class="separator:a85a9c0748c74947c36a77382a4a41d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed906eb69bbf66e32a2f89e54d59c211"><td class="memItemLeft" align="right" valign="top"><a id="aed906eb69bbf66e32a2f89e54d59c211"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#aed906eb69bbf66e32a2f89e54d59c211">~Container</a> () override</td></tr>
+<tr class="memdesc:aed906eb69bbf66e32a2f89e54d59c211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just destructor. Does nothing. <br /></td></tr>
+<tr class="separator:aed906eb69bbf66e32a2f89e54d59c211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classhex__num_1_1_container"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classhex__num_1_1_container')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classhex__num_1_1_container.html">hex_num::Container</a></td></tr>
-<tr class="memitem:a7460a02575f693edbea7e44d08c4f290 inherit pub_methods_classhex__num_1_1_container"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_container.html#a7460a02575f693edbea7e44d08c4f290">get_len</a> ()</td></tr>
-<tr class="memdesc:a7460a02575f693edbea7e44d08c4f290 inherit pub_methods_classhex__num_1_1_container"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get len of the <a class="el" href="classhex__num_1_1_container.html" title="Abstract class for container.">Container</a>.  <a href="classhex__num_1_1_container.html#a7460a02575f693edbea7e44d08c4f290">More...</a><br /></td></tr>
-<tr class="separator:a7460a02575f693edbea7e44d08c4f290 inherit pub_methods_classhex__num_1_1_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ab598efdb3efd5232bd31fc65c6e7f1 inherit pub_methods_classhex__num_1_1_container"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_container.html#a2ab598efdb3efd5232bd31fc65c6e7f1">set_len</a> (size_t len)</td></tr>
-<tr class="memdesc:a2ab598efdb3efd5232bd31fc65c6e7f1 inherit pub_methods_classhex__num_1_1_container"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set len of the container.  <a href="classhex__num_1_1_container.html#a2ab598efdb3efd5232bd31fc65c6e7f1">More...</a><br /></td></tr>
-<tr class="separator:a2ab598efdb3efd5232bd31fc65c6e7f1 inherit pub_methods_classhex__num_1_1_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65e3d74752e4d79aee469d61092b67f5 inherit pub_methods_classhex__num_1_1_container"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_container.html#a65e3d74752e4d79aee469d61092b67f5">get_len</a> () const</td></tr>
+<tr class="memdesc:a65e3d74752e4d79aee469d61092b67f5 inherit pub_methods_classhex__num_1_1_container"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get len of the <a class="el" href="classhex__num_1_1_container.html" title="Abstract class for container.">Container</a>.  <a href="classhex__num_1_1_container.html#a65e3d74752e4d79aee469d61092b67f5">More...</a><br /></td></tr>
+<tr class="separator:a65e3d74752e4d79aee469d61092b67f5 inherit pub_methods_classhex__num_1_1_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b00862b3c4ba8fef953b3c4237ed5b1 inherit pub_methods_classhex__num_1_1_container"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_container.html#a2b00862b3c4ba8fef953b3c4237ed5b1">set_len</a> (size_t len)</td></tr>
+<tr class="memdesc:a2b00862b3c4ba8fef953b3c4237ed5b1 inherit pub_methods_classhex__num_1_1_container"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set len of the container.  <a href="classhex__num_1_1_container.html#a2b00862b3c4ba8fef953b3c4237ed5b1">More...</a><br /></td></tr>
+<tr class="separator:a2b00862b3c4ba8fef953b3c4237ed5b1 inherit pub_methods_classhex__num_1_1_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classhex__num_1_1_container"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classhex__num_1_1_container')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classhex__num_1_1_container.html">hex_num::Container</a></td></tr>
-<tr class="memitem:a7d29dc002fb9d2d7de9180e494536bb1 inherit pub_static_methods_classhex__num_1_1_container"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_container.html#a7d29dc002fb9d2d7de9180e494536bb1">hex_remains_to_char</a> (int hex)</td></tr>
-<tr class="memdesc:a7d29dc002fb9d2d7de9180e494536bb1 inherit pub_static_methods_classhex__num_1_1_container"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hex as a char.  <a href="classhex__num_1_1_container.html#a7d29dc002fb9d2d7de9180e494536bb1">More...</a><br /></td></tr>
-<tr class="separator:a7d29dc002fb9d2d7de9180e494536bb1 inherit pub_static_methods_classhex__num_1_1_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb094acb8c045bc36aead152f030092a inherit pub_static_methods_classhex__num_1_1_container"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_container.html#afb094acb8c045bc36aead152f030092a">int_hex_from_char</a> (char hex)</td></tr>
-<tr class="memdesc:afb094acb8c045bc36aead152f030092a inherit pub_static_methods_classhex__num_1_1_container"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hex char as int.  <a href="classhex__num_1_1_container.html#afb094acb8c045bc36aead152f030092a">More...</a><br /></td></tr>
-<tr class="separator:afb094acb8c045bc36aead152f030092a inherit pub_static_methods_classhex__num_1_1_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355a488c7b14b3afdd32244929c438cd inherit pub_static_methods_classhex__num_1_1_container"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_container.html#a355a488c7b14b3afdd32244929c438cd">int_to_char</a> (int hex)</td></tr>
+<tr class="memdesc:a355a488c7b14b3afdd32244929c438cd inherit pub_static_methods_classhex__num_1_1_container"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hex as a char.  <a href="classhex__num_1_1_container.html#a355a488c7b14b3afdd32244929c438cd">More...</a><br /></td></tr>
+<tr class="separator:a355a488c7b14b3afdd32244929c438cd inherit pub_static_methods_classhex__num_1_1_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a387c1177f5c5ebac0c9058a9310a4619 inherit pub_static_methods_classhex__num_1_1_container"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhex__num_1_1_container.html#a387c1177f5c5ebac0c9058a9310a4619">char_to_int</a> (char hex)</td></tr>
+<tr class="memdesc:a387c1177f5c5ebac0c9058a9310a4619 inherit pub_static_methods_classhex__num_1_1_container"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hex char as int.  <a href="classhex__num_1_1_container.html#a387c1177f5c5ebac0c9058a9310a4619">More...</a><br /></td></tr>
+<tr class="separator:a387c1177f5c5ebac0c9058a9310a4619 inherit pub_static_methods_classhex__num_1_1_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a74cfe2911c36542f7cd2337660423834"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74cfe2911c36542f7cd2337660423834">&#9670;&nbsp;</a></span>get()</h2>
+<a id="a4379b42194126e7448888d08f982887e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4379b42194126e7448888d08f982887e">&#9670;&nbsp;</a></span>force_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Container::force_set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set val to pos even if it touchs number sign. </p>
+<p>Set val to pos even if it touchs number sign, does nothing if container has not cell with such pos </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td></td></tr>
+    <tr><td class="paramname">val</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classhex__num_1_1_container.html#a217eea09c3597b3a0c97904ef946f93e">hex_num::Container</a>.</p>
+
+</div>
+</div>
+<a id="a1a8032a02914a99de2e34b9874d6d35c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a8032a02914a99de2e34b9874d6d35c">&#9670;&nbsp;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,8 +216,18 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">char Container::get </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>def</em> = <code>'0'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -158,15 +238,106 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get char on pos in container. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Return char on pos in container. If cell with such pos does not return def </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td></td></tr>
+    <tr><td class="paramname">def</td><td></td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Char on pos in container </dd></dl>
 
-<p>Implements <a class="el" href="classhex__num_1_1_container.html#a5dc2afc45c0a0d76e8c33518ad85f7fe">hex_num::Container</a>.</p>
+<p>Implements <a class="el" href="classhex__num_1_1_container.html#a406c24a918cf07bd421357c31e5741b0">hex_num::Container</a>.</p>
+
+</div>
+</div>
+<a id="aece6989fe9db58affa758fc69e489353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aece6989fe9db58affa758fc69e489353">&#9670;&nbsp;</a></span>get_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhex__num_1_1_container.html">hex_num::Container</a> * Container::get_copy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return copy of a <a class="el" href="classstatic__hex_1_1_container.html">Container</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>copy of a <a class="el" href="classstatic__hex_1_1_container.html">Container</a> </dd></dl>
+
+<p>Implements <a class="el" href="classhex__num_1_1_container.html#a2d98c56fa8e0b775faeeaa778433339e">hex_num::Container</a>.</p>
+
+</div>
+</div>
+<a id="afea73b22d5176fca52a6a2937b086de2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afea73b22d5176fca52a6a2937b086de2">&#9670;&nbsp;</a></span>get_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhex__num_1_1_container.html">hex_num::Container</a> * Container::get_new </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return new <a class="el" href="classstatic__hex_1_1_container.html">Container</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>new <a class="el" href="classstatic__hex_1_1_container.html">Container</a> </dd></dl>
+
+<p>Implements <a class="el" href="classhex__num_1_1_container.html#a9e308fd7a6e22b0b36496479c208416d">hex_num::Container</a>.</p>
+
+</div>
+</div>
+<a id="a5a9dbc746a87a6a68532641bd0012316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a9dbc746a87a6a68532641bd0012316">&#9670;&nbsp;</a></span>get_sign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Container::get_sign </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return sign. </p>
+<dl class="section return"><dt>Returns</dt><dd>Return 0 if sing is + or 0 and return 1 if sign is - </dd></dl>
+
+<p>Implements <a class="el" href="classhex__num_1_1_container.html#ae759a017e6cfca0037f22ec86108a488">hex_num::Container</a>.</p>
 
 </div>
 </div>
@@ -204,8 +375,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set val. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Set val but not sign. </p>
+<p>Set val if it does not touch sign bit else throw an exception. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td></td></tr>
     <tr><td class="paramname">val</td><td></td></tr>
@@ -214,6 +385,61 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="classhex__num_1_1_container.html#a5093b21b641049ad64da98d49b9a810d">hex_num::Container</a>.</p>
+
+</div>
+</div>
+<a id="a812023ae82882a3bb11bb5ceb9505503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a812023ae82882a3bb11bb5ceb9505503">&#9670;&nbsp;</a></span>weak_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Container::weak_get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return val on pos but without sign. </p>
+<ol type="1">
+<li>Return cell's val if cell is in container and has not store sign bit.<ol type="a">
+<li>Return val without sign bit if this cell store sign bit</li>
+<li>Return def char if container has not cell with that pos <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td></td></tr>
+    <tr><td class="paramname">def</td><td>- default value that will be returned if container has no cell on given pos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+</li>
+</ol>
+</li>
+</ol>
+
+<p>Implements <a class="el" href="classhex__num_1_1_container.html#a726713abe71f8a20048573539d1ac33a">hex_num::Container</a>.</p>
 
 </div>
 </div>

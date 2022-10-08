@@ -11,7 +11,7 @@ using namespace std;
 typedef Container C;
 
 //-----------------Container-----------------------------------
-size_t C::get_len() const { return len; }
+int C::get_len() const { return len; }
 void C::set_len(size_t len) { this->len = len; }
 
 char C::int_to_char(int hex) {
@@ -64,6 +64,11 @@ Hex_num::~Hex_num() {
   arr = nullptr;
   // cout << "Abstact container destructor" << endl;
 }
+
+Hex_num &Hex_num::operator=(const Hex_num &a) {
+  arr = a.arr->get_copy();
+  return *this;
+}
 //-------------------------------------------------------------
 
 //-----------------Protected methods---------------------------
@@ -89,31 +94,44 @@ void Hex_num::str_to_arr(string str) {
   }
 }
 
-// void Hex_num::unset_minus(){};
 //-------------------------------------------------------------
-void Hex_num::move_left(int n) {
-  bool sign = arr->get_sign();
-  for (int i = arr->get_len(); i >= 0; ++i) {
-    arr->force_set(i, arr->get(i - 1));
+Hex_num Hex_num::move_left(unsigned n) {
+  if (n == 0) {
+    return *this;
   }
-  arr->force_set(0, '0');
-  if (sign) {
+  bool sign = arr->get_sign();
+  for (int i = arr->get_len(); i >= 0; --i) {
+    arr->force_set(i + n - 1, arr->get(i - 1));
+  }
+  for (int i = 0; i < n; ++i) {
+    arr->force_set(i, '0');
+  }
+  if (!sign) {
     arr->unset_minus();
   } else {
     arr->set_minus();
   }
+  return *this;
 }
 
-void Hex_num::move_right(int n) {
-  for (int i = 1; i < arr->get_len(); ++i) {
-    arr->set(i - 1, arr->weak_get(i, '0'));
+Hex_num Hex_num::move_right(unsigned n) {
+  if (n == 0) {
+    return *this;
   }
-  if (arr->get_sign()) {
-    arr->force_set(arr->get_len() - 1, '0');
+  bool sign = arr->get_sign();
+  cout << "Sign: " << sign << endl;
+  for (int i = 1; i < arr->get_len(); ++i) {
+    arr->set(i - 1, arr->weak_get(i + n - 1, '0'));
+  }
+  for (int i = arr->get_len() - 1; i > arr->get_len() - 1 - n; --i) {
+    arr->force_set(i, '0');
+  }
+  if (!sign) {
+    arr->unset_minus();
   } else {
-    arr->force_set(arr->get_len() - 1, '0');
     arr->set_minus();
   }
+  return *this;
 }
 
 bool Hex_num::evenness() {
@@ -124,14 +142,15 @@ bool Hex_num::evenness() {
   }
 }
 
-void Hex_num::input(istream &is) {
+istream &Hex_num::input(istream &is) {
   string inp;
   getline(is, inp);
   arr->set_zeros();
   str_to_arr(inp);
+  return is;
 }
 
-void Hex_num::output(ostream &os) {
+ostream &Hex_num::output(ostream &os) const {
   bool started = 0;
   int i = arr->get_len() - 1;
   int a = C::char_to_int(arr->get(i));
@@ -155,6 +174,7 @@ void Hex_num::output(ostream &os) {
     os << '0';
   }
   os << endl;
+  return os;
 }
 
 void Hex_num::print_container(ostream &out) {
@@ -297,26 +317,17 @@ Hex_num Hex_num::sum(const Hex_num &a, const Hex_num &b) {
   a_add.reverse_code()->to_additional_code();
   Hex_num b_add(b);
   b_add.reverse_code()->to_additional_code();
-
-  a_add.print_container(cout << "a in additional: ");
-  b_add.print_container(cout << "b in additional: ");
-  // a_add.print_container(cout);
-  // b_add.print_container(cout);
-
-  // cout << "HERE" << endl;
   Hex_num ans = sum_of_additonals(a_add, b_add);
   ans.from_add_to_rev_code()->reverse_code();
   return ans;
 }
-Hex_num Hex_num::dif(Hex_num const &a, Hex_num const &b) {
-  if (b.arr->get_sign()) {
-    b.arr->set_minus();
-  } else {
-    b.arr->unset_minus();
-  }
-  return sum(a, b);
-}
 
-// Hex_num::~Hex_num() {
-//   free()
-// }
+Hex_num Hex_num::dif(Hex_num const &a, Hex_num const &b) {
+  Hex_num minus_b(b);
+  if (!minus_b.arr->get_sign()) {
+    minus_b.arr->set_minus();
+  } else {
+    minus_b.arr->unset_minus();
+  }
+  return sum(a, minus_b);
+}

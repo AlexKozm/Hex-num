@@ -178,6 +178,30 @@ main.cpp.s:
 	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+overl_stat_hex_num.o: overl_stat_hex_num.cpp.o
+.PHONY : overl_stat_hex_num.o
+
+# target to build an object file
+overl_stat_hex_num.cpp.o:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/overl_stat_hex_num.cpp.o
+.PHONY : overl_stat_hex_num.cpp.o
+
+overl_stat_hex_num.i: overl_stat_hex_num.cpp.i
+.PHONY : overl_stat_hex_num.i
+
+# target to preprocess a source file
+overl_stat_hex_num.cpp.i:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/overl_stat_hex_num.cpp.i
+.PHONY : overl_stat_hex_num.cpp.i
+
+overl_stat_hex_num.s: overl_stat_hex_num.cpp.s
+.PHONY : overl_stat_hex_num.s
+
+# target to generate assembly for a file
+overl_stat_hex_num.cpp.s:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/overl_stat_hex_num.cpp.s
+.PHONY : overl_stat_hex_num.cpp.s
+
 stat_hex_num.o: stat_hex_num.cpp.o
 .PHONY : stat_hex_num.o
 
@@ -217,6 +241,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... overl_stat_hex_num.o"
+	@echo "... overl_stat_hex_num.i"
+	@echo "... overl_stat_hex_num.s"
 	@echo "... stat_hex_num.o"
 	@echo "... stat_hex_num.i"
 	@echo "... stat_hex_num.s"

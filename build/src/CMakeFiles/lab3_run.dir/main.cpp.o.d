@@ -1,6 +1,7 @@
 src/CMakeFiles/lab3_run.dir/main.cpp.o: \
  /home/alex/Mephi/sem3/Infa/lab3/src/main.cpp /usr/include/stdc-predef.h \
- /home/alex/Mephi/sem3/Infa/lab3/src/stat_hex_num.h \
+ /home/alex/Mephi/sem3/Infa/lab3/src/overl_stat_hex_num.h \
+ /home/alex/Mephi/sem3/Infa/lab3/src/hex_num_abstract.h \
  /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -142,5 +143,10 @@ src/CMakeFiles/lab3_run.dir/main.cpp.o: \
  /usr/include/c++/9/bits/locale_facets.tcc \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
- /usr/include/c++/9/bits/istream.tcc \
- /home/alex/Mephi/sem3/Infa/lab3/src/hex_num_abstract.h
+ /usr/include/c++/9/bits/istream.tcc /usr/include/c++/9/optional \
+ /usr/include/c++/9/utility /usr/include/c++/9/bits/stl_relops.h \
+ /usr/include/c++/9/bits/enable_special_members.h \
+ /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_uninitialized.h \
+ /usr/include/c++/9/bits/stl_vector.h \
+ /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
+ /home/alex/Mephi/sem3/Infa/lab3/src/stat_hex_num.h

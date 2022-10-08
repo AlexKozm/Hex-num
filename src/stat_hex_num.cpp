@@ -15,7 +15,7 @@ Container::Container() {
 }
 
 
-Container::Container(Container &that) {
+Container::Container(const Container &that) {
   set_len(that.get_len());
   for (int i = 0; i < get_len(); ++i) {
     arr[i] = that.arr[i];
@@ -28,11 +28,12 @@ void Container::set_zeros() {
   std::fill_n(arr, get_len(), '0');
 }
 
-char Container::get(int pos) const {
-  if (pos >= get_len()) {
-    throw std::overflow_error("Out of index");
+char Container::get(int pos, char def) const {
+  if (pos < get_len()) {
+    return arr[pos];
+  } else {
+    return def;
   }
-  return arr[pos];
 }
 
 char Container::weak_get(int pos, char def) const {
@@ -43,7 +44,7 @@ char Container::weak_get(int pos, char def) const {
     if (val >= 8) {
       return int_to_char(val - 8);
     } else {
-      return val;
+      return int_to_char(val);
     }
   } else if (pos >= get_len()) {
     return def;
@@ -63,30 +64,36 @@ void Container::set(int pos, char val) {
 }
 
 void Container::force_set(int pos, char val) {
-  if (pos >= get_len()) {
-    throw std::overflow_error("Out of index");
+  if (pos < get_len()) {
+    // throw std::overflow_error("Out of index");
+    arr[pos] = val;
   }
-  arr[pos] = val;
 }
 
 hex_num::Container *Container::get_new() const { return new Container; }
 hex_num::Container *Container::get_copy() const {
-  Container *cont = new Container;
-  cont->set_len(get_len());
-  for (int i = 0; i < get_len(); ++i) {
-    cont->arr[i] = arr[i];
-  }
-  return cont;
+  // Container *cont = new Container;
+  // cont->set_len(get_len());
+  // for (int i = 0; i < get_len(); ++i) {
+  //   cont->arr[i] = arr[i];
+  // }
+  // return cont;
+  return new Container(*this);
 }
 
 void Container::set_minus() {
-  char val = arr[get_len() - 1];
-  if (val < '8') {
-    arr[get_len() - 1] += 8;
+  int val = char_to_int(arr[get_len() - 1]);
+  if (val < 8) {
+    arr[get_len() - 1] = int_to_char(val + 8);
   } // else it has minus already
 };
 
-void Container::unset_minus(){};
+void Container::unset_minus(){
+  int val = char_to_int(arr[get_len() - 1]);
+  if (val >= 8) {
+    arr[get_len() - 1] = int_to_char(val - 8);
+  } // else it has not minus already
+};
 
 bool Container::get_sign() const {
   if (char_to_int(arr[get_len() - 1]) >= 8) {
@@ -100,6 +107,7 @@ bool Container::get_sign() const {
 Hex_num::Hex_num() : hex_num::Hex_num::Hex_num(new Container) {}
 Hex_num::Hex_num(int hex) : hex_num::Hex_num(new Container, hex) {}
 Hex_num::Hex_num(std::string hex) : hex_num::Hex_num(new Container, hex) {}
+Hex_num::Hex_num(const hex_num::Hex_num &that) : hex_num::Hex_num(that) {};
 Hex_num::~Hex_num() {
   delete arr;
   arr = nullptr;

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unset_5fminus_32',['unset_minus',['../classhex__num_1_1_container.html#afa27ccadbb192ea1b7c82e6211caf244',1,'hex_num::Container::unset_minus()'],['../classstatic__hex_1_1_container.html#a3ff190db0b22dd9af1789a6f3a812f6c',1,'static_hex::Container::unset_minus()']]]
+  ['output_43',['output',['../classhex__num_1_1_hex__num.html#a3417d0ea564a120c9e008afbba1fc4d9',1,'hex_num::Hex_num']]]
 ];

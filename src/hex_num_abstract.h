@@ -12,14 +12,14 @@ namespace hex_num {
  * @brief Abstract class for container
  */
 class Container {
-  size_t len = 0; // current len of container
+  int len = 0; // current len of container
 
 public:
   /**
    * @brief Get len of the Container
    * @return Length
    */
-  size_t get_len() const;
+  int get_len() const;
   /**
    * @brief Set len of the container
    * @param len New length of the container
@@ -44,15 +44,17 @@ public:
   virtual bool get_sign() const = 0;
   /**
    * @brief Get char on pos in container
+     @details Return char on pos in container. If cell with such pos does not
+              exist return def
    * @param pos
+     @param def
    * @return Char on pos in container
    */
-  virtual char get(int pos) const = 0;
+  virtual char get(int pos, char def = '0') const = 0;
   /**
    * @brief Return val on pos but without sign
-   * @details 1. Return val if it is in container.
-              2. Return val without sign bit if this cell store sign bit
-              3. Return def char if container has not cell with that pos
+   * @details Return cell's val without sign. If container has no cell on given
+              pos return def
    * @param pos
      @param def - default value that will be returned if container has no cell
                   on given pos
@@ -61,7 +63,7 @@ public:
   virtual char weak_get(int pos, char def) const = 0;
   /**
    * @brief Set val but not sign
-     @details Set val if it does not touch sign bit else throw an exception
+     @details Set val if it does not touch sign bit else throw an exception.
    * @param pos
    * @param val
    */
@@ -74,9 +76,15 @@ public:
    * @param val
    */
   virtual void force_set(int pos, char val) = 0;
-  // TODO write a doc. Will be done at sum and dif realization
+  /**
+   * @brief Return new Container
+   * @return new Container
+   */
   virtual Container *get_new() const = 0;
-  // TODO
+  /**
+   * @brief Return copy of a Container
+   * @return copy of a Container
+   */
   virtual Container *get_copy() const = 0;
   /**
    * @brief Return hex as a char
@@ -92,7 +100,9 @@ public:
    * @return int hex
    */
   static int char_to_int(char hex);
-  // TODO
+  /**
+   * @brief Just destructor. Does nothing
+   */
   virtual ~Container();
 };
 
@@ -125,7 +135,10 @@ protected:
    * @param hex
    */
   Hex_num(Container *arr, std::string hex);
-  // TODO
+  /**
+   * @brief Copy constructor
+   * @param that
+   */
   Hex_num(const Hex_num &that);
   /**
    * @brief Convert string to arr
@@ -135,12 +148,17 @@ protected:
    * @param str
    */
   void str_to_arr(std::string str);
-  /**
-   * @brief Make num positive
-   */
-  void unset_minus();
+  // TODO
+  Hex_num *to_additional_code();
+  // TODO
+  Hex_num *reverse_code();
+  // TODO
+  Hex_num *from_add_to_rev_code();
+  // TODO
+  static Hex_num sum_of_additonals(const Hex_num &a, const Hex_num &b);
 
 public:
+  Hex_num &operator=(const Hex_num &a);
   /**
    * @class Wrong_format_exception
    * @brief Exception for wrong format
@@ -154,10 +172,20 @@ public:
     Wrong_format_exception(std::string msg);
   };
 
-  // TODO
-  void move_left(int n);
-  // TODO
-  void move_right(int n);
+  /**
+   * @brief Moves chars n times to left. Empty cells fills with '0'. Saves num
+   *        sign.
+   * @param n
+   * @return self
+   */
+  Hex_num move_left(unsigned n);
+  /**
+   * @brief Moves chars n times to right. Empty cells fills with '0'. Saves num
+   *        sign.
+   * @param n
+   * @return self
+   */
+  Hex_num move_right(unsigned n);
   /**
    * @brief Is number even
    * @return 1 if even, else 0
@@ -171,25 +199,17 @@ public:
    * @throw Wrong_format_exception
    * @param inp
    */
-  void input(std::istream &inp);
+  std::istream &input(std::istream &inp);
   /**
    * @brief Output string representation in hex format to stream
    * @param out
    */
-  void output(std::ostream &out);
+  std::ostream &output(std::ostream &out) const;
   /**
    * @brief Print Hex_num in direct code with hex num
    * @param out
    */
   void print_container(std::ostream &out);
-  // TODO
-  Hex_num *to_additional_code();
-  // TODO
-  Hex_num *reverse_code();
-  // TODO
-  Hex_num *from_add_to_rev_code();
-  // TODO
-  static Hex_num sum_of_additonals(const Hex_num &a, const Hex_num &b);
   // TODO
   static bool equal(const Hex_num &a, const Hex_num &b);
   // TODO
