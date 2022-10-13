@@ -53,4 +53,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/lab3_run.dir/DependInfo.cmake"
   "tst/CMakeFiles/tests.dir/DependInfo.cmake"
+  "tst/CMakeFiles/tests_dyn.dir/DependInfo.cmake"
   )

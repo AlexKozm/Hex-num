@@ -1,6 +1,6 @@
 src/CMakeFiles/lab3_run.dir/main.cpp.o: \
  /home/alex/Mephi/sem3/Infa/lab3/src/main.cpp /usr/include/stdc-predef.h \
- /home/alex/Mephi/sem3/Infa/lab3/src/overl_stat_hex_num.h \
+ /home/alex/Mephi/sem3/Infa/lab3/src/overl_dyn_hex_num.h \
  /home/alex/Mephi/sem3/Infa/lab3/src/hex_num_abstract.h \
  /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
@@ -149,4 +149,6 @@ src/CMakeFiles/lab3_run.dir/main.cpp.o: \
  /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_uninitialized.h \
  /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
+ /home/alex/Mephi/sem3/Infa/lab3/src/hex_num_dynamic.h \
+ /home/alex/Mephi/sem3/Infa/lab3/src/overl_stat_hex_num.h \
  /home/alex/Mephi/sem3/Infa/lab3/src/stat_hex_num.h

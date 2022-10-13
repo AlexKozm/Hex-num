@@ -1,12 +1,27 @@
 // #include "stat_hex_num.h"
+#include "overl_dyn_hex_num.h"
 #include "overl_stat_hex_num.h"
 #include <iostream>
 // using namespace std;
 // using namespace static_hex;
-using namespace overl_stat_hex_num;
+using namespace overl_dyn_hex_num;
 
 int main() {
   cout << "Start" << endl;
+
+  // Hex_num a("-7FFFFFE");
+  // Hex_num b("-1");
+  // a.output(cout);
+  // b.output(cout);
+  // Hex_num c = Hex_num::sum(a, b);
+  // c.output(cout);
+
+  //----------------------------------------------------------
+  // Hex_num a("-1");
+  // a.print_container(cout);
+  // a.reverse_code();
+  // a.print_container(cout);
+  //-----------------------------------------------
   Hex_num a, b;
   cout << "Enter a: ";
   cin >> a;
@@ -14,7 +29,7 @@ int main() {
   cin >> b;
   cout << "a: " << a;
   cout << "b: " << b;
-  // cout << b + a; // - ?
+  // cout << (b + a); // - ?
   cout << "a + b = " << static_cast<Hex_num>(a + b);
   cout << "a - b = " << static_cast<Hex_num>(a - b);
   cout << "a == b: " << (a == b) << endl;
@@ -33,12 +48,14 @@ int main() {
   cout << "Moved right on: ";
   cout << b;
 
+  //----------------------------------------------------------
   // Hex_num a("123FADE");
   // a.move_right(2);
   // cout <<  "HERE" << endl;
   // a.print_container(cout);
   // a.output(cout);
 
+  //----------------------------------------------------------
   // Hex_num a;
   // a.input(cin);
   // a.print_container(cout << "Container: ");
@@ -46,6 +63,7 @@ int main() {
   // a.reverse_code()->print_container(cout << "Reversed: ");
   // a.to_additional_code()->print_container(cout << "Additional: ");
 
+  //----------------------------------------------------------
   // Hex_num a("-10"), b("-F");
   // a.print_container(cout);
   // b.print_container(cout);
@@ -53,6 +71,7 @@ int main() {
   // b.print_container(cout << "b direct: ");
   // Hex_num::sum(a, b).output(cout);
 
+  //----------------------------------------------------------
   // Hex_num h("-A10");
   // h.to_reverse_code()
   //     ->to_additional_code()

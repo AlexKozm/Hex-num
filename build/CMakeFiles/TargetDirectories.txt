@@ -4,5 +4,6 @@
 /home/alex/Mephi/sem3/Infa/lab3/build/src/CMakeFiles/edit_cache.dir
 /home/alex/Mephi/sem3/Infa/lab3/build/src/CMakeFiles/rebuild_cache.dir
 /home/alex/Mephi/sem3/Infa/lab3/build/tst/CMakeFiles/tests.dir
+/home/alex/Mephi/sem3/Infa/lab3/build/tst/CMakeFiles/tests_dyn.dir
 /home/alex/Mephi/sem3/Infa/lab3/build/tst/CMakeFiles/edit_cache.dir
 /home/alex/Mephi/sem3/Infa/lab3/build/tst/CMakeFiles/rebuild_cache.dir

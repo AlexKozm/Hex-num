@@ -20,6 +20,16 @@
   "file": "/home/alex/Mephi/sem3/Infa/lab3/src/overl_stat_hex_num.cpp"
 },
 {
+  "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/src",
+  "command": "/usr/bin/c++  -I/home/alex/Mephi/sem3/Infa/lab3/./src   -Wall -g -std=gnu++2a -o CMakeFiles/lab3_run.dir/hex_num_dynamic.cpp.o -c /home/alex/Mephi/sem3/Infa/lab3/src/hex_num_dynamic.cpp",
+  "file": "/home/alex/Mephi/sem3/Infa/lab3/src/hex_num_dynamic.cpp"
+},
+{
+  "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/src",
+  "command": "/usr/bin/c++  -I/home/alex/Mephi/sem3/Infa/lab3/./src   -Wall -g -std=gnu++2a -o CMakeFiles/lab3_run.dir/overl_dyn_hex_num.cpp.o -c /home/alex/Mephi/sem3/Infa/lab3/src/overl_dyn_hex_num.cpp",
+  "file": "/home/alex/Mephi/sem3/Infa/lab3/src/overl_dyn_hex_num.cpp"
+},
+{
   "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/tst",
   "command": "/usr/bin/c++  -I/home/alex/Mephi/sem3/Infa/lab3/./src -std=gnu++2a -o CMakeFiles/tests.dir/curve-test.cpp.o -c /home/alex/Mephi/sem3/Infa/lab3/tst/curve-test.cpp",
   "file": "/home/alex/Mephi/sem3/Infa/lab3/tst/curve-test.cpp"
@@ -38,5 +48,25 @@
   "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/tst",
   "command": "/usr/bin/c++  -I/home/alex/Mephi/sem3/Infa/lab3/./src -std=gnu++2a -o CMakeFiles/tests.dir/__/src/overl_stat_hex_num.cpp.o -c /home/alex/Mephi/sem3/Infa/lab3/src/overl_stat_hex_num.cpp",
   "file": "/home/alex/Mephi/sem3/Infa/lab3/src/overl_stat_hex_num.cpp"
+},
+{
+  "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/tst",
+  "command": "/usr/bin/c++  -I/home/alex/Mephi/sem3/Infa/lab3/./src -std=gnu++2a -o CMakeFiles/tests_dyn.dir/curve-test-dyn.cpp.o -c /home/alex/Mephi/sem3/Infa/lab3/tst/curve-test-dyn.cpp",
+  "file": "/home/alex/Mephi/sem3/Infa/lab3/tst/curve-test-dyn.cpp"
+},
+{
+  "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/tst",
+  "command": "/usr/bin/c++  -I/home/alex/Mephi/sem3/Infa/lab3/./src -std=gnu++2a -o CMakeFiles/tests_dyn.dir/__/src/hex_num_dynamic.cpp.o -c /home/alex/Mephi/sem3/Infa/lab3/src/hex_num_dynamic.cpp",
+  "file": "/home/alex/Mephi/sem3/Infa/lab3/src/hex_num_dynamic.cpp"
+},
+{
+  "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/tst",
+  "command": "/usr/bin/c++  -I/home/alex/Mephi/sem3/Infa/lab3/./src -std=gnu++2a -o CMakeFiles/tests_dyn.dir/__/src/hex_num_abstract.cpp.o -c /home/alex/Mephi/sem3/Infa/lab3/src/hex_num_abstract.cpp",
+  "file": "/home/alex/Mephi/sem3/Infa/lab3/src/hex_num_abstract.cpp"
+},
+{
+  "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/tst",
+  "command": "/usr/bin/c++  -I/home/alex/Mephi/sem3/Infa/lab3/./src -std=gnu++2a -o CMakeFiles/tests_dyn.dir/__/src/overl_dyn_hex_num.cpp.o -c /home/alex/Mephi/sem3/Infa/lab3/src/overl_dyn_hex_num.cpp",
+  "file": "/home/alex/Mephi/sem3/Infa/lab3/src/overl_dyn_hex_num.cpp"
 }
 ]

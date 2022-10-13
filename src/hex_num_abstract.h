@@ -63,7 +63,8 @@ public:
   virtual char weak_get(int pos, char def) const = 0;
   /**
    * @brief Set val but not sign
-     @details Set val if it does not touch sign bit else throw an exception.
+     @details Set val if it is possible not to touch sign bit else 
+              throw an exception.
    * @param pos
    * @param val
    */
@@ -148,14 +149,6 @@ protected:
    * @param str
    */
   void str_to_arr(std::string str);
-  // TODO
-  Hex_num *to_additional_code();
-  // TODO
-  Hex_num *reverse_code();
-  // TODO
-  Hex_num *from_add_to_rev_code();
-  // TODO
-  static Hex_num sum_of_additonals(const Hex_num &a, const Hex_num &b);
 
 public:
   Hex_num &operator=(const Hex_num &a);
@@ -172,6 +165,14 @@ public:
     Wrong_format_exception(std::string msg);
   };
 
+  // TODO
+  Hex_num *to_additional_code();
+  // TODO
+  Hex_num *reverse_code();
+  // TODO
+  Hex_num *from_add_to_rev_code();
+  // TODO
+  static Hex_num sum_of_additonals(const Hex_num &a, const Hex_num &b);
   /**
    * @brief Moves chars n times to left. Empty cells fills with '0'. Saves num
    *        sign.

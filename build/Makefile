@@ -142,6 +142,19 @@ tests/fast:
 	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/tests.dir/build.make tst/CMakeFiles/tests.dir/build
 .PHONY : tests/fast
 
+#=============================================================================
+# Target rules for targets named tests_dyn
+
+# Build rule for target.
+tests_dyn: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_dyn
+.PHONY : tests_dyn
+
+# fast build rule for target.
+tests_dyn/fast:
+	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/tests_dyn.dir/build.make tst/CMakeFiles/tests_dyn.dir/build
+.PHONY : tests_dyn/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -152,6 +165,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... lab3_run"
 	@echo "... tests"
+	@echo "... tests_dyn"
 .PHONY : help
 
 
