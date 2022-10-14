@@ -150,6 +150,9 @@ protected:
    */
   void str_to_arr(std::string str);
 
+  // TODO
+  void check_for_minus_zero();
+
 public:
   Hex_num &operator=(const Hex_num &a);
   /**

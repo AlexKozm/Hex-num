@@ -20,6 +20,7 @@ Container::Container() {
 
 Container::Container(const Container &that) {
   set_len(that.get_len());
+  arr.resize(that.get_len());
   for (int i = 0; i < get_len(); ++i) {
     arr[i] = that.arr[i];
   }
@@ -42,9 +43,7 @@ char Container::get(int pos, char def) const {
 }
 
 char Container::weak_get(int pos, char def) const {
-  if (pos < get_len() - 1) {
-    return arr[pos];
-  } else if (pos == get_len() - 1) {
+  if (pos == get_len() - 1) {
     int val = char_to_int(arr[pos]);
     if (val >= 8) {
       return int_to_char(val - 8);
@@ -81,7 +80,7 @@ void Container::set(int pos, char val) {
   }
   // cout << "Before if: " << (pos == get_len() - 1) << "; " << get(pos, '0') << endl;
   if ((pos == get_len() - 1) && (get_sign() == 1)) {
-    cout << "resizing for minus" << endl;
+    // cout << "resizing for minus" << endl;
     arr.resize(pos + 2);
     arr[pos + 1] = '0';
     set_len(pos + 2);

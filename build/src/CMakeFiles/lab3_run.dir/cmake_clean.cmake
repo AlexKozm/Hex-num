@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/lab3_run.dir/hex_num_dynamic.cpp.o.d"
   "CMakeFiles/lab3_run.dir/main.cpp.o"
   "CMakeFiles/lab3_run.dir/main.cpp.o.d"
+  "CMakeFiles/lab3_run.dir/menu.cpp.o"
+  "CMakeFiles/lab3_run.dir/menu.cpp.o.d"
   "CMakeFiles/lab3_run.dir/overl_dyn_hex_num.cpp.o"
   "CMakeFiles/lab3_run.dir/overl_dyn_hex_num.cpp.o.d"
   "CMakeFiles/lab3_run.dir/overl_stat_hex_num.cpp.o"

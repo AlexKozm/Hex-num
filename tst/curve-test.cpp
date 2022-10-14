@@ -462,5 +462,10 @@ TEST_CASE("Moves") {
       a.move_right(2).output(str);
       CHECK(str.str() == "-123FA\n");
     }
+    SECTION("-123 -> 3") {
+      Hex_num a("-123");
+      a.move_right(3).output(str);
+      CHECK(str.str() == "0\n");
+    }
   }
 }

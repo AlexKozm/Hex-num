@@ -5,6 +5,7 @@
 #include <math.h>
 #include <stdexcept>
 #include <string>
+#include <sstream>
 
 using namespace hex_num;
 using namespace std;
@@ -66,6 +67,7 @@ Hex_num::~Hex_num() {
 }
 
 Hex_num &Hex_num::operator=(const Hex_num &a) {
+  delete arr;
   arr = a.arr->get_copy();
   return *this;
 }
@@ -94,6 +96,16 @@ void Hex_num::str_to_arr(string str) {
   if (str[0] == '-') {
     arr->set_minus();
   }
+  check_for_minus_zero();
+}
+
+
+void Hex_num::check_for_minus_zero() {
+  std::stringstream str;
+  output(str);
+  if (str.str() == "-0\n") {
+    arr->unset_minus();
+  }
 }
 
 //-------------------------------------------------------------
@@ -102,10 +114,10 @@ Hex_num Hex_num::move_left(unsigned n) {
     return *this;
   }
   bool sign = arr->get_sign();
-  for (int i = arr->get_len(); i >= 0; --i) {
+  for (int i = arr->get_len(); i >= 1; --i) {
     arr->force_set(i + n - 1, arr->weak_get(i - 1, '0'));
   }
-  for (int i = 0; i < n; ++i) {
+  for (int i = 0; i < static_cast<int>(n); ++i) {
     arr->force_set(i, '0');
   }
   if (!sign) {
@@ -113,26 +125,37 @@ Hex_num Hex_num::move_left(unsigned n) {
   } else {
     arr->set_minus();
   }
+  check_for_minus_zero();
   return *this;
 }
 
 Hex_num Hex_num::move_right(unsigned n) {
+  // print_container(cout);
   if (n == 0) {
     return *this;
   }
   bool sign = arr->get_sign();
-  cout << "Sign: " << sign << endl;
+  // cout << "Sign: " << sign << endl;
   for (int i = 1; i < arr->get_len(); ++i) {
+    // cout << "set to pos " << (i - 1) << ": " 
+    //      << arr->weak_get(i + n - 1, '0') << endl;
     arr->set(i - 1, arr->weak_get(i + n - 1, '0'));
+    // arr->force_set(i + n - 1, '0');
+    // cout << "1-st for: "; print_container(cout);
   }
-  for (int i = arr->get_len() - 1; i > arr->get_len() - 1 - n; --i) {
+  // cout <<( arr->get_len() - 1 > 
+  //          arr->get_len() - 1 - static_cast<int>(n)) << endl;
+  for (int i = arr->get_len() - 1; i > arr->get_len() - 1 - static_cast<int>(n); --i) {
     arr->set(i, '0');
+    // cout << "2-d for: "; print_container(cout);
   }
   if (!sign) {
     arr->unset_minus();
   } else {
     arr->set_minus();
   }
+  // cout << "before minus zero check: "; print_container(cout);
+  check_for_minus_zero();
   return *this;
 }
 
@@ -291,7 +314,7 @@ Hex_num *Hex_num::from_add_to_rev_code() {
       arr->set(i, 'F');
     }
   }
-  cout << "rev code: "; this->print_container(cout);
+  // cout << "rev code: "; this->print_container(cout);
   return this;
 }
 
@@ -325,7 +348,7 @@ Hex_num Hex_num::sum_of_additonals(const Hex_num &a, const Hex_num &b) {
       ++i;
     }
   }
-  cout << "additional in sum func: "; ans.print_container(cout);
+  // cout << "additional in sum func: "; ans.print_container(cout);
   if (a.arr->get_sign() == 1 && b.arr->get_sign() == 1 &&
       C::char_to_int(ans.arr->get(ans.arr->get_len() - 1)) / 8 % 2 == 0) {
     throw overflow_error("<0 + <0 = >0");
@@ -336,20 +359,21 @@ Hex_num Hex_num::sum_of_additonals(const Hex_num &a, const Hex_num &b) {
   } else if (a.arr->get_sign() == 1 ||
              b.arr->get_sign() == 1) {
   }
-  cout << "final additional in sum func: "; ans.print_container(cout);
+  // cout << "final additional in sum func: "; ans.print_container(cout);
   return ans;
 }
 
 Hex_num Hex_num::sum(const Hex_num &a, const Hex_num &b) {
   Hex_num a_add(a);
   a_add.reverse_code()->to_additional_code();
-  cout<<"additional a: "; a_add.print_container(cout);
+  // cout<<"additional a: "; a_add.print_container(cout);
   Hex_num b_add(b);
   b_add.reverse_code()->to_additional_code();
-  cout<<"additional b: "; b_add.print_container(cout);
+  // cout<<"additional b: "; b_add.print_container(cout);
   Hex_num ans = sum_of_additonals(a_add, b_add);
   ans.from_add_to_rev_code()->reverse_code();
-  cout<<"ans: "; ans.print_container(cout);
+  // cout<<"ans: "; ans.print_container(cout);
+  ans.check_for_minus_zero();
   return ans;
 }
 

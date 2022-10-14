@@ -150,5 +150,4 @@ src/CMakeFiles/lab3_run.dir/main.cpp.o: \
  /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
  /home/alex/Mephi/sem3/Infa/lab3/src/hex_num_dynamic.h \
- /home/alex/Mephi/sem3/Infa/lab3/src/overl_stat_hex_num.h \
- /home/alex/Mephi/sem3/Infa/lab3/src/stat_hex_num.h
+ /home/alex/Mephi/sem3/Infa/lab3/src/menu.h

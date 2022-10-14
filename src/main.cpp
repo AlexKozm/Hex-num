@@ -1,19 +1,27 @@
 // #include "stat_hex_num.h"
 #include "overl_dyn_hex_num.h"
-#include "overl_stat_hex_num.h"
+// #include "overl_stat_hex_num.h"
 #include <iostream>
+#include "menu.h"
 // using namespace std;
 // using namespace static_hex;
 using namespace overl_dyn_hex_num;
 
 int main() {
   cout << "Start" << endl;
+  bool run = 1;
+  while (run) {
+    try {
+      run = input_menu::menu();
+    } 
+    catch (hex_num::Hex_num::Wrong_format_exception err) {
 
-  // Hex_num a("-7FFFFFE");
-  // Hex_num b("-1");
-  // a.output(cout);
-  // b.output(cout);
-  // Hex_num c = Hex_num::sum(a, b);
+    }
+  }
+
+  // Hex_num a("1234");
+  // Hex_num b("-AF12");
+  // Hex_num c = a + b;
   // c.output(cout);
 
   //----------------------------------------------------------
@@ -22,31 +30,31 @@ int main() {
   // a.reverse_code();
   // a.print_container(cout);
   //-----------------------------------------------
-  Hex_num a, b;
-  cout << "Enter a: ";
-  cin >> a;
-  cout << "Enter b: ";
-  cin >> b;
-  cout << "a: " << a;
-  cout << "b: " << b;
-  // cout << (b + a); // - ?
-  cout << "a + b = " << static_cast<Hex_num>(a + b);
-  cout << "a - b = " << static_cast<Hex_num>(a - b);
-  cout << "a == b: " << (a == b) << endl;
-  cout << "Is a even: " << a.evenness() << endl;
-  cout << "Is a even: " << b.evenness() << endl;
-
-  int n, m;
-  cout << "Move left on: ";
-  cin >> n;
-  cout << "Move right on: ";
-  cin >> m;
-  a << n;
-  b >> m;
-  cout << "Moved left on: ";
-  cout << a;
-  cout << "Moved right on: ";
-  cout << b;
+  // Hex_num a, b;
+  // cout << "Enter a: ";
+  // cin >> a;
+  // cout << "Enter b: ";
+  // cin >> b;
+  // cout << "a: " << a;
+  // cout << "b: " << b;
+  // // cout << (b + a); // - ?
+  // cout << "a + b = " << static_cast<Hex_num>(a + b);
+  // cout << "a - b = " << static_cast<Hex_num>(a - b);
+  // cout << "a == b: " << (a == b) << endl;
+  // cout << "Is a even: " << a.evenness() << endl;
+  // cout << "Is a even: " << b.evenness() << endl;
+  //
+  // int n, m;
+  // cout << "Move left on: ";
+  // cin >> n;
+  // cout << "Move right on: ";
+  // cin >> m;
+  // a << n;
+  // b >> m;
+  // cout << "Moved left on: ";
+  // cout << a;
+  // cout << "Moved right on: ";
+  // cout << b;
 
   //----------------------------------------------------------
   // Hex_num a("123FADE");
