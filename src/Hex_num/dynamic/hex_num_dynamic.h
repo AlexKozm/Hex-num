@@ -2,7 +2,7 @@
 #if !defined (HEX_NUM_DYNAMIC_H)
 #define HEX_NUM_DYNAMIC_H
 
-#include "Hex_num/base/hex_num_abstract.h"
+#include "Hex_num/base/hex_num.h"
 
 namespace hex_num_dynamic {
 using namespace std;

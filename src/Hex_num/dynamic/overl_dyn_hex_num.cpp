@@ -1,5 +1,5 @@
 #include "overl_dyn_hex_num.h"
-#include "Hex_num/base/hex_num_abstract.h"
+#include "Hex_num/base/hex_num.h"
 #include "iostream"
 #include "hex_num_dynamic.h"
 #include <string>

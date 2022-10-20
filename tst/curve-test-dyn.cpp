@@ -1,4 +1,4 @@
-#include "Hex_num/base/hex_num_abstract.h"
+#include "Hex_num/base/hex_num.h"
 #include "Hex_num/dynamic/hex_num_dynamic.h"
 #include <catch2/catch_test_macros.hpp>
 #include <sstream>

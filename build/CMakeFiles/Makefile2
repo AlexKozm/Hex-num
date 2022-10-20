@@ -116,12 +116,12 @@ tst/clean: tst/CMakeFiles/tests_dyn.dir/clean
 src/CMakeFiles/lab3_run.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target lab3_run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target lab3_run"
 .PHONY : src/CMakeFiles/lab3_run.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/lab3_run.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/lab3_run.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/lab3_run.dir/rule
@@ -142,12 +142,12 @@ src/CMakeFiles/lab3_run.dir/clean:
 tst/CMakeFiles/tests.dir/all:
 	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/tests.dir/build.make tst/CMakeFiles/tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/tests.dir/build.make tst/CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=9,10,11,12,13 "Built target tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=10,11,12,13,14,15 "Built target tests"
 .PHONY : tst/CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
 tst/CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tst/CMakeFiles/tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 0
 .PHONY : tst/CMakeFiles/tests.dir/rule
@@ -168,12 +168,12 @@ tst/CMakeFiles/tests.dir/clean:
 tst/CMakeFiles/tests_dyn.dir/all:
 	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/tests_dyn.dir/build.make tst/CMakeFiles/tests_dyn.dir/depend
 	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/tests_dyn.dir/build.make tst/CMakeFiles/tests_dyn.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=14,15,16,17,18 "Built target tests_dyn"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=16,17,18,19,20,21 "Built target tests_dyn"
 .PHONY : tst/CMakeFiles/tests_dyn.dir/all
 
 # Build rule for subdir invocation for target.
 tst/CMakeFiles/tests_dyn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tst/CMakeFiles/tests_dyn.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 0
 .PHONY : tst/CMakeFiles/tests_dyn.dir/rule

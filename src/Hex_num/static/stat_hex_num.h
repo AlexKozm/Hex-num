@@ -4,7 +4,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <string>
-#include "Hex_num/base/hex_num_abstract.h"
+#include "Hex_num/base/hex_num.h"
 
 namespace static_hex {
 
