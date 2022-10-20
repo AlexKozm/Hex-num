@@ -26,7 +26,6 @@ char C::int_to_char(int hex) {
 }
 
 int C::char_to_int(char hex) {
-  // cout << "Befor throw: " << (char)hex << endl;
   if ('0' <= hex && hex <= '9') {
     return hex - '0';
   } else if ('A' <= hex && hex <= 'F') {

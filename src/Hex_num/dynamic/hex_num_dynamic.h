@@ -1,19 +1,16 @@
-#if !defined(HEX_NUM_H)
-#define HEX_NUM_H
+#include <vector>
+#if !defined (HEX_NUM_DYNAMIC_H)
+#define HEX_NUM_DYNAMIC_H
 
-#include <iostream>
-#include <stdexcept>
-#include <string>
-#include "hex_num_abstract.h"
+#include "Hex_num/base/hex_num_abstract.h"
 
-namespace static_hex {
-
+namespace hex_num_dynamic {
+using namespace std;
 
 //TODO
 class Container : public hex_num::Container {
-  const static size_t stat_len = 7;
-  char arr[stat_len] = {};
-
+  const static int def_len = 3;
+  vector<char> arr = vector<char>(def_len);
 public:
   /**
    * @brief Init container with 0's
@@ -76,6 +73,6 @@ public:
   ~Hex_num();
 };
 
-} // namespace static_hex
+}
 
 #endif

@@ -1,5 +1,5 @@
 #include "stat_hex_num.h"
-#include "hex_num_abstract.h"
+#include "Hex_num/base/hex_num_abstract.h"
 #include <algorithm>
 #include <iostream>
 #include <stdexcept>

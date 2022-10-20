@@ -109,9 +109,8 @@ public:
 
 /**
  * @class Hex_num
- * @brief Class with abstract container
+ * @brief Base class for hex_num 
  * @details
- * @todo make abstract
  */
 class Hex_num {
 
