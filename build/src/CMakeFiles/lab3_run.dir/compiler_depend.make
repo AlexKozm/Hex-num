@@ -427,7 +427,6 @@ src/CMakeFiles/lab3_run.dir/hex_num_dynamic.cpp.o: ../src/hex_num_dynamic.cpp \
 
 src/CMakeFiles/lab3_run.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/stdc-predef.h \
-  ../src/overl_dyn_hex_num.h \
   ../src/hex_num_abstract.h \
   /usr/include/c++/9/iostream \
   /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
@@ -608,6 +607,7 @@ src/CMakeFiles/lab3_run.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/9/bits/ostream.tcc \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/bits/istream.tcc \
+  ../src/overl_dyn_hex_num.h \
   /usr/include/c++/9/optional \
   /usr/include/c++/9/utility \
   /usr/include/c++/9/bits/stl_relops.h \

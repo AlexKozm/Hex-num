@@ -36,10 +36,13 @@ class Hex_num : public hex_num_dynamic::Hex_num {
   hex_num::Hex_num &operator>>(int n);
   friend istream &operator>>(istream &is, hex_num::Hex_num &hex);
   friend ostream &operator<<(ostream &os, const hex_num::Hex_num &hex);
+  friend ostream &operator<<(ostream &os, hex_num::Hex_num &&hex);
   friend hex_num::Hex_num operator+(const Hex_num &a, const Hex_num &b);
   friend hex_num::Hex_num operator-(const Hex_num &a, const Hex_num &b);
 };
 
 } // namespace overl_dyn_hex_num
+
+// ostream &::operator<<(ostream &os, hex_num::Hex_num hex);
 
 #endif

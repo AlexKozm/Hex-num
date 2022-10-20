@@ -15,7 +15,16 @@ Inheritance diagram for hex\+\_\+num\+::Container\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=200pt]{classhex__num_1_1_container__inherit__graph}
+\includegraphics[width=350pt]{classhex__num_1_1_container__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for hex\+\_\+num\+::Container\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classhex__num_1_1_container__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -106,7 +115,7 @@ Set val to pos even if it touchs number sign, does nothing if container has not 
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_a4379b42194126e7448888d08f982887e}{static\+\_\+hex\+::\+Container}}.
+Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_a4379b42194126e7448888d08f982887e}{static\+\_\+hex\+::\+Container}}, and \mbox{\hyperlink{classhex__num__dynamic_1_1_container_a4379b42194126e7448888d08f982887e}{hex\+\_\+num\+\_\+dynamic\+::\+Container}}.
 
 \mbox{\Hypertarget{classhex__num_1_1_container_a406c24a918cf07bd421357c31e5741b0}\label{classhex__num_1_1_container_a406c24a918cf07bd421357c31e5741b0}} 
 \index{hex\_num::Container@{hex\_num::Container}!get@{get}}
@@ -130,7 +139,7 @@ Char on pos in container
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_a1a8032a02914a99de2e34b9874d6d35c}{static\+\_\+hex\+::\+Container}}.
+Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_a1a8032a02914a99de2e34b9874d6d35c}{static\+\_\+hex\+::\+Container}}, and \mbox{\hyperlink{classhex__num__dynamic_1_1_container_a1a8032a02914a99de2e34b9874d6d35c}{hex\+\_\+num\+\_\+dynamic\+::\+Container}}.
 
 \mbox{\Hypertarget{classhex__num_1_1_container_a2d98c56fa8e0b775faeeaa778433339e}\label{classhex__num_1_1_container_a2d98c56fa8e0b775faeeaa778433339e}} 
 \index{hex\_num::Container@{hex\_num::Container}!get\_copy@{get\_copy}}
@@ -147,7 +156,7 @@ copy of a \mbox{\hyperlink{classhex__num_1_1_container}{Container}}
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_aece6989fe9db58affa758fc69e489353}{static\+\_\+hex\+::\+Container}}.
+Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_aece6989fe9db58affa758fc69e489353}{static\+\_\+hex\+::\+Container}}, and \mbox{\hyperlink{classhex__num__dynamic_1_1_container_aece6989fe9db58affa758fc69e489353}{hex\+\_\+num\+\_\+dynamic\+::\+Container}}.
 
 \mbox{\Hypertarget{classhex__num_1_1_container_a65e3d74752e4d79aee469d61092b67f5}\label{classhex__num_1_1_container_a65e3d74752e4d79aee469d61092b67f5}} 
 \index{hex\_num::Container@{hex\_num::Container}!get\_len@{get\_len}}
@@ -177,7 +186,7 @@ new \mbox{\hyperlink{classhex__num_1_1_container}{Container}}
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_afea73b22d5176fca52a6a2937b086de2}{static\+\_\+hex\+::\+Container}}.
+Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_afea73b22d5176fca52a6a2937b086de2}{static\+\_\+hex\+::\+Container}}, and \mbox{\hyperlink{classhex__num__dynamic_1_1_container_afea73b22d5176fca52a6a2937b086de2}{hex\+\_\+num\+\_\+dynamic\+::\+Container}}.
 
 \mbox{\Hypertarget{classhex__num_1_1_container_ae759a017e6cfca0037f22ec86108a488}\label{classhex__num_1_1_container_ae759a017e6cfca0037f22ec86108a488}} 
 \index{hex\_num::Container@{hex\_num::Container}!get\_sign@{get\_sign}}
@@ -194,7 +203,7 @@ Return 0 if sing is + or 0 and return 1 if sign is -\/
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_a5a9dbc746a87a6a68532641bd0012316}{static\+\_\+hex\+::\+Container}}.
+Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_a5a9dbc746a87a6a68532641bd0012316}{static\+\_\+hex\+::\+Container}}, and \mbox{\hyperlink{classhex__num__dynamic_1_1_container_a5a9dbc746a87a6a68532641bd0012316}{hex\+\_\+num\+\_\+dynamic\+::\+Container}}.
 
 \mbox{\Hypertarget{classhex__num_1_1_container_a355a488c7b14b3afdd32244929c438cd}\label{classhex__num_1_1_container_a355a488c7b14b3afdd32244929c438cd}} 
 \index{hex\_num::Container@{hex\_num::Container}!int\_to\_char@{int\_to\_char}}
@@ -224,7 +233,7 @@ Hex as a char
 
 Set val but not sign. 
 
-Set val if it does not touch sign bit else throw an exception. 
+Set val if it is possible not to touch sign bit else throw an exception. 
 \begin{DoxyParams}{Parameters}
 {\em pos} & \\
 \hline
@@ -233,7 +242,7 @@ Set val if it does not touch sign bit else throw an exception.
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_ad9c46d0d8cfcc11af06a278a83816d8f}{static\+\_\+hex\+::\+Container}}.
+Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_ad9c46d0d8cfcc11af06a278a83816d8f}{static\+\_\+hex\+::\+Container}}, and \mbox{\hyperlink{classhex__num__dynamic_1_1_container_ad9c46d0d8cfcc11af06a278a83816d8f}{hex\+\_\+num\+\_\+dynamic\+::\+Container}}.
 
 \mbox{\Hypertarget{classhex__num_1_1_container_a2b00862b3c4ba8fef953b3c4237ed5b1}\label{classhex__num_1_1_container_a2b00862b3c4ba8fef953b3c4237ed5b1}} 
 \index{hex\_num::Container@{hex\_num::Container}!set\_len@{set\_len}}
@@ -272,7 +281,7 @@ Return cell\textquotesingle{}s val without sign. If container has no cell on giv
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_a812023ae82882a3bb11bb5ceb9505503}{static\+\_\+hex\+::\+Container}}.
+Implemented in \mbox{\hyperlink{classstatic__hex_1_1_container_a812023ae82882a3bb11bb5ceb9505503}{static\+\_\+hex\+::\+Container}}, and \mbox{\hyperlink{classhex__num__dynamic_1_1_container_a812023ae82882a3bb11bb5ceb9505503}{hex\+\_\+num\+\_\+dynamic\+::\+Container}}.
 
 
 

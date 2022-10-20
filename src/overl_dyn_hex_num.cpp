@@ -34,6 +34,10 @@ ostream &operator<<(ostream &os, const hex_num::Hex_num &hex) {
   hex.output(os);
   return os;
 }
+ostream &operator<<(ostream &os, const hex_num::Hex_num &&hex) {
+  hex.output(os);
+  return os;
+}
 hex_num::Hex_num operator+(const Hex_num &a, const Hex_num &b) {
   return hex_num_dynamic::Hex_num::sum(a, b);
 }

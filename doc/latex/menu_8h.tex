@@ -1,0 +1,74 @@
+\hypertarget{menu_8h}{}\doxysection{src/menu.h File Reference}
+\label{menu_8h}\index{src/menu.h@{src/menu.h}}
+
+
+Menu file.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classinput__menu_1_1_e_o_f__exeption}{input\+\_\+menu\+::\+E\+O\+F\+\_\+exeption}}
+\begin{DoxyCompactList}\small\item\em Exeption for End Of File. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{menu_8h_acbb95d0247229e8913d662e1f24129cc}{input\+\_\+menu\+::get\+\_\+uint}} (int max)
+\begin{DoxyCompactList}\small\item\em Get int in \mbox{[}0; max) or throw exeption in case of eof. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{menu_8h_ac9388da2d911eee1a264e6b7a1300fbc}{input\+\_\+menu\+::get\+\_\+double}} ()
+\begin{DoxyCompactList}\small\item\em Get double or throw exeption in case of eof. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_aff9c357559b5d5731b469789a9b56707}\label{menu_8h_aff9c357559b5d5731b469789a9b56707}} 
+int {\bfseries input\+\_\+menu\+::big\+\_\+if} (int num)
+\item 
+\mbox{\Hypertarget{menu_8h_a25379ba47ba9b47219676d3837ff4131}\label{menu_8h_a25379ba47ba9b47219676d3837ff4131}} 
+int {\bfseries input\+\_\+menu\+::menu} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Menu file. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{menu_8h_ac9388da2d911eee1a264e6b7a1300fbc}\label{menu_8h_ac9388da2d911eee1a264e6b7a1300fbc}} 
+\index{menu.h@{menu.h}!get\_double@{get\_double}}
+\index{get\_double@{get\_double}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{get\_double()}{get\_double()}}
+{\footnotesize\ttfamily double input\+\_\+menu\+::get\+\_\+double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get double or throw exeption in case of eof. 
+
+Get double or throw exeption in case of eof. If input is not a number function will ask to enter number again. 
+\begin{DoxyExceptions}{Exceptions}
+{\em E\+O\+F\+\_\+exeption} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Double from input 
+\end{DoxyReturn}
+\mbox{\Hypertarget{menu_8h_acbb95d0247229e8913d662e1f24129cc}\label{menu_8h_acbb95d0247229e8913d662e1f24129cc}} 
+\index{menu.h@{menu.h}!get\_uint@{get\_uint}}
+\index{get\_uint@{get\_uint}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{get\_uint()}{get\_uint()}}
+{\footnotesize\ttfamily int input\+\_\+menu\+::get\+\_\+uint (\begin{DoxyParamCaption}\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Get int in \mbox{[}0; max) or throw exeption in case of eof. 
+
+Get int in \mbox{[}0; max) or throw exeption in case of eof. If input is not a number or the number is not in \mbox{[}0; max), function will ask to enter number again. 
+\begin{DoxyExceptions}{Exceptions}
+{\em E\+O\+F\+\_\+exeption} & \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em max} & Upper bound \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int in \mbox{[}0; max) or -\/1 in case of eof 
+\end{DoxyReturn}

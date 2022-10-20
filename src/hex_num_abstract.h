@@ -141,6 +141,8 @@ protected:
    * @param that
    */
   Hex_num(const Hex_num &that);
+  // TODO
+  Hex_num(Hex_num &&that);
   /**
    * @brief Convert string to arr
    * @details Convert string to arr. In case of error throws an exception
@@ -154,6 +156,9 @@ protected:
   void check_for_minus_zero();
 
 public:
+  // TODO 
+  Hex_num &operator=(Hex_num &&a);
+  // TODO
   Hex_num &operator=(const Hex_num &a);
   /**
    * @class Wrong_format_exception

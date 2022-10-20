@@ -66,19 +66,12 @@ void Container::set(int pos, char val) {
 
 void Container::force_set(int pos, char val) {
   if (pos < get_len()) {
-    // throw std::overflow_error("Out of index");
     arr[pos] = val;
   }
 }
 
 hex_num::Container *Container::get_new() const { return new Container; }
 hex_num::Container *Container::get_copy() const {
-  // Container *cont = new Container;
-  // cont->set_len(get_len());
-  // for (int i = 0; i < get_len(); ++i) {
-  //   cont->arr[i] = arr[i];
-  // }
-  // return cont;
   return new Container(*this);
 }
 
@@ -112,5 +105,4 @@ Hex_num::Hex_num(const hex_num::Hex_num &that) : hex_num::Hex_num(that) {};
 Hex_num::~Hex_num() {
   delete arr;
   arr = nullptr;
-  // std::cout << "Static container destructor" << std::endl;
 };

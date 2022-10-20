@@ -77,7 +77,7 @@ int input_menu::big_if(int num) {
     }
     break;
   case 5:
-    cout << "Enter hex: " << endl;
+    cout << "Enter hex: ";
     cin >> a;
     cout << "Lengh of movement. ";
     inp = get_uint(-1);

@@ -1,5 +1,7 @@
 <map id="hex_num::Hex_num" name="hex_num::Hex_num">
-<area shape="rect" id="node1" title="Class with abstract container." alt="" coords="9,5,161,32"/>
-<area shape="rect" id="node2" href="$classstatic__hex_1_1_hex__num.html" title=" " alt="" coords="5,80,164,107"/>
-<area shape="rect" id="node3" href="$classoverl__stat__hex__num_1_1_hex__num.html" title=" " alt="" coords="7,155,162,196"/>
+<area shape="rect" id="node1" title="Class with abstract container." alt="" coords="121,5,315,376"/>
+<area shape="rect" id="node2" href="$classhex__num__dynamic_1_1_hex__num.html" title=" " alt="" coords="5,424,220,560"/>
+<area shape="rect" id="node4" href="$classstatic__hex_1_1_hex__num.html" title=" " alt="" coords="244,424,403,560"/>
+<area shape="rect" id="node3" href="$classoverl__dyn__hex__num_1_1_hex__num.html" title=" " alt="" coords="32,608,193,803"/>
+<area shape="rect" id="node5" href="$classoverl__stat__hex__num_1_1_hex__num.html" title=" " alt="" coords="246,608,401,803"/>
 </map>
