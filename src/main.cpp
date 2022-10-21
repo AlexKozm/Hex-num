@@ -14,7 +14,7 @@ int main() {
     try {
       run = input_menu::menu();
     } 
-    catch (hex_num::Hex_num::Wrong_format_exception &err) {
+    catch (hex_num::Container::Wrong_format_exception &err) {
 
     }
   }

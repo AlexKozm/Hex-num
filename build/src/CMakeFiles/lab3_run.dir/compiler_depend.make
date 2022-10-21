@@ -1214,7 +1214,7 @@ src/CMakeFiles/lab3_run.dir/Hex_num/static/stat_hex_num.cpp.o: ../src/Hex_num/st
 
 src/CMakeFiles/lab3_run.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/stdc-predef.h \
-  ../src/Hex_num/base/hex_num_abstract.h \
+  ../src/Hex_num/base/hex_num.h \
   /usr/include/c++/9/iostream \
   /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -1396,7 +1396,7 @@ src/CMakeFiles/lab3_run.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/9/bits/istream.tcc \
   ../src/Hex_num/base/container.h \
   ../src/Hex_num/dynamic/overl_dyn_hex_num.h \
-  ../src/Hex_num/base/hex_num_abstract.h \
+  ../src/Hex_num/base/hex_num.h \
   /usr/include/c++/9/optional \
   /usr/include/c++/9/utility \
   /usr/include/c++/9/bits/stl_relops.h \
@@ -1927,8 +1927,6 @@ src/CMakeFiles/lab3_run.dir/menu.cpp.o: ../src/menu.cpp \
 /usr/include/c++/9/bits/invoke.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h:
-
-../src/Hex_num/base/hex_num_abstract.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 

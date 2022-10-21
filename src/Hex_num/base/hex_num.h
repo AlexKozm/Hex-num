@@ -15,7 +15,7 @@ namespace hex_num {
 class Hex_num {
 
 protected:
-  Container *arr = nullptr;
+  Container *cont = nullptr;
   /**
    * @brief Create Hex_num with given Container arr
    * @param arr
@@ -59,18 +59,6 @@ public:
   Hex_num &operator=(Hex_num &&a);
   // TODO
   Hex_num &operator=(const Hex_num &a);
-  /**
-   * @class Wrong_format_exception
-   * @brief Exception for wrong format
-   */
-  class Wrong_format_exception : public std::runtime_error {
-  public:
-    /**
-     * @brief Constructor with message
-     * @param msg
-     */
-    Wrong_format_exception(std::string msg);
-  };
 
   // TODO
   Hex_num *to_additional_code();

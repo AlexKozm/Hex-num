@@ -103,6 +103,6 @@ Hex_num::Hex_num(int hex) : hex_num::Hex_num(new Container, hex) {}
 Hex_num::Hex_num(std::string hex) : hex_num::Hex_num(new Container, hex) {}
 Hex_num::Hex_num(const hex_num::Hex_num &that) : hex_num::Hex_num(that) {};
 Hex_num::~Hex_num() {
-  delete arr;
-  arr = nullptr;
+  delete cont;
+  cont = nullptr;
 };

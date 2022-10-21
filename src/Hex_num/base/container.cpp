@@ -1,8 +1,6 @@
 #include "container.h"
-#include "hex_num.h"
 
 using namespace hex_num;
-using namespace std;
 typedef Container C;
 
 //-----------------Container-----------------------------------
@@ -24,10 +22,13 @@ int C::char_to_int(char hex) {
   } else if ('A' <= hex && hex <= 'F') {
     return hex - 'A' + 10;
   } else {
-    throw Hex_num::Wrong_format_exception(
+    throw C::Wrong_format_exception(
         "Wrong format in converting char to int");
   }
 }
+
+C::Wrong_format_exception::Wrong_format_exception(std::string msg)
+    : runtime_error(msg){};
 
 C::~Container() {}
 //-------------------------------------------------------------

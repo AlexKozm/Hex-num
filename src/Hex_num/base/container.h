@@ -105,6 +105,18 @@ public:
    * @brief Just destructor. Does nothing
    */
   virtual ~Container();
+  /**
+   * @class Wrong_format_exception
+   * @brief Exception for wrong format
+   */
+  class Wrong_format_exception : public std::runtime_error {
+  public:
+    /**
+     * @brief Constructor with message
+     * @param msg
+     */
+    Wrong_format_exception(std::string msg);
+  };
 };
 } // namespace hex_num
 #endif
