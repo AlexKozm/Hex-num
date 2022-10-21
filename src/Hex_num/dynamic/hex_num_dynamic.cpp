@@ -4,12 +4,12 @@
 
 using namespace hex_num_dynamic;
 
-void print_vect(vector<char> vec) {
-  for (int i = 0; i < vec.size(); ++i) {
-    cout << vec[i]<< "; ";
-  }
-  cout<< endl;
-}
+// void print_vect(vector<char> vec) {
+//   for (int i = 0; i < vec.size(); ++i) {
+//     cout << vec[i]<< "; ";
+//   }
+//   cout<< endl;
+// }
 
 //-----------------Container-----------------------------------
 Container::Container() {
@@ -33,7 +33,7 @@ void Container::set_zeros() {
   }
 }
 
-char Container::get(int pos, char def) const {
+char Container::get_val(int pos, char def) const {
   if (pos < get_len()) {
     return arr[pos];
   } else {
@@ -41,7 +41,7 @@ char Container::get(int pos, char def) const {
   }
 }
 
-char Container::weak_get(int pos, char def) const {
+char Container::get_digit(int pos, char def) const {
   if (pos == get_len() - 1) {
     int val = char_to_int(arr[pos]);
     if (val >= 8) {
@@ -55,7 +55,7 @@ char Container::weak_get(int pos, char def) const {
   return arr[pos];
 }
 
-void Container::set(int pos, char val) {
+void Container::set_digit(int pos, char val) {
   if (pos >= get_len() || (pos == get_len() - 1 && char_to_int(val) >= 8)) {
     bool sgn = get_sign();
     unset_minus();
@@ -77,7 +77,7 @@ void Container::set(int pos, char val) {
   arr[pos] = val;
 }
 
-void Container::force_set(int pos, char val) {
+void Container::set_val(int pos, char val) {
   if (pos >= get_len()) {
     arr.resize(pos + 2);
     arr[pos + 1] = '0';
@@ -92,7 +92,7 @@ hex_num::Container *Container::get_copy() const {
 }
 
 void Container::set_minus() {
-  int val = char_to_int(get(get_len() - 1));
+  int val = char_to_int(get_val(get_len() - 1));
   if (val < 8) {
     arr[get_len() - 1] = int_to_char(val + 8);
   } // else it has minus already
@@ -117,7 +117,12 @@ bool Container::get_sign() const {
 Hex_num::Hex_num() : hex_num::Hex_num::Hex_num(new Container) {}
 Hex_num::Hex_num(int hex) : hex_num::Hex_num(new Container, hex) {}
 Hex_num::Hex_num(std::string hex) : hex_num::Hex_num(new Container, hex) {}
-Hex_num::Hex_num(const hex_num::Hex_num &that) : hex_num::Hex_num(that){};
+Hex_num::Hex_num(const Hex_num &that) : hex_num::Hex_num(that){
+  std::cout << "Copy constructor of dynamic class" << std:: endl;
+};
+Hex_num::Hex_num(Hex_num &&that) : hex_num::Hex_num(that){
+  std::cout << "Move constructor of dynamic class" << std:: endl;
+};
 Hex_num::~Hex_num() {
   delete cont;
   cont = nullptr;

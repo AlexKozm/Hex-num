@@ -10,7 +10,16 @@ namespace overl_dyn_hex_num {
 Hex_num::Hex_num() : hex_num_dynamic::Hex_num::Hex_num() {}
 Hex_num::Hex_num(int hex) : hex_num_dynamic::Hex_num(hex) {}
 Hex_num::Hex_num(std::string hex) : hex_num_dynamic::Hex_num(hex) {}
-Hex_num::Hex_num(const hex_num::Hex_num &that) : hex_num_dynamic::Hex_num(that){}
+Hex_num::Hex_num(const Hex_num &that) : hex_num_dynamic::Hex_num(that){}
+Hex_num::Hex_num(Hex_num &&that) : hex_num_dynamic::Hex_num(that){}
+Hex_num &Hex_num::operator=(const hex_num::Hex_num &a) {
+  hex_num::Hex_num::operator=(a);
+  return *this;
+}
+Hex_num &Hex_num::operator=(hex_num::Hex_num &&a) {
+  hex_num::Hex_num::operator=(a);
+  return *this;
+}
 Hex_num::~Hex_num(){}
 
 bool Hex_num::operator==(const hex_num::Hex_num &hex) const {

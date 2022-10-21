@@ -10,7 +10,6 @@ namespace hex_num {
 /**
  * @class Hex_num
  * @brief Base class for hex_num 
- * @details
  */
 class Hex_num {
 
@@ -36,13 +35,6 @@ protected:
    */
   Hex_num(Container *arr, std::string hex);
   /**
-   * @brief Copy constructor
-   * @param that
-   */
-  Hex_num(const Hex_num &that);
-  // TODO
-  Hex_num(Hex_num &&that);
-  /**
    * @brief Convert string to arr
    * @details Convert string to arr. In case of error throws an exception
               and object stays in undefined state
@@ -51,35 +43,72 @@ protected:
    */
   void str_to_arr(std::string str);
 
-  // TODO
+  /**
+   * @brief Replace -0 to 0
+     @details In imput and maybe in calculation we can get -0 value in 
+              direct code. Because direct code should not contain -0
+              we should call this function to replace -0 with 0
+   */
   void check_for_minus_zero();
 
 public:
-  // TODO 
+  /**
+   * @brief Copy constructor
+   * @param that
+   */
+  Hex_num(const Hex_num &that);
+  /**
+   * @brief Move constructor
+   * @param that 
+   */
+  Hex_num(Hex_num &&that);
+  /**
+   * @brief Move assignment
+   * @param a 
+   * @return Itself
+   */
   Hex_num &operator=(Hex_num &&a);
-  // TODO
+  /**
+   * @brief Copy assignment
+   * @param a 
+   * @return Itself
+   */
   Hex_num &operator=(const Hex_num &a);
 
-  // TODO
+  /**
+   * @brief Convert reverse code to additional code
+   * @return Itself
+   */
   Hex_num *to_additional_code();
-  // TODO
+  /**
+   * @brief Reverce all bits except sign bit
+   * @return Itself
+   */
   Hex_num *reverse_code();
-  // TODO
+  /**
+   * @brief Convert additional code number to reverse code number
+   * @return Itself
+   */
   Hex_num *from_add_to_rev_code();
-  // TODO
+  /**
+   * @brief Return sum of a and b
+   * @param a In additional code
+   * @param b In additional code
+   * @return Sum in additional code
+   */
   static Hex_num sum_of_additonals(const Hex_num &a, const Hex_num &b);
   /**
    * @brief Moves chars n times to left. Empty cells fills with '0'. Saves num
    *        sign.
    * @param n
-   * @return self
+   * @return Itself TODO should create new Hex_num and not change itself
    */
   Hex_num move_left(unsigned n);
   /**
    * @brief Moves chars n times to right. Empty cells fills with '0'. Saves num
    *        sign.
    * @param n
-   * @return self
+   * @return Itself TODO should create new Hex_num and not change itself
    */
   Hex_num move_right(unsigned n);
   /**
@@ -106,11 +135,26 @@ public:
    * @param out
    */
   void print_container(std::ostream &out);
-  // TODO
+  /**
+   * @brief Checks for equality a and b
+   * @param a 
+   * @param b 
+   * @return if a == b
+   */
   static bool equal(const Hex_num &a, const Hex_num &b);
-  // TODO
+  /**
+   * @brief Return sum of a and b
+   * @param a 
+   * @param b 
+   * @return New Hex_num
+   */
   static Hex_num sum(const Hex_num &a, const Hex_num &b);
-  // TODO
+  /**
+   * @brief Return difference of a and b
+   * @param a 
+   * @param b 
+   * @return New Hex_num
+   */
   static Hex_num dif(Hex_num const &a, Hex_num const &b);
 
   virtual ~Hex_num();

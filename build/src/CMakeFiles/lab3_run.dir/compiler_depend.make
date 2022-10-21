@@ -182,8 +182,7 @@ src/CMakeFiles/lab3_run.dir/Hex_num/base/container.cpp.o: ../src/Hex_num/base/co
   /usr/include/c++/9/bits/basic_ios.tcc \
   /usr/include/c++/9/bits/ostream.tcc \
   /usr/include/c++/9/istream \
-  /usr/include/c++/9/bits/istream.tcc \
-  ../src/Hex_num/base/hex_num.h
+  /usr/include/c++/9/bits/istream.tcc
 
 src/CMakeFiles/lab3_run.dir/Hex_num/base/hex_num.cpp.o: ../src/Hex_num/base/hex_num.cpp \
   /usr/include/stdc-predef.h \
@@ -1658,9 +1657,9 @@ src/CMakeFiles/lab3_run.dir/menu.cpp.o: ../src/menu.cpp \
 
 /usr/include/c++/9/functional:
 
-../src/Hex_num/base/hex_num.cpp:
-
 ../src/Hex_num/base/hex_num.h:
+
+../src/Hex_num/base/hex_num.cpp:
 
 /usr/include/c++/9/istream:
 

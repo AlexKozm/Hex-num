@@ -2,7 +2,8 @@
 \label{classstatic__hex_1_1_container}\index{static\_hex::Container@{static\_hex::Container}}
 
 
-Inheritance diagram for static\+\_\+hex\+::Container\+:\nopagebreak
+Inheritance diagram for static\+\_\+hex\+::Container\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,7 +12,8 @@ Inheritance diagram for static\+\_\+hex\+::Container\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for static\+\_\+hex\+::Container\+:\nopagebreak
+Collaboration diagram for static\+\_\+hex\+::Container\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -27,15 +29,15 @@ Collaboration diagram for static\+\_\+hex\+::Container\+:\nopagebreak
 \mbox{\Hypertarget{classstatic__hex_1_1_container_abac07420631a50ba9e8c111ec04a77e7}\label{classstatic__hex_1_1_container_abac07420631a50ba9e8c111ec04a77e7}} 
 void \mbox{\hyperlink{classstatic__hex_1_1_container_abac07420631a50ba9e8c111ec04a77e7}{set\+\_\+zeros}} () override
 \begin{DoxyCompactList}\small\item\em Set to all container cells \textquotesingle{}0\textquotesingle{} value. \end{DoxyCompactList}\item 
-char \mbox{\hyperlink{classstatic__hex_1_1_container_a1a8032a02914a99de2e34b9874d6d35c}{get}} (int pos, char def=\textquotesingle{}0\textquotesingle{}) const override
+char \mbox{\hyperlink{classstatic__hex_1_1_container_a7312bdfd517e73500785862b6184a2b2}{get\+\_\+val}} (int pos, char def=\textquotesingle{}0\textquotesingle{}) const override
 \begin{DoxyCompactList}\small\item\em Get char on pos in container. \end{DoxyCompactList}\item 
-char \mbox{\hyperlink{classstatic__hex_1_1_container_a812023ae82882a3bb11bb5ceb9505503}{weak\+\_\+get}} (int pos, char def) const override
+char \mbox{\hyperlink{classstatic__hex_1_1_container_aa4f7957b8532337b5fb05a7dcb575115}{get\+\_\+digit}} (int pos, char def) const override
 \begin{DoxyCompactList}\small\item\em Return val on pos but without sign. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classstatic__hex_1_1_container_a5a9dbc746a87a6a68532641bd0012316}{get\+\_\+sign}} () const override
 \begin{DoxyCompactList}\small\item\em Return sign. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classstatic__hex_1_1_container_ad9c46d0d8cfcc11af06a278a83816d8f}{set}} (int pos, char val) override
+void \mbox{\hyperlink{classstatic__hex_1_1_container_aa8eb16eb3fb1192d9d66626bc0a65d99}{set\+\_\+digit}} (int pos, char val) override
 \begin{DoxyCompactList}\small\item\em Set val but not sign. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classstatic__hex_1_1_container_a4379b42194126e7448888d08f982887e}{force\+\_\+set}} (int pos, char val) override
+void \mbox{\hyperlink{classstatic__hex_1_1_container_a16812650f1a3b87c68d3c40f0df91b6f}{set\+\_\+val}} (int pos, char val) override
 \begin{DoxyCompactList}\small\item\em Set val to pos even if it touchs number sign. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classstatic__hex_1_1_container_ade5102c53129b321fccf8c80d4076e92}\label{classstatic__hex_1_1_container_ade5102c53129b321fccf8c80d4076e92}} 
 void \mbox{\hyperlink{classstatic__hex_1_1_container_ade5102c53129b321fccf8c80d4076e92}{set\+\_\+minus}} () override
@@ -57,51 +59,6 @@ void \mbox{\hyperlink{classstatic__hex_1_1_container_a3ff190db0b22dd9af1789a6f3a
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classstatic__hex_1_1_container_a4379b42194126e7448888d08f982887e}\label{classstatic__hex_1_1_container_a4379b42194126e7448888d08f982887e}} 
-\index{static\_hex::Container@{static\_hex::Container}!force\_set@{force\_set}}
-\index{force\_set@{force\_set}!static\_hex::Container@{static\_hex::Container}}
-\doxysubsubsection{\texorpdfstring{force\_set()}{force\_set()}}
-{\footnotesize\ttfamily void Container\+::force\+\_\+set (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{char}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Set val to pos even if it touchs number sign. 
-
-Set val to pos even if it touchs number sign, does nothing if container has not cell with such pos 
-\begin{DoxyParams}{Parameters}
-{\em pos} & \\
-\hline
-{\em val} & \\
-\hline
-\end{DoxyParams}
-
-
-Implements \mbox{\hyperlink{classhex__num_1_1_container_a217eea09c3597b3a0c97904ef946f93e}{hex\+\_\+num\+::\+Container}}.
-
-\mbox{\Hypertarget{classstatic__hex_1_1_container_a1a8032a02914a99de2e34b9874d6d35c}\label{classstatic__hex_1_1_container_a1a8032a02914a99de2e34b9874d6d35c}} 
-\index{static\_hex::Container@{static\_hex::Container}!get@{get}}
-\index{get@{get}!static\_hex::Container@{static\_hex::Container}}
-\doxysubsubsection{\texorpdfstring{get()}{get()}}
-{\footnotesize\ttfamily char Container\+::get (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{char}]{def = {\ttfamily \textquotesingle{}0\textquotesingle{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Get char on pos in container. 
-
-Return char on pos in container. If cell with such pos does not exist return def 
-\begin{DoxyParams}{Parameters}
-{\em pos} & \\
-\hline
-{\em def} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Char on pos in container 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classhex__num_1_1_container_a406c24a918cf07bd421357c31e5741b0}{hex\+\_\+num\+::\+Container}}.
-
 \mbox{\Hypertarget{classstatic__hex_1_1_container_aece6989fe9db58affa758fc69e489353}\label{classstatic__hex_1_1_container_aece6989fe9db58affa758fc69e489353}} 
 \index{static\_hex::Container@{static\_hex::Container}!get\_copy@{get\_copy}}
 \index{get\_copy@{get\_copy}!static\_hex::Container@{static\_hex::Container}}
@@ -118,6 +75,37 @@ copy of a \mbox{\hyperlink{classstatic__hex_1_1_container}{Container}}
 
 
 Implements \mbox{\hyperlink{classhex__num_1_1_container_a2d98c56fa8e0b775faeeaa778433339e}{hex\+\_\+num\+::\+Container}}.
+
+\mbox{\Hypertarget{classstatic__hex_1_1_container_aa4f7957b8532337b5fb05a7dcb575115}\label{classstatic__hex_1_1_container_aa4f7957b8532337b5fb05a7dcb575115}} 
+\index{static\_hex::Container@{static\_hex::Container}!get\_digit@{get\_digit}}
+\index{get\_digit@{get\_digit}!static\_hex::Container@{static\_hex::Container}}
+\doxysubsubsection{\texorpdfstring{get\_digit()}{get\_digit()}}
+{\footnotesize\ttfamily char Container\+::get\+\_\+digit (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{char}]{def }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return val on pos but without sign. 
+
+
+\begin{DoxyEnumerate}
+\item Return cell\textquotesingle{}s val if cell is in container and has not store sign bit.
+\begin{DoxyEnumerate}
+\item Return val without sign bit if this cell store sign bit
+\item Return def char if container has not cell with that pos 
+\begin{DoxyParams}{Parameters}
+{\em pos} & \\
+\hline
+{\em def} & -\/ default value that will be returned if container has no cell on given pos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+
+Implements \mbox{\hyperlink{classhex__num_1_1_container_a244f3ecc1edf3e87152cc48aa1fcc2e7}{hex\+\_\+num\+::\+Container}}.
 
 \mbox{\Hypertarget{classstatic__hex_1_1_container_afea73b22d5176fca52a6a2937b086de2}\label{classstatic__hex_1_1_container_afea73b22d5176fca52a6a2937b086de2}} 
 \index{static\_hex::Container@{static\_hex::Container}!get\_new@{get\_new}}
@@ -153,11 +141,35 @@ Return 0 if sing is + or 0 and return 1 if sign is -\/
 
 Implements \mbox{\hyperlink{classhex__num_1_1_container_ae759a017e6cfca0037f22ec86108a488}{hex\+\_\+num\+::\+Container}}.
 
-\mbox{\Hypertarget{classstatic__hex_1_1_container_ad9c46d0d8cfcc11af06a278a83816d8f}\label{classstatic__hex_1_1_container_ad9c46d0d8cfcc11af06a278a83816d8f}} 
-\index{static\_hex::Container@{static\_hex::Container}!set@{set}}
-\index{set@{set}!static\_hex::Container@{static\_hex::Container}}
-\doxysubsubsection{\texorpdfstring{set()}{set()}}
-{\footnotesize\ttfamily void Container\+::set (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{char}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{classstatic__hex_1_1_container_a7312bdfd517e73500785862b6184a2b2}\label{classstatic__hex_1_1_container_a7312bdfd517e73500785862b6184a2b2}} 
+\index{static\_hex::Container@{static\_hex::Container}!get\_val@{get\_val}}
+\index{get\_val@{get\_val}!static\_hex::Container@{static\_hex::Container}}
+\doxysubsubsection{\texorpdfstring{get\_val()}{get\_val()}}
+{\footnotesize\ttfamily char Container\+::get\+\_\+val (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{char}]{def = {\ttfamily \textquotesingle{}0\textquotesingle{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get char on pos in container. 
+
+Return char on pos in container. If cell with such pos does not exist return def 
+\begin{DoxyParams}{Parameters}
+{\em pos} & \\
+\hline
+{\em def} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Char on pos in container 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classhex__num_1_1_container_aabab3e50628f93d237a4b318bb7600a4}{hex\+\_\+num\+::\+Container}}.
+
+\mbox{\Hypertarget{classstatic__hex_1_1_container_aa8eb16eb3fb1192d9d66626bc0a65d99}\label{classstatic__hex_1_1_container_aa8eb16eb3fb1192d9d66626bc0a65d99}} 
+\index{static\_hex::Container@{static\_hex::Container}!set\_digit@{set\_digit}}
+\index{set\_digit@{set\_digit}!static\_hex::Container@{static\_hex::Container}}
+\doxysubsubsection{\texorpdfstring{set\_digit()}{set\_digit()}}
+{\footnotesize\ttfamily void Container\+::set\+\_\+digit (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{char}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -172,42 +184,32 @@ Set val if it is possible not to touch sign bit else throw an exception.
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{classhex__num_1_1_container_a5093b21b641049ad64da98d49b9a810d}{hex\+\_\+num\+::\+Container}}.
+Implements \mbox{\hyperlink{classhex__num_1_1_container_afadcd2d0654cd8c2385cbb1d6454e20f}{hex\+\_\+num\+::\+Container}}.
 
-\mbox{\Hypertarget{classstatic__hex_1_1_container_a812023ae82882a3bb11bb5ceb9505503}\label{classstatic__hex_1_1_container_a812023ae82882a3bb11bb5ceb9505503}} 
-\index{static\_hex::Container@{static\_hex::Container}!weak\_get@{weak\_get}}
-\index{weak\_get@{weak\_get}!static\_hex::Container@{static\_hex::Container}}
-\doxysubsubsection{\texorpdfstring{weak\_get()}{weak\_get()}}
-{\footnotesize\ttfamily char Container\+::weak\+\_\+get (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{char}]{def }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Return val on pos but without sign. 
+\mbox{\Hypertarget{classstatic__hex_1_1_container_a16812650f1a3b87c68d3c40f0df91b6f}\label{classstatic__hex_1_1_container_a16812650f1a3b87c68d3c40f0df91b6f}} 
+\index{static\_hex::Container@{static\_hex::Container}!set\_val@{set\_val}}
+\index{set\_val@{set\_val}!static\_hex::Container@{static\_hex::Container}}
+\doxysubsubsection{\texorpdfstring{set\_val()}{set\_val()}}
+{\footnotesize\ttfamily void Container\+::set\+\_\+val (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{char}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
-\begin{DoxyEnumerate}
-\item Return cell\textquotesingle{}s val if cell is in container and has not store sign bit.
-\begin{DoxyEnumerate}
-\item Return val without sign bit if this cell store sign bit
-\item Return def char if container has not cell with that pos 
+
+Set val to pos even if it touchs number sign. 
+
+Set val to pos even if it touchs number sign, does nothing if container has not cell with such pos 
 \begin{DoxyParams}{Parameters}
 {\em pos} & \\
 \hline
-{\em def} & -\/ default value that will be returned if container has no cell on given pos \\
+{\em val} & \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
 
-\end{DoxyReturn}
 
-\end{DoxyEnumerate}
-\end{DoxyEnumerate}
-
-Implements \mbox{\hyperlink{classhex__num_1_1_container_a726713abe71f8a20048573539d1ac33a}{hex\+\_\+num\+::\+Container}}.
+Implements \mbox{\hyperlink{classhex__num_1_1_container_a10741cbe22e44373477200f049b2c5db}{hex\+\_\+num\+::\+Container}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/stat\+\_\+hex\+\_\+num.\+h\item 
-src/stat\+\_\+hex\+\_\+num.\+cpp\end{DoxyCompactItemize}
+src/\+Hex\+\_\+num/static/stat\+\_\+hex\+\_\+num.\+h\item 
+src/\+Hex\+\_\+num/static/stat\+\_\+hex\+\_\+num.\+cpp\end{DoxyCompactItemize}

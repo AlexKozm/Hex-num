@@ -28,7 +28,7 @@ void Container::set_zeros() {
   std::fill_n(arr, get_len(), '0');
 }
 
-char Container::get(int pos, char def) const {
+char Container::get_val(int pos, char def) const {
   if (pos < get_len()) {
     return arr[pos];
   } else {
@@ -36,7 +36,7 @@ char Container::get(int pos, char def) const {
   }
 }
 
-char Container::weak_get(int pos, char def) const {
+char Container::get_digit(int pos, char def) const {
   if (pos < get_len() - 1) {
     return arr[pos];
   } else if (pos == get_len() - 1) {
@@ -52,7 +52,7 @@ char Container::weak_get(int pos, char def) const {
   return arr[pos];
 }
 
-void Container::set(int pos, char val) {
+void Container::set_digit(int pos, char val) {
   if (pos >= get_len() || (pos == get_len() - 1 && char_to_int(val) >= 8)) {
     throw std::overflow_error("Out of index");
   }
@@ -64,7 +64,7 @@ void Container::set(int pos, char val) {
   }
 }
 
-void Container::force_set(int pos, char val) {
+void Container::set_val(int pos, char val) {
   if (pos < get_len()) {
     arr[pos] = val;
   }

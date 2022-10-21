@@ -1,7 +1,7 @@
 <map id="hex_num::Hex_num" name="hex_num::Hex_num">
-<area shape="rect" id="node1" title="Class with abstract container." alt="" coords="121,5,315,376"/>
-<area shape="rect" id="node2" href="$classhex__num__dynamic_1_1_hex__num.html" title=" " alt="" coords="5,424,220,560"/>
-<area shape="rect" id="node4" href="$classstatic__hex_1_1_hex__num.html" title=" " alt="" coords="244,424,403,560"/>
-<area shape="rect" id="node3" href="$classoverl__dyn__hex__num_1_1_hex__num.html" title=" " alt="" coords="32,608,193,803"/>
-<area shape="rect" id="node5" href="$classoverl__stat__hex__num_1_1_hex__num.html" title=" " alt="" coords="246,608,401,803"/>
+<area shape="rect" id="node1" title="Base class for hex_num." alt="" coords="121,5,315,405"/>
+<area shape="rect" id="node2" href="$classhex__num__dynamic_1_1_hex__num.html" title=" " alt="" coords="5,453,220,589"/>
+<area shape="rect" id="node4" href="$classstatic__hex_1_1_hex__num.html" title=" " alt="" coords="244,453,403,589"/>
+<area shape="rect" id="node3" href="$classoverl__dyn__hex__num_1_1_hex__num.html" title=" " alt="" coords="32,637,193,832"/>
+<area shape="rect" id="node5" href="$classoverl__stat__hex__num_1_1_hex__num.html" title=" " alt="" coords="246,637,401,832"/>
 </map>

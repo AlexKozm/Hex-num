@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['todo_20list_25',['Todo List',['../todo.html',1,'']]]
+  ['reverse_5fcode_25',['reverse_code',['../classhex__num_1_1_hex__num.html#a959e3760951336e3d74bc851091fb931',1,'hex_num::Hex_num']]]
 ];

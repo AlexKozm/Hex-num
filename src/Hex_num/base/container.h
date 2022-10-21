@@ -50,7 +50,7 @@ public:
      @param def
    * @return Char on pos in container
    */
-  virtual char get(int pos, char def = '0') const = 0;
+  virtual char get_val(int pos, char def = '0') const = 0;
   /**
    * @brief Return val on pos but without sign
    * @details Return cell's val without sign. If container has no cell on given
@@ -60,7 +60,7 @@ public:
                   on given pos
    * @return
    */
-  virtual char weak_get(int pos, char def) const = 0;
+  virtual char get_digit(int pos, char def) const = 0;
   /**
    * @brief Set val but not sign
      @details Set val if it is possible not to touch sign bit else
@@ -68,7 +68,7 @@ public:
    * @param pos
    * @param val
    */
-  virtual void set(int pos, char val) = 0;
+  virtual void set_digit(int pos, char val) = 0;
   /**
    * @brief Set val to pos even if it touchs number sign
      @details Set val to pos even if it touchs number sign, does nothing if
@@ -76,7 +76,7 @@ public:
    * @param pos
    * @param val
    */
-  virtual void force_set(int pos, char val) = 0;
+  virtual void set_val(int pos, char val) = 0;
   /**
    * @brief Return new Container
    * @return new Container

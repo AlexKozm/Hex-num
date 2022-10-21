@@ -19,7 +19,7 @@ public:
   // TODO
   void set_zeros() override;
   //TODO
-  char get(int pos, char def = '0') const override;
+  char get_val(int pos, char def = '0') const override;
   /**
    * @brief Return val on pos but without sign
    * @details 1. Return cell's val if cell is in container and has not store sign bit.
@@ -30,13 +30,13 @@ public:
                   on given pos
    * @return
    */
-  char weak_get(int pos, char def) const override;
+  char get_digit(int pos, char def) const override;
   // TODO
   bool get_sign() const override;
   //TODO
-  void set(int pos, char val) override;
+  void set_digit(int pos, char val) override;
   // TODO
-  void force_set(int pos, char val) override;
+  void set_val(int pos, char val) override;
   // TODO
   void set_minus() override;
   //TODO
@@ -68,7 +68,9 @@ public:
    */
   Hex_num(std::string hex);
   //TODO
-  Hex_num(const hex_num::Hex_num &that);
+  Hex_num(const Hex_num &that);
+  // TODO
+  Hex_num(Hex_num &&that);
   //TODO
   ~Hex_num();
 };

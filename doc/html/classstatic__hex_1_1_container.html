@@ -101,21 +101,21 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#abac07420631a50ba9e8c111ec04a77e7">set_zeros</a> () override</td></tr>
 <tr class="memdesc:abac07420631a50ba9e8c111ec04a77e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to all container cells '0' value. <br /></td></tr>
 <tr class="separator:abac07420631a50ba9e8c111ec04a77e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a8032a02914a99de2e34b9874d6d35c"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#a1a8032a02914a99de2e34b9874d6d35c">get</a> (int pos, char def='0') const override</td></tr>
-<tr class="memdesc:a1a8032a02914a99de2e34b9874d6d35c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get char on pos in container.  <a href="classstatic__hex_1_1_container.html#a1a8032a02914a99de2e34b9874d6d35c">More...</a><br /></td></tr>
-<tr class="separator:a1a8032a02914a99de2e34b9874d6d35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a812023ae82882a3bb11bb5ceb9505503"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#a812023ae82882a3bb11bb5ceb9505503">weak_get</a> (int pos, char def) const override</td></tr>
-<tr class="memdesc:a812023ae82882a3bb11bb5ceb9505503"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return val on pos but without sign.  <a href="classstatic__hex_1_1_container.html#a812023ae82882a3bb11bb5ceb9505503">More...</a><br /></td></tr>
-<tr class="separator:a812023ae82882a3bb11bb5ceb9505503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7312bdfd517e73500785862b6184a2b2"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#a7312bdfd517e73500785862b6184a2b2">get_val</a> (int pos, char def='0') const override</td></tr>
+<tr class="memdesc:a7312bdfd517e73500785862b6184a2b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get char on pos in container.  <a href="classstatic__hex_1_1_container.html#a7312bdfd517e73500785862b6184a2b2">More...</a><br /></td></tr>
+<tr class="separator:a7312bdfd517e73500785862b6184a2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f7957b8532337b5fb05a7dcb575115"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#aa4f7957b8532337b5fb05a7dcb575115">get_digit</a> (int pos, char def) const override</td></tr>
+<tr class="memdesc:aa4f7957b8532337b5fb05a7dcb575115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return val on pos but without sign.  <a href="classstatic__hex_1_1_container.html#aa4f7957b8532337b5fb05a7dcb575115">More...</a><br /></td></tr>
+<tr class="separator:aa4f7957b8532337b5fb05a7dcb575115"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a9dbc746a87a6a68532641bd0012316"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#a5a9dbc746a87a6a68532641bd0012316">get_sign</a> () const override</td></tr>
 <tr class="memdesc:a5a9dbc746a87a6a68532641bd0012316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return sign.  <a href="classstatic__hex_1_1_container.html#a5a9dbc746a87a6a68532641bd0012316">More...</a><br /></td></tr>
 <tr class="separator:a5a9dbc746a87a6a68532641bd0012316"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9c46d0d8cfcc11af06a278a83816d8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#ad9c46d0d8cfcc11af06a278a83816d8f">set</a> (int pos, char val) override</td></tr>
-<tr class="memdesc:ad9c46d0d8cfcc11af06a278a83816d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set val but not sign.  <a href="classstatic__hex_1_1_container.html#ad9c46d0d8cfcc11af06a278a83816d8f">More...</a><br /></td></tr>
-<tr class="separator:ad9c46d0d8cfcc11af06a278a83816d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4379b42194126e7448888d08f982887e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#a4379b42194126e7448888d08f982887e">force_set</a> (int pos, char val) override</td></tr>
-<tr class="memdesc:a4379b42194126e7448888d08f982887e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set val to pos even if it touchs number sign.  <a href="classstatic__hex_1_1_container.html#a4379b42194126e7448888d08f982887e">More...</a><br /></td></tr>
-<tr class="separator:a4379b42194126e7448888d08f982887e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8eb16eb3fb1192d9d66626bc0a65d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#aa8eb16eb3fb1192d9d66626bc0a65d99">set_digit</a> (int pos, char val) override</td></tr>
+<tr class="memdesc:aa8eb16eb3fb1192d9d66626bc0a65d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set val but not sign.  <a href="classstatic__hex_1_1_container.html#aa8eb16eb3fb1192d9d66626bc0a65d99">More...</a><br /></td></tr>
+<tr class="separator:aa8eb16eb3fb1192d9d66626bc0a65d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16812650f1a3b87c68d3c40f0df91b6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#a16812650f1a3b87c68d3c40f0df91b6f">set_val</a> (int pos, char val) override</td></tr>
+<tr class="memdesc:a16812650f1a3b87c68d3c40f0df91b6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set val to pos even if it touchs number sign.  <a href="classstatic__hex_1_1_container.html#a16812650f1a3b87c68d3c40f0df91b6f">More...</a><br /></td></tr>
+<tr class="separator:a16812650f1a3b87c68d3c40f0df91b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade5102c53129b321fccf8c80d4076e92"><td class="memItemLeft" align="right" valign="top"><a id="ade5102c53129b321fccf8c80d4076e92"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatic__hex_1_1_container.html#ade5102c53129b321fccf8c80d4076e92">set_minus</a> () override</td></tr>
 <tr class="memdesc:ade5102c53129b321fccf8c80d4076e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make num negative. <br /></td></tr>
@@ -156,101 +156,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a387c1177f5c5ebac0c9058a9310a4619 inherit pub_static_methods_classhex__num_1_1_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4379b42194126e7448888d08f982887e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4379b42194126e7448888d08f982887e">&#9670;&nbsp;</a></span>force_set()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Container::force_set </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set val to pos even if it touchs number sign. </p>
-<p>Set val to pos even if it touchs number sign, does nothing if container has not cell with such pos </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pos</td><td></td></tr>
-    <tr><td class="paramname">val</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="classhex__num_1_1_container.html#a217eea09c3597b3a0c97904ef946f93e">hex_num::Container</a>.</p>
-
-</div>
-</div>
-<a id="a1a8032a02914a99de2e34b9874d6d35c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a8032a02914a99de2e34b9874d6d35c">&#9670;&nbsp;</a></span>get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char Container::get </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>def</em> = <code>'0'</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get char on pos in container. </p>
-<p>Return char on pos in container. If cell with such pos does not exist return def </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pos</td><td></td></tr>
-    <tr><td class="paramname">def</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Char on pos in container </dd></dl>
-
-<p>Implements <a class="el" href="classhex__num_1_1_container.html#a406c24a918cf07bd421357c31e5741b0">hex_num::Container</a>.</p>
-
-</div>
-</div>
 <a id="aece6989fe9db58affa758fc69e489353"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aece6989fe9db58affa758fc69e489353">&#9670;&nbsp;</a></span>get_copy()</h2>
 
@@ -278,6 +183,61 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>copy of a <a class="el" href="classstatic__hex_1_1_container.html">Container</a> </dd></dl>
 
 <p>Implements <a class="el" href="classhex__num_1_1_container.html#a2d98c56fa8e0b775faeeaa778433339e">hex_num::Container</a>.</p>
+
+</div>
+</div>
+<a id="aa4f7957b8532337b5fb05a7dcb575115"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f7957b8532337b5fb05a7dcb575115">&#9670;&nbsp;</a></span>get_digit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Container::get_digit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return val on pos but without sign. </p>
+<ol type="1">
+<li>Return cell's val if cell is in container and has not store sign bit.<ol type="a">
+<li>Return val without sign bit if this cell store sign bit</li>
+<li>Return def char if container has not cell with that pos <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td></td></tr>
+    <tr><td class="paramname">def</td><td>- default value that will be returned if container has no cell on given pos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+</li>
+</ol>
+</li>
+</ol>
+
+<p>Implements <a class="el" href="classhex__num_1_1_container.html#a244f3ecc1edf3e87152cc48aa1fcc2e7">hex_num::Container</a>.</p>
 
 </div>
 </div>
@@ -341,8 +301,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ad9c46d0d8cfcc11af06a278a83816d8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9c46d0d8cfcc11af06a278a83816d8f">&#9670;&nbsp;</a></span>set()</h2>
+<a id="a7312bdfd517e73500785862b6184a2b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7312bdfd517e73500785862b6184a2b2">&#9670;&nbsp;</a></span>get_val()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,7 +311,55 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Container::set </td>
+          <td class="memname">char Container::get_val </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>def</em> = <code>'0'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get char on pos in container. </p>
+<p>Return char on pos in container. If cell with such pos does not exist return def </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td></td></tr>
+    <tr><td class="paramname">def</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Char on pos in container </dd></dl>
+
+<p>Implements <a class="el" href="classhex__num_1_1_container.html#aabab3e50628f93d237a4b318bb7600a4">hex_num::Container</a>.</p>
+
+</div>
+</div>
+<a id="aa8eb16eb3fb1192d9d66626bc0a65d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8eb16eb3fb1192d9d66626bc0a65d99">&#9670;&nbsp;</a></span>set_digit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Container::set_digit </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>pos</em>, </td>
@@ -384,12 +392,12 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classhex__num_1_1_container.html#a5093b21b641049ad64da98d49b9a810d">hex_num::Container</a>.</p>
+<p>Implements <a class="el" href="classhex__num_1_1_container.html#afadcd2d0654cd8c2385cbb1d6454e20f">hex_num::Container</a>.</p>
 
 </div>
 </div>
-<a id="a812023ae82882a3bb11bb5ceb9505503"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a812023ae82882a3bb11bb5ceb9505503">&#9670;&nbsp;</a></span>weak_get()</h2>
+<a id="a16812650f1a3b87c68d3c40f0df91b6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16812650f1a3b87c68d3c40f0df91b6f">&#9670;&nbsp;</a></span>set_val()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -398,7 +406,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char Container::weak_get </td>
+          <td class="memname">void Container::set_val </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>pos</em>, </td>
@@ -407,12 +415,12 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>def</em>&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -422,30 +430,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return val on pos but without sign. </p>
-<ol type="1">
-<li>Return cell's val if cell is in container and has not store sign bit.<ol type="a">
-<li>Return val without sign bit if this cell store sign bit</li>
-<li>Return def char if container has not cell with that pos <dl class="params"><dt>Parameters</dt><dd>
+<p>Set val to pos even if it touchs number sign. </p>
+<p>Set val to pos even if it touchs number sign, does nothing if container has not cell with such pos </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td></td></tr>
-    <tr><td class="paramname">def</td><td>- default value that will be returned if container has no cell on given pos </td></tr>
+    <tr><td class="paramname">val</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-</li>
-</ol>
-</li>
-</ol>
 
-<p>Implements <a class="el" href="classhex__num_1_1_container.html#a726713abe71f8a20048573539d1ac33a">hex_num::Container</a>.</p>
+<p>Implements <a class="el" href="classhex__num_1_1_container.html#a10741cbe22e44373477200f049b2c5db">hex_num::Container</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/<a class="el" href="stat__hex__num_8h_source.html">stat_hex_num.h</a></li>
-<li>src/stat_hex_num.cpp</li>
+<li>src/Hex_num/static/<a class="el" href="stat__hex__num_8h_source.html">stat_hex_num.h</a></li>
+<li>src/Hex_num/static/stat_hex_num.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

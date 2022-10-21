@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: src/hex_num_dynamic.h Source File</title>
+<title>My Project: src/Hex_num/dynamic/hex_num_dynamic.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7342765c12ed0d3d517cf347fcc28ae1.html">Hex_num</a></li><li class="navelem"><a class="el" href="dir_5f130e373f6749049bc523422e128756.html">dynamic</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,7 +73,7 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#if !defined (HEX_NUM_DYNAMIC_H)</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define HEX_NUM_DYNAMIC_H</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;hex_num_abstract.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Hex_num/base/hex_num.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>hex_num_dynamic {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span>std;</div>
@@ -87,14 +87,14 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="comment">// TODO</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">void</span> set_zeros() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">//TODO</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">char</span> get(<span class="keywordtype">int</span> pos, <span class="keywordtype">char</span> def = <span class="charliteral">&#39;0&#39;</span>) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">char</span> weak_get(<span class="keywordtype">int</span> pos, <span class="keywordtype">char</span> def) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">char</span> get_val(<span class="keywordtype">int</span> pos, <span class="keywordtype">char</span> def = <span class="charliteral">&#39;0&#39;</span>) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">char</span> get_digit(<span class="keywordtype">int</span> pos, <span class="keywordtype">char</span> def) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// TODO</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">bool</span> get_sign() <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">//TODO</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">void</span> set(<span class="keywordtype">int</span> pos, <span class="keywordtype">char</span> val) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">void</span> set_digit(<span class="keywordtype">int</span> pos, <span class="keywordtype">char</span> val) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">// TODO</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">void</span> force_set(<span class="keywordtype">int</span> pos, <span class="keywordtype">char</span> val) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">void</span> set_val(<span class="keywordtype">int</span> pos, <span class="keywordtype">char</span> val) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="comment">// TODO</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">void</span> set_minus() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">//TODO</span></div>
@@ -125,9 +125,9 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclasshex__num__dynamic_1_1_container_html"><div class="ttname"><a href="classhex__num__dynamic_1_1_container.html">hex_num_dynamic::Container</a></div><div class="ttdef"><b>Definition:</b> hex_num_dynamic.h:11</div></div>
-<div class="ttc" id="aclasshex__num_1_1_hex__num_html"><div class="ttname"><a href="classhex__num_1_1_hex__num.html">hex_num::Hex_num</a></div><div class="ttdoc">Class with abstract container.</div><div class="ttdef"><b>Definition:</b> hex_num_abstract.h:116</div></div>
+<div class="ttc" id="aclasshex__num_1_1_hex__num_html"><div class="ttname"><a href="classhex__num_1_1_hex__num.html">hex_num::Hex_num</a></div><div class="ttdoc">Base class for hex_num.</div><div class="ttdef"><b>Definition:</b> hex_num.h:14</div></div>
 <div class="ttc" id="aclasshex__num__dynamic_1_1_hex__num_html"><div class="ttname"><a href="classhex__num__dynamic_1_1_hex__num.html">hex_num_dynamic::Hex_num</a></div><div class="ttdef"><b>Definition:</b> hex_num_dynamic.h:54</div></div>
-<div class="ttc" id="aclasshex__num_1_1_container_html"><div class="ttname"><a href="classhex__num_1_1_container.html">hex_num::Container</a></div><div class="ttdoc">Abstract class for container.</div><div class="ttdef"><b>Definition:</b> hex_num_abstract.h:14</div></div>
+<div class="ttc" id="aclasshex__num_1_1_container_html"><div class="ttname"><a href="classhex__num_1_1_container.html">hex_num::Container</a></div><div class="ttdoc">Abstract class for container.</div><div class="ttdef"><b>Definition:</b> container.h:14</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
