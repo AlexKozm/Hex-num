@@ -68,9 +68,21 @@ public:
    */
   Hex_num(std::string hex);
   //TODO
-  Hex_num(const Hex_num &that);
+  Hex_num(const hex_num::Hex_num &that);
   // TODO
-  Hex_num(Hex_num &&that);
+  Hex_num(hex_num::Hex_num &&that);
+  /**
+   * @brief Move assignment
+   * @param a
+   * @return Itself
+   */
+  Hex_num &operator=(hex_num::Hex_num &&a);
+  /**
+   * @brief Copy assignment
+   * @param a
+   * @return Itself
+   */
+  Hex_num &operator=(const hex_num::Hex_num &a);
   //TODO
   ~Hex_num();
 };

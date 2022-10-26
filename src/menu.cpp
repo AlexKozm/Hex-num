@@ -118,6 +118,7 @@ int input_menu::menu() {
     cout << "+--------------+" << endl;
     inp = get_uint(7);
     inp = big_if(inp);
+    if (inp == 0) return 0;
     cout << "+----------------------------+" << endl;
     cout << "|Enter any key to continue...|" << endl;
     cout << "+----------------------------+" << endl;

@@ -10,14 +10,39 @@ namespace overl_dyn_hex_num {
 Hex_num::Hex_num() : hex_num_dynamic::Hex_num::Hex_num() {}
 Hex_num::Hex_num(int hex) : hex_num_dynamic::Hex_num(hex) {}
 Hex_num::Hex_num(std::string hex) : hex_num_dynamic::Hex_num(hex) {}
-Hex_num::Hex_num(const Hex_num &that) : hex_num_dynamic::Hex_num(that){}
-Hex_num::Hex_num(Hex_num &&that) : hex_num_dynamic::Hex_num(that){}
+Hex_num::Hex_num(const Hex_num &that) : hex_num_dynamic::Hex_num(that){
+  std::cout << "Copy constructor of over class" << std:: endl;
+}
+Hex_num::Hex_num(Hex_num &&that) : hex_num_dynamic::Hex_num(move(that)){
+    std::cout << "Move constructor of over class" << std:: endl;
+}
+
+Hex_num &Hex_num::operator=(const Hex_num &a) {
+  std::cout << "Copy assignment of over class" << std:: endl;
+  hex_num::Hex_num::operator=(a);
+  return *this;
+}
+Hex_num &Hex_num::operator=(Hex_num &&a) {
+  std::cout << "Move assignment of over class" << std:: endl;
+  hex_num::Hex_num::operator=(std::move(a));
+  return *this;
+}
+
+//-----
+Hex_num::Hex_num(const hex_num::Hex_num &that) : hex_num_dynamic::Hex_num(that){
+  std::cout << "Copy constructor of over class from base" << std:: endl;
+}
+Hex_num::Hex_num(hex_num::Hex_num &&that) : hex_num_dynamic::Hex_num(move(that)){
+    std::cout << "Move constructor of over class from base" << std:: endl;
+}
 Hex_num &Hex_num::operator=(const hex_num::Hex_num &a) {
+  std::cout << "Copy assignment of over class from base" << std:: endl;
   hex_num::Hex_num::operator=(a);
   return *this;
 }
 Hex_num &Hex_num::operator=(hex_num::Hex_num &&a) {
-  hex_num::Hex_num::operator=(a);
+  std::cout << "Move assignment of over class from base" << std:: endl;
+  hex_num::Hex_num::operator=(std::move(a));
   return *this;
 }
 Hex_num::~Hex_num(){}
@@ -48,7 +73,7 @@ ostream &operator<<(ostream &os, const hex_num::Hex_num &&hex) {
   return os;
 }
 hex_num::Hex_num operator+(const Hex_num &a, const Hex_num &b) {
-  return hex_num_dynamic::Hex_num::sum(a, b);
+  return Hex_num::sum(a, b);
 }
 
 hex_num::Hex_num operator-(const Hex_num &a, const Hex_num &b) {

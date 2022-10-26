@@ -29,10 +29,9 @@ Hex_num::Hex_num(C *arr, int hex) : cont(arr) {
 
 Hex_num::Hex_num(C *arr, string hex) : cont(arr) { str_to_arr(hex); }
 
-
 Hex_num::Hex_num(const Hex_num &that) {
   cont = that.cont->get_copy();
-  std::cout << "Copy constructor of base class" << std:: endl;
+  std::cout << "Copy constructor of base class" << std::endl;
 }
 Hex_num::~Hex_num() {
   delete cont;
@@ -42,18 +41,19 @@ Hex_num::~Hex_num() {
 Hex_num &Hex_num::operator=(const Hex_num &a) {
   delete cont;
   cont = a.cont->get_copy();
-  std::cout << "Copy assignment of base class" << std:: endl;
+  std::cout << "Copy assignment of base class" << std::endl;
   return *this;
 }
 
 Hex_num &Hex_num::operator=(Hex_num &&a) {
   swap(cont, a.cont);
-  std::cout << "Move assignment of base class" << std:: endl;
+  std::cout << "Move assignment of base class" << std::endl;
   return *this;
 }
 
-Hex_num::Hex_num(Hex_num &&that) { swap(cont, that.cont); 
-  std::cout << "Move constructor of base class" << std:: endl;
+Hex_num::Hex_num(Hex_num &&that) {
+  swap(cont, that.cont);
+  std::cout << "Move constructor of base class" << std::endl;
 }
 //-------------------------------------------------------------
 
@@ -70,8 +70,7 @@ void Hex_num::str_to_arr(string str) {
         str.npos) {
       cont->set_digit(i, str[str.length() - 1 - i]);
     } else {
-      throw C::Wrong_format_exception(
-          "Wrong format in converting str to arr");
+      throw C::Wrong_format_exception("Wrong format in converting str to arr");
     }
   }
   if (str[0] == '-') {
@@ -263,8 +262,7 @@ bool Hex_num::equal(Hex_num const &a, Hex_num const &b) {
   if (a.cont->get_sign() != a.cont->get_sign()) {
     return 0;
   }
-  for (int i = 0; i < max(a.cont->get_len(), b.cont->get_len());
-       ++i) {
+  for (int i = 0; i < max(a.cont->get_len(), b.cont->get_len()); ++i) {
     if (a.cont->get_digit(i, '0') != b.cont->get_digit(i, '0')) {
       return 0;
     }
@@ -277,10 +275,8 @@ Hex_num Hex_num::sum_of_additonals(const Hex_num &a, const Hex_num &b) {
   int i = 0;
   int from_prev = 0;
   while (i < a.cont->get_len() || i < b.cont->get_len()) {
-    int s1 = C::char_to_int(
-        a.cont->get_val(i, a.cont->get_sign() ? 'F' : '0'));
-    int s2 = C::char_to_int(
-        b.cont->get_val(i, b.cont->get_sign() ? 'F' : '0'));
+    int s1 = C::char_to_int(a.cont->get_val(i, a.cont->get_sign() ? 'F' : '0'));
+    int s2 = C::char_to_int(b.cont->get_val(i, b.cont->get_sign() ? 'F' : '0'));
     int res = s1 + s2 + from_prev;
     from_prev = 0;
     if (res >= 16) {
@@ -293,13 +289,11 @@ Hex_num Hex_num::sum_of_additonals(const Hex_num &a, const Hex_num &b) {
     }
   }
   if (a.cont->get_sign() == 1 && b.cont->get_sign() == 1 &&
-      C::char_to_int(ans.cont->get_val(ans.cont->get_len() - 1)) / 8 %
-              2 ==
-          0) {
+      C::char_to_int(ans.cont->get_val(ans.cont->get_len() - 1)) / 8 % 2 == 0) {
     throw overflow_error("<0 + <0 = >0");
   } else if (a.cont->get_sign() == 0 && b.cont->get_sign() == 0 &&
-             C::char_to_int(ans.cont->get_val(ans.cont->get_len() - 1)) /
-                     8 % 2 ==
+             C::char_to_int(ans.cont->get_val(ans.cont->get_len() - 1)) / 8 %
+                     2 ==
                  1) {
     throw overflow_error(">0 + >0 = <0");
   } else if (a.cont->get_sign() == 1 || b.cont->get_sign() == 1) {
