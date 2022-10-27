@@ -4,7 +4,6 @@
 #include "stat_hex_num.h"
 #include <string>
 
-using namespace std;
 namespace overl_stat_hex_num {
 
 Hex_num::Hex_num() : static_hex::Hex_num::Hex_num() {}
@@ -26,11 +25,11 @@ hex_num::Hex_num &Hex_num::operator>>(int n) {
   return *this;
 }
 
-istream &operator>>(istream &is, hex_num::Hex_num &hex) {
+std::istream &operator>>(std::istream &is, hex_num::Hex_num &hex) {
   hex.input(is);
   return is;
 }
-ostream &operator<<(ostream &os, const hex_num::Hex_num &hex) {
+std::ostream &operator<<(std::ostream &os, const hex_num::Hex_num &hex) {
   hex.output(os);
   return os;
 }

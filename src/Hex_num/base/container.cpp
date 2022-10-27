@@ -1,7 +1,6 @@
 #include "container.h"
 
-using namespace hex_num;
-typedef Container C;
+typedef hex_num::Container C;
 
 //-----------------Container-----------------------------------
 int C::get_len() const { return len; }

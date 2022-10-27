@@ -9,7 +9,6 @@
 // #include "overl_dyn_hex_num.h"
 
 namespace input_menu {
-// using namespace hex_num_dynamic;
 
 /**
  * @class EOF_exeption

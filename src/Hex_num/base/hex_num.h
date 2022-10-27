@@ -45,7 +45,7 @@ protected:
 
   /**
    * @brief Replace -0 to 0
-     @details In imput and maybe in calculation we can get -0 value in 
+     @details In input and maybe in calculation we can get -0 value in 
               direct code. Because direct code should not contain -0
               we should call this function to replace -0 with 0
    */

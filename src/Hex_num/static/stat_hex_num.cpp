@@ -5,7 +5,8 @@
 #include <stdexcept>
 #include <string>
 
-using namespace static_hex;
+typedef static_hex::Container Container;
+typedef static_hex::Hex_num Hex_num;
 
 //-----------------Container-----------------------------------
 Container::Container() {

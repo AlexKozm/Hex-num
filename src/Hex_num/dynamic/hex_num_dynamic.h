@@ -5,11 +5,10 @@
 #include "Hex_num/base/hex_num.h"
 
 namespace hex_num_dynamic {
-using namespace std;
 
 class Container : public hex_num::Container {
   const static int def_len = 3;
-  vector<char> arr = vector<char>(def_len);
+  std::vector<char> arr = std::vector<char>(def_len);
 
 public:
   /**
@@ -60,6 +59,7 @@ public:
   Hex_num(std::string hex);
   Hex_num(const hex_num::Hex_num &that);
   Hex_num(hex_num::Hex_num &&that);
+  ~Hex_num();
   /**
    * @brief Move assignment
    * @param a
@@ -72,8 +72,17 @@ public:
    * @return Itself
    */
   Hex_num &operator=(const hex_num::Hex_num &a);
-  ~Hex_num();
+
+  hex_num::Hex_num operator<<(int n);
+  hex_num::Hex_num operator>>(int n);
 };
+
+bool operator==(const hex_num::Hex_num &hex1, const hex_num::Hex_num &hex2);
+std::istream &operator>>(std::istream &is, hex_num::Hex_num &hex);
+std::ostream &operator<<(std::ostream &os, const hex_num::Hex_num &hex);
+std::ostream &operator<<(std::ostream &os, hex_num::Hex_num &&hex);
+hex_num::Hex_num operator+(const Hex_num &a, const Hex_num &b);
+hex_num::Hex_num operator-(const Hex_num &a, const Hex_num &b);
 
 } // namespace hex_num_dynamic
 

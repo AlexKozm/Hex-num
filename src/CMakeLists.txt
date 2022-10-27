@@ -4,7 +4,7 @@ add_executable(lab3_run main.cpp
                         Hex_num/base/hex_num.cpp  
                         Hex_num/base/container.cpp  
                         Hex_num/dynamic/hex_num_dynamic.cpp 
-                        Hex_num/dynamic/overl_dyn_hex_num.cpp
+                        # Hex_num/dynamic/overl_dyn_hex_num.cpp
                         Hex_num/static/stat_hex_num.cpp
                         Hex_num/static/overl_stat_hex_num.cpp
                         menu.cpp)

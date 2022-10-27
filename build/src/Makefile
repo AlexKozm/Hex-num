@@ -202,30 +202,6 @@ Hex_num/dynamic/hex_num_dynamic.cpp.s:
 	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/dynamic/hex_num_dynamic.cpp.s
 .PHONY : Hex_num/dynamic/hex_num_dynamic.cpp.s
 
-Hex_num/dynamic/overl_dyn_hex_num.o: Hex_num/dynamic/overl_dyn_hex_num.cpp.o
-.PHONY : Hex_num/dynamic/overl_dyn_hex_num.o
-
-# target to build an object file
-Hex_num/dynamic/overl_dyn_hex_num.cpp.o:
-	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/dynamic/overl_dyn_hex_num.cpp.o
-.PHONY : Hex_num/dynamic/overl_dyn_hex_num.cpp.o
-
-Hex_num/dynamic/overl_dyn_hex_num.i: Hex_num/dynamic/overl_dyn_hex_num.cpp.i
-.PHONY : Hex_num/dynamic/overl_dyn_hex_num.i
-
-# target to preprocess a source file
-Hex_num/dynamic/overl_dyn_hex_num.cpp.i:
-	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/dynamic/overl_dyn_hex_num.cpp.i
-.PHONY : Hex_num/dynamic/overl_dyn_hex_num.cpp.i
-
-Hex_num/dynamic/overl_dyn_hex_num.s: Hex_num/dynamic/overl_dyn_hex_num.cpp.s
-.PHONY : Hex_num/dynamic/overl_dyn_hex_num.s
-
-# target to generate assembly for a file
-Hex_num/dynamic/overl_dyn_hex_num.cpp.s:
-	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/dynamic/overl_dyn_hex_num.cpp.s
-.PHONY : Hex_num/dynamic/overl_dyn_hex_num.cpp.s
-
 Hex_num/static/overl_stat_hex_num.o: Hex_num/static/overl_stat_hex_num.cpp.o
 .PHONY : Hex_num/static/overl_stat_hex_num.o
 
@@ -340,9 +316,6 @@ help:
 	@echo "... Hex_num/dynamic/hex_num_dynamic.o"
 	@echo "... Hex_num/dynamic/hex_num_dynamic.i"
 	@echo "... Hex_num/dynamic/hex_num_dynamic.s"
-	@echo "... Hex_num/dynamic/overl_dyn_hex_num.o"
-	@echo "... Hex_num/dynamic/overl_dyn_hex_num.i"
-	@echo "... Hex_num/dynamic/overl_dyn_hex_num.s"
 	@echo "... Hex_num/static/overl_stat_hex_num.o"
 	@echo "... Hex_num/static/overl_stat_hex_num.i"
 	@echo "... Hex_num/static/overl_stat_hex_num.s"

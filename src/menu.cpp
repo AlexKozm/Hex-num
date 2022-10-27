@@ -1,12 +1,14 @@
 #include "menu.h"
-#include "overl_dyn_hex_num.h"
+// #include "overl_dyn_hex_num.h"
+#include "hex_num_dynamic.h"
+#include "hex_num.h"
 #include <iostream>
 #include <string>
 #include <limits>
 
 using namespace std;
 using namespace input_menu;
-using namespace overl_dyn_hex_num;
+using namespace hex_num_dynamic;
 
 int input_menu::get_uint(int max) {
   cout << "Enter num: ";
@@ -44,18 +46,16 @@ int input_menu::big_if(int num) {
     cin >> a;
     cout << "Enter b: ";
     cin >> b;
-    c = a + b;
     cout << "+------\\__" << endl;
-    cout << "|Answer: " << c;
+    cout << "|Answer: " << a + b;
     break;
   case 2:
     cout << "Enter a: ";
     cin >> a;
     cout << "Enter b: ";
     cin >> b;
-    c = a - b;
     cout << "+------\\__" << endl;
-    cout << "|Answer: "<< c;
+    cout << "|Answer: "<< a - b;
     break;
   case 3:
     cout << "Enter hex: ";
@@ -82,9 +82,8 @@ int input_menu::big_if(int num) {
     cin >> a;
     cout << "Lengh of movement. ";
     inp = get_uint(-1);
-    c = (a << inp);
     cout << "+------\\__" << endl;
-    cout << "|Answer: "<< c;
+    cout << "|Answer: " << (a << inp);
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     break;
@@ -93,9 +92,8 @@ int input_menu::big_if(int num) {
     cin >> a;
     cout << "Lengh of movement. ";
     inp = get_uint(-1);
-    c = a >> inp;
     cout << "+------\\__" << endl;
-    cout << "|Answer: "<< c;
+    cout << "|Answer: "<< (a >> inp);
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     break;
@@ -123,7 +121,8 @@ int input_menu::menu() {
     cout << "+----------------------------+" << endl;
     cout << "|Enter any key to continue...|" << endl;
     cout << "+----------------------------+" << endl;
-    getchar();
+    char a = getchar();
+    if (a == '0') return 0;
   }
 
   return 0;

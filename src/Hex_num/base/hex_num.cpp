@@ -8,9 +8,8 @@
 #include <string>
 #include <tuple>
 
-using namespace hex_num;
-using namespace std;
-typedef Container C;
+typedef hex_num::Container C;
+typedef hex_num::Hex_num Hex_num;
 
 //-----------------Hex_num constructors------------------------
 Hex_num::Hex_num(C *arr) : cont(arr) {}
@@ -27,15 +26,11 @@ Hex_num::Hex_num(C *arr, int hex) : cont(arr) {
   }
 }
 
-Hex_num::Hex_num(C *arr, string hex) : cont(arr) { str_to_arr(hex); }
+Hex_num::Hex_num(C *arr, std::string hex) : cont(arr) { str_to_arr(hex); }
 
 Hex_num::Hex_num(const Hex_num &that) {
   cont = that.cont->get_copy();
   std::cout << "Copy constructor of base class" << std::endl;
-}
-Hex_num::~Hex_num() {
-  delete cont;
-  cont = nullptr;
 }
 
 Hex_num &Hex_num::operator=(const Hex_num &a) {
@@ -46,27 +41,32 @@ Hex_num &Hex_num::operator=(const Hex_num &a) {
 }
 
 Hex_num &Hex_num::operator=(Hex_num &&a) {
-  swap(cont, a.cont);
+  std::swap(cont, a.cont);
   std::cout << "Move assignment of base class" << std::endl;
   return *this;
 }
 
 Hex_num::Hex_num(Hex_num &&that) {
-  swap(cont, that.cont);
+  std::swap(cont, that.cont);
   std::cout << "Move constructor of base class" << std::endl;
+}
+
+Hex_num::~Hex_num() {
+  delete cont;
+  cont = nullptr;
 }
 //-------------------------------------------------------------
 
 //-----------------Protected methods---------------------------
 
-void Hex_num::str_to_arr(string str) {
+void Hex_num::str_to_arr(std::string str) {
   size_t len = str.length();
   len = str[0] == '-' ? len - 1 : len;
   if (len == 0) {
     throw C::Wrong_format_exception("Empty string");
   }
   for (size_t i = 0; i < len; ++i) {
-    if (string("0123456789ABCDEF").find(str[str.length() - 1 - i]) !=
+    if (std::string("0123456789ABCDEF").find(str[str.length() - 1 - i]) !=
         str.npos) {
       cont->set_digit(i, str[str.length() - 1 - i]);
     } else {
@@ -137,15 +137,15 @@ bool Hex_num::evenness() {
   }
 }
 
-istream &Hex_num::input(istream &is) {
-  string inp;
+std::istream &Hex_num::input(std::istream &is) {
+  std::string inp;
   getline(is, inp);
   cont->set_zeros();
   str_to_arr(inp);
   return is;
 }
 
-ostream &Hex_num::output(ostream &os) const {
+std::ostream &Hex_num::output(std::ostream &os) const {
 
   bool started = 0;
   int i = cont->get_len() - 1;
@@ -164,16 +164,16 @@ ostream &Hex_num::output(ostream &os) const {
   if (started == 0) {
     os << '0';
   }
-  os << endl;
+  os << std::endl;
 
   return os;
 }
 
-void Hex_num::print_container(ostream &out) {
+void Hex_num::print_container(std::ostream &out) {
   for (int i = cont->get_len() - 1; i >= 0; --i) {
     out << cont->get_val(i);
   }
-  out << endl;
+  out << std::endl;
 }
 
 Hex_num *Hex_num::reverse_code() {
@@ -234,7 +234,7 @@ Hex_num *Hex_num::from_add_to_rev_code() {
       val = C::char_to_int(cont->get_val(i));
     }
     if (i == cont->get_len() - 1 && val == 8) {
-      throw overflow_error(
+      throw std::overflow_error(
           "Such additional code can't be represented as a reversed code");
     } else {
       for (int j = 0; j < 4; ++j) {
@@ -262,7 +262,7 @@ bool Hex_num::equal(Hex_num const &a, Hex_num const &b) {
   if (a.cont->get_sign() != a.cont->get_sign()) {
     return 0;
   }
-  for (int i = 0; i < max(a.cont->get_len(), b.cont->get_len()); ++i) {
+  for (int i = 0; i < std::max(a.cont->get_len(), b.cont->get_len()); ++i) {
     if (a.cont->get_digit(i, '0') != b.cont->get_digit(i, '0')) {
       return 0;
     }
@@ -290,12 +290,12 @@ Hex_num Hex_num::sum_of_additonals(const Hex_num &a, const Hex_num &b) {
   }
   if (a.cont->get_sign() == 1 && b.cont->get_sign() == 1 &&
       C::char_to_int(ans.cont->get_val(ans.cont->get_len() - 1)) / 8 % 2 == 0) {
-    throw overflow_error("<0 + <0 = >0");
+    throw std::overflow_error("<0 + <0 = >0");
   } else if (a.cont->get_sign() == 0 && b.cont->get_sign() == 0 &&
              C::char_to_int(ans.cont->get_val(ans.cont->get_len() - 1)) / 8 %
                      2 ==
                  1) {
-    throw overflow_error(">0 + >0 = <0");
+    throw std::overflow_error(">0 + >0 = <0");
   } else if (a.cont->get_sign() == 1 || b.cont->get_sign() == 1) {
   }
   return ans;
