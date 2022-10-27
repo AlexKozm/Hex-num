@@ -2,6 +2,7 @@
 #include "overl_dyn_hex_num.h"
 #include <iostream>
 #include <string>
+#include <limits>
 
 using namespace std;
 using namespace input_menu;

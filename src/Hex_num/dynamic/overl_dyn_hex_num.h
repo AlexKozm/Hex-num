@@ -26,19 +26,15 @@ class Hex_num : public hex_num_dynamic::Hex_num {
    * @param hex 
    */
   Hex_num(std::string hex);
-  //TODO
   Hex_num(const Hex_num &that);
-  // TODO
   Hex_num(Hex_num &&that);
   Hex_num &operator=(const Hex_num &a);
   Hex_num &operator=(Hex_num &&a);
 
   Hex_num(const hex_num::Hex_num &that);
-  // TODO
   Hex_num(hex_num::Hex_num &&that);
   Hex_num &operator=(const hex_num::Hex_num &a);
   Hex_num &operator=(hex_num::Hex_num &&a);
-  //TODO
   ~Hex_num();
 
   bool operator==(const hex_num::Hex_num &hex) const;
