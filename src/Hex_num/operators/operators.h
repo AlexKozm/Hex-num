@@ -1,7 +1,7 @@
 #if !defined(OPETATORS_H)
 #define OPETATORS_H
 
-#include <vector>
+// #include <vector>
 #include "Hex_num/base/hex_num.h"
 #include "container_d.h"
 

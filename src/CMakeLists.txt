@@ -6,9 +6,8 @@ add_executable(lab3_run main.cpp
                         Hex_num/operators/operators.cpp
                         Hex_num/dynamic/hex_num_d.cpp 
                         Hex_num/dynamic/container_d.cpp
-                        # Hex_num/dynamic/overl_dyn_hex_num.cpp
                         Hex_num/static/hex_num_s.cpp
-                        Hex_num/static/overl_stat_hex_num.cpp
+                        Hex_num/static/container_s.cpp
                         menu.cpp)
                         
 target_include_directories(lab3_run PUBLIC ./Hex_num/base)

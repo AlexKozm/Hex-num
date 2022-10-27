@@ -1,9 +1,9 @@
 #if !defined(HEX_NUM_ABSTRACT_H)
 #define HEX_NUM_ABSTRACT_H
 
-#include <iostream>
-#include <stdexcept>
-#include <string>
+// #include <iostream>
+// #include <stdexcept>
+// #include <string>
 #include "container.h"
 
 namespace hex_num {

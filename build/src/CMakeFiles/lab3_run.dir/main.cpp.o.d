@@ -2,6 +2,8 @@ src/CMakeFiles/lab3_run.dir/main.cpp.o: \
  /home/alex/Mephi/sem3/Infa/lab3/src/main.cpp /usr/include/stdc-predef.h \
  /home/alex/Mephi/sem3/Infa/lab3/src/menu.h \
  /home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/static/hex_num_s.h \
+ /home/alex/Mephi/sem3/Infa/lab3/./src/Hex_num/base/hex_num.h \
+ /home/alex/Mephi/sem3/Infa/lab3/./src/Hex_num/base/container.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -158,13 +160,11 @@ src/CMakeFiles/lab3_run.dir/main.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/alex/Mephi/sem3/Infa/lab3/./src/Hex_num/base/hex_num.h \
- /home/alex/Mephi/sem3/Infa/lab3/./src/Hex_num/base/container.h \
  /home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/dynamic/hex_num_d.h \
+ /home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/dynamic/container_d.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/dynamic/container_d.h \
  /home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/operators/operators.h \
  /home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/dynamic/container_d.h

@@ -1,48 +1,33 @@
-#include "container_d.h"
-// #include <array>
-// #include <tuple>
-// #include <utility>
-// #include <vector>
+#include "hex_num_s.h"
+#include "Hex_num/base/hex_num.h"
+#include "container_s.h"
+// #include <algorithm>
 // #include <iostream>
+// #include <stdexcept>
+// #include <string>
 
-namespace hex_num_dynamic {
+typedef static_hex::Container Container;
+typedef static_hex::Hex_num Hex_num;
 
 //-----------------Container-----------------------------------
 Container::Container() {
-  set_len(def_len);
+  set_len(stat_len);
   set_zeros();
+  // std::cout << "Static container constructor" << std::endl;
 }
+
 
 Container::Container(const Container &that) {
   set_len(that.get_len());
-  arr.resize(that.get_len());
   for (int i = 0; i < get_len(); ++i) {
     arr[i] = that.arr[i];
   }
 }
 
-Container::Container(Container &&that) {
-  set_len(that.get_len());
-  std::swap(arr, that.arr);
-}
-
-
-Container &Container::operator=(const Container &that) {
-  set_len(that.get_len());
-  arr = that.arr;
-  return *this;
-}
-
-Container &Container::operator=(Container &&that) {
-  set_len(that.get_len());
-  std::swap(arr, that.arr);
-  return *this;
-}
+Container::~Container() {}
 
 void Container::set_zeros() {
-  for (int i = 0; i < get_len(); ++i) {
-    arr[i] = '0';
-  }
+  std::fill_n(arr, get_len(), '0');
 }
 
 char Container::get_val(int pos, char def) const {
@@ -54,7 +39,9 @@ char Container::get_val(int pos, char def) const {
 }
 
 char Container::get_digit(int pos, char def) const {
-  if (pos == get_len() - 1) {
+  if (pos < get_len() - 1) {
+    return arr[pos];
+  } else if (pos == get_len() - 1) {
     int val = char_to_int(arr[pos]);
     if (val >= 8) {
       return int_to_char(val - 8);
@@ -69,49 +56,35 @@ char Container::get_digit(int pos, char def) const {
 
 void Container::set_digit(int pos, char val) {
   if (pos >= get_len() || (pos == get_len() - 1 && char_to_int(val) >= 8)) {
-    bool sgn = get_sign();
-    unset_minus();
-    arr.resize(pos + 2);
-    arr[pos + 1] = '0';
-    set_len(pos + 2);
-    if (sgn) {
-      set_minus();
-    } else {
-      unset_minus();
-    }
+    throw std::overflow_error("Out of index");
   }
-  if ((pos == get_len() - 1) && (get_sign() == 1)) {
-    arr.resize(pos + 2);
-    arr[pos + 1] = '0';
-    set_len(pos + 2);
-    set_minus();
+  // TODO may be err: should be < 8 
+  if ((pos == get_len() - 1) && (char_to_int(arr[pos]) >= 8)) {
+    arr[pos] = int_to_char(char_to_int(val) + 8);
+  } else {
+    arr[pos] = val;
   }
-  if (pos < 0) {
-    return;
-  }
-  arr[pos] = val;
 }
 
 void Container::set_val(int pos, char val) {
-  if (pos >= get_len()) {
-    arr.resize(pos + 2);
-    arr[pos + 1] = '0';
-    set_len(pos + 2);
+  if (pos < get_len()) {
+    arr[pos] = val;
   }
-  arr[pos] = val;
 }
 
 hex_num::Container *Container::get_new() const { return new Container; }
-hex_num::Container *Container::get_copy() const { return new Container(*this); }
+hex_num::Container *Container::get_copy() const {
+  return new Container(*this);
+}
 
 void Container::set_minus() {
-  int val = char_to_int(get_val(get_len() - 1));
+  int val = char_to_int(arr[get_len() - 1]);
   if (val < 8) {
     arr[get_len() - 1] = int_to_char(val + 8);
   } // else it has minus already
 };
 
-void Container::unset_minus() {
+void Container::unset_minus(){
   int val = char_to_int(arr[get_len() - 1]);
   if (val >= 8) {
     arr[get_len() - 1] = int_to_char(val - 8);
@@ -125,5 +98,4 @@ bool Container::get_sign() const {
     return 0;
   }
 }
-} // namespace hex_num_dynamic
 

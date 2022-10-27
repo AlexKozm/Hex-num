@@ -1,12 +1,12 @@
 #include "hex_num.h"
-#include "string"
-#include <functional>
-#include <iostream>
+// #include "string"
+// #include <functional>
+// #include <iostream>
 #include <math.h>
 #include <sstream>
-#include <stdexcept>
-#include <string>
-#include <tuple>
+// #include <stdexcept>
+// #include <string>
+// #include <tuple>
 
 typedef hex_num::Container C;
 typedef hex_num::Hex_num Hex_num;

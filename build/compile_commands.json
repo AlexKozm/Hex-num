@@ -36,8 +36,8 @@
 },
 {
   "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/src",
-  "command": "/usr/bin/c++  -I/home/alex/Mephi/sem3/Infa/lab3/./src -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/base -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/operators -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/static -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/dynamic   -Wall -g -std=gnu++2a -o CMakeFiles/lab3_run.dir/Hex_num/static/overl_stat_hex_num.cpp.o -c /home/alex/Mephi/sem3/Infa/lab3/src/Hex_num/static/overl_stat_hex_num.cpp",
-  "file": "/home/alex/Mephi/sem3/Infa/lab3/src/Hex_num/static/overl_stat_hex_num.cpp"
+  "command": "/usr/bin/c++  -I/home/alex/Mephi/sem3/Infa/lab3/./src -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/base -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/operators -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/static -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/dynamic   -Wall -g -std=gnu++2a -o CMakeFiles/lab3_run.dir/Hex_num/static/container_s.cpp.o -c /home/alex/Mephi/sem3/Infa/lab3/src/Hex_num/static/container_s.cpp",
+  "file": "/home/alex/Mephi/sem3/Infa/lab3/src/Hex_num/static/container_s.cpp"
 },
 {
   "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/src",
@@ -63,6 +63,11 @@
   "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/tst",
   "command": "/usr/bin/c++  -I/home/alex/Mephi/sem3/Infa/lab3/./src -std=gnu++2a -o CMakeFiles/tests.dir/__/src/Hex_num/static/hex_num_s.cpp.o -c /home/alex/Mephi/sem3/Infa/lab3/src/Hex_num/static/hex_num_s.cpp",
   "file": "/home/alex/Mephi/sem3/Infa/lab3/src/Hex_num/static/hex_num_s.cpp"
+},
+{
+  "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/tst",
+  "command": "/usr/bin/c++  -I/home/alex/Mephi/sem3/Infa/lab3/./src -std=gnu++2a -o CMakeFiles/tests.dir/__/src/Hex_num/static/container_s.cpp.o -c /home/alex/Mephi/sem3/Infa/lab3/src/Hex_num/static/container_s.cpp",
+  "file": "/home/alex/Mephi/sem3/Infa/lab3/src/Hex_num/static/container_s.cpp"
 },
 {
   "directory": "/home/alex/Mephi/sem3/Infa/lab3/build/tst",
