@@ -5,10 +5,13 @@
 #include <iostream>
 #include <string>
 #include <limits>
+#include "../operators/operators.h"
 
 using namespace std;
 using namespace input_menu;
-using namespace hex_num_dynamic;
+// using namespace hex_num_dynamic;
+// typedef hex_num_dynamic::Hex_num Hex_num;
+using namespace hex_num;
 
 int input_menu::get_uint(int max) {
   cout << "Enter num: ";
@@ -34,7 +37,7 @@ int input_menu::get_uint(int max) {
 }
 
 int input_menu::big_if(int num) {
-  Hex_num a, b, c;
+  hex_num_dynamic::Hex_num a, b, c;
   int inp;
   cin.clear();
   cin.ignore(numeric_limits<streamsize>::max(), '\n');

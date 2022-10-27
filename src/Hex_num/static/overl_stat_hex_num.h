@@ -33,11 +33,12 @@ class Hex_num : public static_hex::Hex_num {
   bool operator==(const hex_num::Hex_num &hex) const;
   hex_num::Hex_num &operator<<(int n);
   hex_num::Hex_num &operator>>(int n);
-  friend std::istream &operator>>(std::istream &is, hex_num::Hex_num &hex);
-  friend std::ostream &operator<<(std::ostream &os, const hex_num::Hex_num &hex);
-  friend hex_num::Hex_num operator+(const Hex_num &a, const Hex_num &b);
-  friend hex_num::Hex_num operator-(const Hex_num &a, const Hex_num &b);
 };
+  std::istream &operator>>(std::istream &is, hex_num::Hex_num &hex);
+  std::ostream &operator<<(std::ostream &os, const hex_num::Hex_num &hex);
+  std::ostream &operator<<(std::ostream &os, hex_num::Hex_num &&hex);
+  hex_num::Hex_num operator+(const Hex_num &a, const Hex_num &b);
+  hex_num::Hex_num operator-(const Hex_num &a, const Hex_num &b);
 
 } // namespace overl_stat_hex_num
 

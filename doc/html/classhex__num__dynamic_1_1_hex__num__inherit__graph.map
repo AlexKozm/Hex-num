@@ -1,5 +1,4 @@
 <map id="hex_num_dynamic::Hex_num" name="hex_num_dynamic::Hex_num">
-<area shape="rect" id="node1" title=" " alt="" coords="5,453,220,589"/>
-<area shape="rect" id="node3" href="$classoverl__dyn__hex__num_1_1_hex__num.html" title=" " alt="" coords="32,637,193,832"/>
-<area shape="rect" id="node2" href="$classhex__num_1_1_hex__num.html" title="Base class for hex_num." alt="" coords="15,5,210,405"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,220,107"/>
+<area shape="rect" id="node2" href="$classhex__num_1_1_hex__num.html" title="Base class for hex_num." alt="" coords="37,5,189,32"/>
 </map>

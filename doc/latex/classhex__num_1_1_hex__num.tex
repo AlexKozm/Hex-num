@@ -16,7 +16,7 @@ Inheritance diagram for hex\+\_\+num\+::Hex\+\_\+num\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{classhex__num_1_1_hex__num__inherit__graph}
+\includegraphics[width=350pt]{classhex__num_1_1_hex__num__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -26,12 +26,16 @@ Collaboration diagram for hex\+\_\+num\+::Hex\+\_\+num\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{classhex__num_1_1_hex__num__coll__graph}
+\includegraphics[width=195pt]{classhex__num_1_1_hex__num__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classhex__num_1_1_hex__num_ad5f2246c4a224f2f2ce6d302349434d2}{Hex\+\_\+num}} (const \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} \&that)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhex__num_1_1_hex__num_a2be2c94ca5fc3e52d418134da95472ee}{Hex\+\_\+num}} (\mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} \&\&that)
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} \& \mbox{\hyperlink{classhex__num_1_1_hex__num_a22eac60660287e5f74c355cda4e0fd39}{operator=}} (\mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} \&\&a)
 \begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} \& \mbox{\hyperlink{classhex__num_1_1_hex__num_a91285cd0c0596d8b8a9271dc5f3d30a0}{operator=}} (const \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} \&a)
@@ -48,9 +52,9 @@ Collaboration diagram for hex\+\_\+num\+::Hex\+\_\+num\+:
 \begin{DoxyCompactList}\small\item\em Moves chars n times to right. Empty cells fills with \textquotesingle{}0\textquotesingle{}. Saves num sign. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classhex__num_1_1_hex__num_acddc9ead823f7fb6af1daeeaaa671adb}{evenness}} ()
 \begin{DoxyCompactList}\small\item\em Is number even. \end{DoxyCompactList}\item 
-std\+::istream \& \mbox{\hyperlink{classhex__num_1_1_hex__num_a630237a1531594566daf94d01f32d22a}{input}} (std\+::istream \&inp)
+std\+::istream \& \mbox{\hyperlink{classhex__num_1_1_hex__num_ab43e668afaf2249fd5f4dc92d6ae1295}{input}} (std\+::istream \&inp)
 \begin{DoxyCompactList}\small\item\em Input str from istream and convert it to \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}}. \end{DoxyCompactList}\item 
-std\+::ostream \& \mbox{\hyperlink{classhex__num_1_1_hex__num_a3417d0ea564a120c9e008afbba1fc4d9}{output}} (std\+::ostream \&out) const
+std\+::ostream \& \mbox{\hyperlink{classhex__num_1_1_hex__num_a98a4ac76ebade1dc6a3a3c27bf0adc17}{output}} (std\+::ostream \&out) const
 \begin{DoxyCompactList}\small\item\em Output string representation in hex format to stream. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classhex__num_1_1_hex__num_a4292fa97f674a841667cb084f5b5b7e2}{print\+\_\+container}} (std\+::ostream \&out)
 \begin{DoxyCompactList}\small\item\em Print \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} in direct code with hex num. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -72,12 +76,8 @@ static \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} \mbox{\hyperl
 \begin{DoxyCompactList}\small\item\em Create \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} with given \mbox{\hyperlink{classhex__num_1_1_container}{Container}} arr. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classhex__num_1_1_hex__num_ad5fee34cec85fb74c380e306b6596301}{Hex\+\_\+num}} (\mbox{\hyperlink{classhex__num_1_1_container}{Container}} $\ast$arr, int hex)
 \begin{DoxyCompactList}\small\item\em Create \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} with given \mbox{\hyperlink{classhex__num_1_1_container}{Container}} arr and init it with hex int or throw an error. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classhex__num_1_1_hex__num_ac44087531808276467b3bfd754da76f3}{Hex\+\_\+num}} (\mbox{\hyperlink{classhex__num_1_1_container}{Container}} $\ast$arr, std\+::string hex)
+\mbox{\hyperlink{classhex__num_1_1_hex__num_ab624d59d214164f57dab003ef70c816f}{Hex\+\_\+num}} (\mbox{\hyperlink{classhex__num_1_1_container}{Container}} $\ast$arr, std\+::string hex)
 \begin{DoxyCompactList}\small\item\em Create \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} with given \mbox{\hyperlink{classhex__num_1_1_container}{Container}} arr and init it with string or throw an error. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classhex__num_1_1_hex__num_ad5f2246c4a224f2f2ce6d302349434d2}{Hex\+\_\+num}} (const \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} \&that)
-\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classhex__num_1_1_hex__num_a2be2c94ca5fc3e52d418134da95472ee}{Hex\+\_\+num}} (\mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} \&\&that)
-\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classhex__num_1_1_hex__num_acca92379e001ae9ec5e3cd4f9c84bb03}{str\+\_\+to\+\_\+arr}} (std\+::string str)
 \begin{DoxyCompactList}\small\item\em Convert string to arr. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classhex__num_1_1_hex__num_ae31fb0459cc60478f0500bb42f0388f9}{check\+\_\+for\+\_\+minus\+\_\+zero}} ()
@@ -126,11 +126,11 @@ Create \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} with given \m
 {\em hex} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classhex__num_1_1_hex__num_ac44087531808276467b3bfd754da76f3}\label{classhex__num_1_1_hex__num_ac44087531808276467b3bfd754da76f3}} 
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_ab624d59d214164f57dab003ef70c816f}\label{classhex__num_1_1_hex__num_ab624d59d214164f57dab003ef70c816f}} 
 \index{hex\_num::Hex\_num@{hex\_num::Hex\_num}!Hex\_num@{Hex\_num}}
 \index{Hex\_num@{Hex\_num}!hex\_num::Hex\_num@{hex\_num::Hex\_num}}
 \doxysubsubsection{\texorpdfstring{Hex\_num()}{Hex\_num()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
-{\footnotesize\ttfamily hex\+\_\+num\+::\+Hex\+\_\+num\+::\+Hex\+\_\+num (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhex__num_1_1_container}{Container}} $\ast$}]{arr,  }\item[{std\+::string}]{hex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily Hex\+\_\+num\+::\+Hex\+\_\+num (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhex__num_1_1_container}{Container}} $\ast$}]{arr,  }\item[{std\+::string}]{hex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -147,7 +147,7 @@ Create \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} with given \m
 \index{hex\_num::Hex\_num@{hex\_num::Hex\_num}!Hex\_num@{Hex\_num}}
 \index{Hex\_num@{Hex\_num}!hex\_num::Hex\_num@{hex\_num::Hex\_num}}
 \doxysubsubsection{\texorpdfstring{Hex\_num()}{Hex\_num()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
-{\footnotesize\ttfamily Hex\+\_\+num\+::\+Hex\+\_\+num (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} \&}]{that }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily Hex\+\_\+num\+::\+Hex\+\_\+num (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} \&}]{that }\end{DoxyParamCaption})}
 
 
 
@@ -162,7 +162,7 @@ Copy constructor.
 \index{hex\_num::Hex\_num@{hex\_num::Hex\_num}!Hex\_num@{Hex\_num}}
 \index{Hex\_num@{Hex\_num}!hex\_num::Hex\_num@{hex\_num::Hex\_num}}
 \doxysubsubsection{\texorpdfstring{Hex\_num()}{Hex\_num()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
-{\footnotesize\ttfamily Hex\+\_\+num\+::\+Hex\+\_\+num (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} \&\&}]{that }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily Hex\+\_\+num\+::\+Hex\+\_\+num (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} \&\&}]{that }\end{DoxyParamCaption})}
 
 
 
@@ -186,7 +186,7 @@ Move constructor.
 
 Replace -\/0 to 0. 
 
-In imput and maybe in calculation we can get -\/0 value in direct code. Because direct code should not contain -\/0 we should call this function to replace -\/0 with 0 \mbox{\Hypertarget{classhex__num_1_1_hex__num_ada3f3ed172f98952a6e5788e9acc76d6}\label{classhex__num_1_1_hex__num_ada3f3ed172f98952a6e5788e9acc76d6}} 
+In input and maybe in calculation we can get -\/0 value in direct code. Because direct code should not contain -\/0 we should call this function to replace -\/0 with 0 \mbox{\Hypertarget{classhex__num_1_1_hex__num_ada3f3ed172f98952a6e5788e9acc76d6}\label{classhex__num_1_1_hex__num_ada3f3ed172f98952a6e5788e9acc76d6}} 
 \index{hex\_num::Hex\_num@{hex\_num::Hex\_num}!dif@{dif}}
 \index{dif@{dif}!hex\_num::Hex\_num@{hex\_num::Hex\_num}}
 \doxysubsubsection{\texorpdfstring{dif()}{dif()}}
@@ -252,11 +252,11 @@ Convert additional code number to reverse code number.
 \begin{DoxyReturn}{Returns}
 Itself 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classhex__num_1_1_hex__num_a630237a1531594566daf94d01f32d22a}\label{classhex__num_1_1_hex__num_a630237a1531594566daf94d01f32d22a}} 
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_ab43e668afaf2249fd5f4dc92d6ae1295}\label{classhex__num_1_1_hex__num_ab43e668afaf2249fd5f4dc92d6ae1295}} 
 \index{hex\_num::Hex\_num@{hex\_num::Hex\_num}!input@{input}}
 \index{input@{input}!hex\_num::Hex\_num@{hex\_num::Hex\_num}}
 \doxysubsubsection{\texorpdfstring{input()}{input()}}
-{\footnotesize\ttfamily istream \& Hex\+\_\+num\+::input (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{inp }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::istream \& Hex\+\_\+num\+::input (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{inp }\end{DoxyParamCaption})}
 
 
 
@@ -288,7 +288,7 @@ Moves chars n times to left. Empty cells fills with \textquotesingle{}0\textquot
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Itself T\+O\+DO should create new \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} and not change itself 
+Itself 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classhex__num_1_1_hex__num_a5120f36cb3e861e5a15be8a1dbded297}\label{classhex__num_1_1_hex__num_a5120f36cb3e861e5a15be8a1dbded297}} 
 \index{hex\_num::Hex\_num@{hex\_num::Hex\_num}!move\_right@{move\_right}}
@@ -306,7 +306,7 @@ Moves chars n times to right. Empty cells fills with \textquotesingle{}0\textquo
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Itself T\+O\+DO should create new \mbox{\hyperlink{classhex__num_1_1_hex__num}{Hex\+\_\+num}} and not change itself 
+Itself 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classhex__num_1_1_hex__num_a91285cd0c0596d8b8a9271dc5f3d30a0}\label{classhex__num_1_1_hex__num_a91285cd0c0596d8b8a9271dc5f3d30a0}} 
 \index{hex\_num::Hex\_num@{hex\_num::Hex\_num}!operator=@{operator=}}
@@ -344,11 +344,11 @@ Move assignment.
 \begin{DoxyReturn}{Returns}
 Itself 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classhex__num_1_1_hex__num_a3417d0ea564a120c9e008afbba1fc4d9}\label{classhex__num_1_1_hex__num_a3417d0ea564a120c9e008afbba1fc4d9}} 
+\mbox{\Hypertarget{classhex__num_1_1_hex__num_a98a4ac76ebade1dc6a3a3c27bf0adc17}\label{classhex__num_1_1_hex__num_a98a4ac76ebade1dc6a3a3c27bf0adc17}} 
 \index{hex\_num::Hex\_num@{hex\_num::Hex\_num}!output@{output}}
 \index{output@{output}!hex\_num::Hex\_num@{hex\_num::Hex\_num}}
 \doxysubsubsection{\texorpdfstring{output()}{output()}}
-{\footnotesize\ttfamily ostream \& Hex\+\_\+num\+::output (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::ostream \& Hex\+\_\+num\+::output (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
 
 
 
@@ -465,4 +465,5 @@ Itself
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 src/\+Hex\+\_\+num/base/hex\+\_\+num.\+h\item 
-src/\+Hex\+\_\+num/base/hex\+\_\+num.\+cpp\end{DoxyCompactItemize}
+src/\+Hex\+\_\+num/base/hex\+\_\+num.\+cpp\item 
+src/\+Hex\+\_\+num/static/hex\+\_\+num\+\_\+s.\+cpp\end{DoxyCompactItemize}

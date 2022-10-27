@@ -6,8 +6,6 @@
 #if !defined(MENU_H)
 #define MENU_H
 
-// #include "overl_dyn_hex_num.h"
-
 namespace input_menu {
 
 /**

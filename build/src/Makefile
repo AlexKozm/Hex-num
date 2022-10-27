@@ -178,6 +178,30 @@ Hex_num/base/hex_num.cpp.s:
 	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/base/hex_num.cpp.s
 .PHONY : Hex_num/base/hex_num.cpp.s
 
+Hex_num/dynamic/container_d.o: Hex_num/dynamic/container_d.cpp.o
+.PHONY : Hex_num/dynamic/container_d.o
+
+# target to build an object file
+Hex_num/dynamic/container_d.cpp.o:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/dynamic/container_d.cpp.o
+.PHONY : Hex_num/dynamic/container_d.cpp.o
+
+Hex_num/dynamic/container_d.i: Hex_num/dynamic/container_d.cpp.i
+.PHONY : Hex_num/dynamic/container_d.i
+
+# target to preprocess a source file
+Hex_num/dynamic/container_d.cpp.i:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/dynamic/container_d.cpp.i
+.PHONY : Hex_num/dynamic/container_d.cpp.i
+
+Hex_num/dynamic/container_d.s: Hex_num/dynamic/container_d.cpp.s
+.PHONY : Hex_num/dynamic/container_d.s
+
+# target to generate assembly for a file
+Hex_num/dynamic/container_d.cpp.s:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/dynamic/container_d.cpp.s
+.PHONY : Hex_num/dynamic/container_d.cpp.s
+
 Hex_num/dynamic/hex_num_d.o: Hex_num/dynamic/hex_num_d.cpp.o
 .PHONY : Hex_num/dynamic/hex_num_d.o
 
@@ -201,6 +225,30 @@ Hex_num/dynamic/hex_num_d.s: Hex_num/dynamic/hex_num_d.cpp.s
 Hex_num/dynamic/hex_num_d.cpp.s:
 	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/dynamic/hex_num_d.cpp.s
 .PHONY : Hex_num/dynamic/hex_num_d.cpp.s
+
+Hex_num/operators/operators.o: Hex_num/operators/operators.cpp.o
+.PHONY : Hex_num/operators/operators.o
+
+# target to build an object file
+Hex_num/operators/operators.cpp.o:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/operators/operators.cpp.o
+.PHONY : Hex_num/operators/operators.cpp.o
+
+Hex_num/operators/operators.i: Hex_num/operators/operators.cpp.i
+.PHONY : Hex_num/operators/operators.i
+
+# target to preprocess a source file
+Hex_num/operators/operators.cpp.i:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/operators/operators.cpp.i
+.PHONY : Hex_num/operators/operators.cpp.i
+
+Hex_num/operators/operators.s: Hex_num/operators/operators.cpp.s
+.PHONY : Hex_num/operators/operators.s
+
+# target to generate assembly for a file
+Hex_num/operators/operators.cpp.s:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/operators/operators.cpp.s
+.PHONY : Hex_num/operators/operators.cpp.s
 
 Hex_num/static/hex_num_s.o: Hex_num/static/hex_num_s.cpp.o
 .PHONY : Hex_num/static/hex_num_s.o
@@ -313,9 +361,15 @@ help:
 	@echo "... Hex_num/base/hex_num.o"
 	@echo "... Hex_num/base/hex_num.i"
 	@echo "... Hex_num/base/hex_num.s"
+	@echo "... Hex_num/dynamic/container_d.o"
+	@echo "... Hex_num/dynamic/container_d.i"
+	@echo "... Hex_num/dynamic/container_d.s"
 	@echo "... Hex_num/dynamic/hex_num_d.o"
 	@echo "... Hex_num/dynamic/hex_num_d.i"
 	@echo "... Hex_num/dynamic/hex_num_d.s"
+	@echo "... Hex_num/operators/operators.o"
+	@echo "... Hex_num/operators/operators.i"
+	@echo "... Hex_num/operators/operators.s"
 	@echo "... Hex_num/static/hex_num_s.o"
 	@echo "... Hex_num/static/hex_num_s.i"
 	@echo "... Hex_num/static/hex_num_s.s"

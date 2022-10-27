@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/alex/Mephi/sem3/Infa/lab3/./src -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/base -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/static -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/dynamic
+CXX_INCLUDES = -I/home/alex/Mephi/sem3/Infa/lab3/./src -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/base -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/operators -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/static -I/home/alex/Mephi/sem3/Infa/lab3/src/./Hex_num/dynamic
 
 CXX_FLAGS =   -Wall -g -std=gnu++2a
 

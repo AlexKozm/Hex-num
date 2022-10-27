@@ -29,6 +29,10 @@ std::istream &operator>>(std::istream &is, hex_num::Hex_num &hex) {
   hex.input(is);
   return is;
 }
+std::ostream &operator<<(std::ostream &os, hex_num::Hex_num &&hex) {
+  hex.output(os);
+  return os;
+}
 std::ostream &operator<<(std::ostream &os, const hex_num::Hex_num &hex) {
   hex.output(os);
   return os;

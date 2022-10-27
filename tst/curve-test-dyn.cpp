@@ -471,5 +471,10 @@ TEST_CASE("Moves") {
       a.move_right(3).output(str);
       CHECK(str.str() == "0\n");
     }
+    SECTION("12 -> 123") {
+      Hex_num a("12");
+      a.move_right(123).output(str);
+      CHECK(str.str() == "0\n");
+    }
   }
 }

@@ -1,6 +1,6 @@
 <map id="overl_stat_hex_num::Hex_num" name="overl_stat_hex_num::Hex_num">
-<area shape="rect" id="node1" title=" " alt="" coords="25,985,180,1180"/>
-<area shape="rect" id="node2" href="$classstatic__hex_1_1_hex__num.html" title=" " alt="" coords="23,800,182,936"/>
-<area shape="rect" id="node3" href="$classhex__num_1_1_hex__num.html" title="Base class for hex_num." alt="" coords="5,351,200,751"/>
-<area shape="rect" id="node4" href="$classhex__num_1_1_container.html" title="Abstract class for container." alt="" coords="26,5,179,288"/>
+<area shape="rect" id="node1" title=" " alt="" coords="7,247,162,288"/>
+<area shape="rect" id="node2" href="$classstatic__hex_1_1_hex__num.html" title=" " alt="" coords="5,171,164,197"/>
+<area shape="rect" id="node3" href="$classhex__num_1_1_hex__num.html" title="Base class for hex_num." alt="" coords="9,95,161,121"/>
+<area shape="rect" id="node4" href="$classhex__num_1_1_container.html" title="Abstract class for container." alt="" coords="8,5,161,32"/>
 </map>

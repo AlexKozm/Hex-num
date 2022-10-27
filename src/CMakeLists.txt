@@ -3,12 +3,15 @@ add_definitions("-Wall" "-g")
 add_executable(lab3_run main.cpp 
                         Hex_num/base/hex_num.cpp  
                         Hex_num/base/container.cpp  
+                        Hex_num/operators/operators.cpp
                         Hex_num/dynamic/hex_num_d.cpp 
+                        Hex_num/dynamic/container_d.cpp
                         # Hex_num/dynamic/overl_dyn_hex_num.cpp
                         Hex_num/static/hex_num_s.cpp
                         Hex_num/static/overl_stat_hex_num.cpp
                         menu.cpp)
                         
 target_include_directories(lab3_run PUBLIC ./Hex_num/base)
+target_include_directories(lab3_run PUBLIC ./Hex_num/operators)
 target_include_directories(lab3_run PUBLIC ./Hex_num/static)
 target_include_directories(lab3_run PUBLIC ./Hex_num/dynamic)
