@@ -9,7 +9,6 @@
 namespace static_hex {
 
 
-//TODO
 class Container : public hex_num::Container {
   const static size_t stat_len = 7;
   char arr[stat_len] = {};
@@ -19,9 +18,10 @@ public:
    * @brief Init container with 0's
    */
   Container();
-  // TODO
+  Container(const Container &that);
+  ~Container() override;
+
   void set_zeros() override;
-  //TODO
   char get_val(int pos, char def = '0') const override;
   /**
    * @brief Return val on pos but without sign
@@ -34,24 +34,13 @@ public:
    * @return
    */
   char get_digit(int pos, char def) const override;
-  // TODO
   bool get_sign() const override;
-  //TODO
   void set_digit(int pos, char val) override;
-  // TODO
   void set_val(int pos, char val) override;
-  // TODO
   void set_minus() override;
-  //TODO
   void unset_minus() override;
-  //TODO
   hex_num::Container *get_new() const override;
-  //TODO
   hex_num::Container *get_copy() const override;
-  // TODO
-  Container(const Container &that);
-  // TODO
-  ~Container() override;
 };
 
 class Hex_num : public hex_num::Hex_num {
@@ -70,9 +59,7 @@ public:
    * @param hex 
    */
   Hex_num(std::string hex);
-  //TODO
   Hex_num(const hex_num::Hex_num &that);
-  //TODO
   ~Hex_num();
 };
 

@@ -1,7 +1,7 @@
 #include "overl_stat_hex_num.h"
 #include "Hex_num/base/hex_num.h"
 #include "iostream"
-#include "stat_hex_num.h"
+#include "hex_num_s.h"
 #include <string>
 
 namespace overl_stat_hex_num {

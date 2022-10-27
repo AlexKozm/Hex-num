@@ -101,14 +101,14 @@ public:
    * @brief Moves chars n times to left. Empty cells fills with '0'. Saves num
    *        sign.
    * @param n
-   * @return Itself TODO should create new Hex_num and not change itself
+   * @return Itself
    */
   Hex_num move_left(unsigned n);
   /**
    * @brief Moves chars n times to right. Empty cells fills with '0'. Saves num
    *        sign.
    * @param n
-   * @return Itself TODO should create new Hex_num and not change itself
+   * @return Itself
    */
   Hex_num move_right(unsigned n);
   /**

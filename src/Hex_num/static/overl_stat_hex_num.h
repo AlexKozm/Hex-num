@@ -4,7 +4,7 @@
 #if !defined(OVERL_STAT_HEX_NUM_H)
 #define OVERL_STAT_HEX_NUM_H
 
-#include "stat_hex_num.h"
+#include "hex_num_s.h"
 
 namespace overl_stat_hex_num {
 

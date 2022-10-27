@@ -178,29 +178,53 @@ Hex_num/base/hex_num.cpp.s:
 	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/base/hex_num.cpp.s
 .PHONY : Hex_num/base/hex_num.cpp.s
 
-Hex_num/dynamic/hex_num_dynamic.o: Hex_num/dynamic/hex_num_dynamic.cpp.o
-.PHONY : Hex_num/dynamic/hex_num_dynamic.o
+Hex_num/dynamic/hex_num_d.o: Hex_num/dynamic/hex_num_d.cpp.o
+.PHONY : Hex_num/dynamic/hex_num_d.o
 
 # target to build an object file
-Hex_num/dynamic/hex_num_dynamic.cpp.o:
-	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/dynamic/hex_num_dynamic.cpp.o
-.PHONY : Hex_num/dynamic/hex_num_dynamic.cpp.o
+Hex_num/dynamic/hex_num_d.cpp.o:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/dynamic/hex_num_d.cpp.o
+.PHONY : Hex_num/dynamic/hex_num_d.cpp.o
 
-Hex_num/dynamic/hex_num_dynamic.i: Hex_num/dynamic/hex_num_dynamic.cpp.i
-.PHONY : Hex_num/dynamic/hex_num_dynamic.i
+Hex_num/dynamic/hex_num_d.i: Hex_num/dynamic/hex_num_d.cpp.i
+.PHONY : Hex_num/dynamic/hex_num_d.i
 
 # target to preprocess a source file
-Hex_num/dynamic/hex_num_dynamic.cpp.i:
-	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/dynamic/hex_num_dynamic.cpp.i
-.PHONY : Hex_num/dynamic/hex_num_dynamic.cpp.i
+Hex_num/dynamic/hex_num_d.cpp.i:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/dynamic/hex_num_d.cpp.i
+.PHONY : Hex_num/dynamic/hex_num_d.cpp.i
 
-Hex_num/dynamic/hex_num_dynamic.s: Hex_num/dynamic/hex_num_dynamic.cpp.s
-.PHONY : Hex_num/dynamic/hex_num_dynamic.s
+Hex_num/dynamic/hex_num_d.s: Hex_num/dynamic/hex_num_d.cpp.s
+.PHONY : Hex_num/dynamic/hex_num_d.s
 
 # target to generate assembly for a file
-Hex_num/dynamic/hex_num_dynamic.cpp.s:
-	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/dynamic/hex_num_dynamic.cpp.s
-.PHONY : Hex_num/dynamic/hex_num_dynamic.cpp.s
+Hex_num/dynamic/hex_num_d.cpp.s:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/dynamic/hex_num_d.cpp.s
+.PHONY : Hex_num/dynamic/hex_num_d.cpp.s
+
+Hex_num/static/hex_num_s.o: Hex_num/static/hex_num_s.cpp.o
+.PHONY : Hex_num/static/hex_num_s.o
+
+# target to build an object file
+Hex_num/static/hex_num_s.cpp.o:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/static/hex_num_s.cpp.o
+.PHONY : Hex_num/static/hex_num_s.cpp.o
+
+Hex_num/static/hex_num_s.i: Hex_num/static/hex_num_s.cpp.i
+.PHONY : Hex_num/static/hex_num_s.i
+
+# target to preprocess a source file
+Hex_num/static/hex_num_s.cpp.i:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/static/hex_num_s.cpp.i
+.PHONY : Hex_num/static/hex_num_s.cpp.i
+
+Hex_num/static/hex_num_s.s: Hex_num/static/hex_num_s.cpp.s
+.PHONY : Hex_num/static/hex_num_s.s
+
+# target to generate assembly for a file
+Hex_num/static/hex_num_s.cpp.s:
+	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/static/hex_num_s.cpp.s
+.PHONY : Hex_num/static/hex_num_s.cpp.s
 
 Hex_num/static/overl_stat_hex_num.o: Hex_num/static/overl_stat_hex_num.cpp.o
 .PHONY : Hex_num/static/overl_stat_hex_num.o
@@ -225,30 +249,6 @@ Hex_num/static/overl_stat_hex_num.s: Hex_num/static/overl_stat_hex_num.cpp.s
 Hex_num/static/overl_stat_hex_num.cpp.s:
 	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/static/overl_stat_hex_num.cpp.s
 .PHONY : Hex_num/static/overl_stat_hex_num.cpp.s
-
-Hex_num/static/stat_hex_num.o: Hex_num/static/stat_hex_num.cpp.o
-.PHONY : Hex_num/static/stat_hex_num.o
-
-# target to build an object file
-Hex_num/static/stat_hex_num.cpp.o:
-	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/static/stat_hex_num.cpp.o
-.PHONY : Hex_num/static/stat_hex_num.cpp.o
-
-Hex_num/static/stat_hex_num.i: Hex_num/static/stat_hex_num.cpp.i
-.PHONY : Hex_num/static/stat_hex_num.i
-
-# target to preprocess a source file
-Hex_num/static/stat_hex_num.cpp.i:
-	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/static/stat_hex_num.cpp.i
-.PHONY : Hex_num/static/stat_hex_num.cpp.i
-
-Hex_num/static/stat_hex_num.s: Hex_num/static/stat_hex_num.cpp.s
-.PHONY : Hex_num/static/stat_hex_num.s
-
-# target to generate assembly for a file
-Hex_num/static/stat_hex_num.cpp.s:
-	cd /home/alex/Mephi/sem3/Infa/lab3/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/Hex_num/static/stat_hex_num.cpp.s
-.PHONY : Hex_num/static/stat_hex_num.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -313,15 +313,15 @@ help:
 	@echo "... Hex_num/base/hex_num.o"
 	@echo "... Hex_num/base/hex_num.i"
 	@echo "... Hex_num/base/hex_num.s"
-	@echo "... Hex_num/dynamic/hex_num_dynamic.o"
-	@echo "... Hex_num/dynamic/hex_num_dynamic.i"
-	@echo "... Hex_num/dynamic/hex_num_dynamic.s"
+	@echo "... Hex_num/dynamic/hex_num_d.o"
+	@echo "... Hex_num/dynamic/hex_num_d.i"
+	@echo "... Hex_num/dynamic/hex_num_d.s"
+	@echo "... Hex_num/static/hex_num_s.o"
+	@echo "... Hex_num/static/hex_num_s.i"
+	@echo "... Hex_num/static/hex_num_s.s"
 	@echo "... Hex_num/static/overl_stat_hex_num.o"
 	@echo "... Hex_num/static/overl_stat_hex_num.i"
 	@echo "... Hex_num/static/overl_stat_hex_num.s"
-	@echo "... Hex_num/static/stat_hex_num.o"
-	@echo "... Hex_num/static/stat_hex_num.i"
-	@echo "... Hex_num/static/stat_hex_num.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -1,6 +1,10 @@
-#include "hex_num_dynamic.h"
-#include "vector"
+#include "hex_num_d.h"
+// #include "vector"
+#include <array>
+#include <tuple>
+#include <utility>
 #include <vector>
+#include <iostream>
 
 namespace hex_num_dynamic {
 
@@ -18,7 +22,23 @@ Container::Container(const Container &that) {
   }
 }
 
-Container::~Container() {}
+Container::Container(Container &&that) {
+  set_len(that.get_len());
+  std::swap(arr, that.arr);
+}
+
+
+Container &Container::operator=(const Container &that) {
+  set_len(that.get_len());
+  arr = that.arr;
+  return *this;
+}
+
+Container &Container::operator=(Container &&that) {
+  set_len(that.get_len());
+  std::swap(arr, that.arr);
+  return *this;
+}
 
 void Container::set_zeros() {
   for (int i = 0; i < get_len(); ++i) {

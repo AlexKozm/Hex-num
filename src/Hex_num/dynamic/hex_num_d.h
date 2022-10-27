@@ -16,9 +16,13 @@ public:
    */
   Container();
   Container(const Container &that);
-  ~Container() override;
+  Container(Container &&that);
+  Container &operator=(const Container &that);
+  Container &operator=(Container &&that);
+  ~Container() override = default;
 
   void set_zeros() override;
+  bool get_sign() const override;
   char get_val(int pos, char def = '0') const override;
   /**
    * @brief Return val on pos but without sign
@@ -32,7 +36,6 @@ public:
    * @return
    */
   char get_digit(int pos, char def) const override;
-  bool get_sign() const override;
   void set_digit(int pos, char val) override;
   void set_val(int pos, char val) override;
   void set_minus() override;
