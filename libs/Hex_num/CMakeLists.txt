@@ -23,7 +23,6 @@ set(HEADER_FILES
   src/static/hex_num_s.h
   )
  
-# We declare the project as a static library and add all the source code files to it.
 add_library(${PROJECT_NAME} STATIC ${HEADER_FILES} ${SOURCE_FILES})
 target_include_directories(${PROJECT_NAME} PUBLIC 
   src/base 
