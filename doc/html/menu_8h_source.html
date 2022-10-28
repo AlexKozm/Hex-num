@@ -73,22 +73,20 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#if !defined(MENU_H)</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define MENU_H</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// #include &quot;overl_dyn_hex_num.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>input_menu {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>input_menu {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classinput__menu_1_1_e_o_f__exeption.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classinput__menu_1_1_e_o_f__exeption.html">EOF_exeption</a> {};</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">int</span> <a class="code" href="menu_8h.html#acbb95d0247229e8913d662e1f24129cc">get_uint</a>(<span class="keywordtype">int</span> max);</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="menu_8h.html#ac9388da2d911eee1a264e6b7a1300fbc">   36</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="menu_8h.html#ac9388da2d911eee1a264e6b7a1300fbc">get_double</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">int</span> big_if(<span class="keywordtype">int</span> num);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">int</span> menu();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;} <span class="comment">// namespace input_menu</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassinput__menu_1_1_e_o_f__exeption_html"><div class="ttname"><a href="classinput__menu_1_1_e_o_f__exeption.html">input_menu::EOF_exeption</a></div><div class="ttdoc">Exeption for End Of File.</div><div class="ttdef"><b>Definition:</b> menu.h:17</div></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classinput__menu_1_1_e_o_f__exeption.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classinput__menu_1_1_e_o_f__exeption.html">EOF_exeption</a> {};</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">int</span> <a class="code" href="menu_8h.html#acbb95d0247229e8913d662e1f24129cc">get_uint</a>(<span class="keywordtype">int</span> max);</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="menu_8h.html#ac9388da2d911eee1a264e6b7a1300fbc">   34</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="menu_8h.html#ac9388da2d911eee1a264e6b7a1300fbc">get_double</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">int</span> big_if(<span class="keywordtype">int</span> num);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">int</span> menu();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;} <span class="comment">// namespace input_menu</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassinput__menu_1_1_e_o_f__exeption_html"><div class="ttname"><a href="classinput__menu_1_1_e_o_f__exeption.html">input_menu::EOF_exeption</a></div><div class="ttdoc">Exeption for End Of File.</div><div class="ttdef"><b>Definition:</b> menu.h:15</div></div>
 <div class="ttc" id="amenu_8h_html_ac9388da2d911eee1a264e6b7a1300fbc"><div class="ttname"><a href="menu_8h.html#ac9388da2d911eee1a264e6b7a1300fbc">input_menu::get_double</a></div><div class="ttdeci">double get_double()</div><div class="ttdoc">Get double or throw exeption in case of eof.</div></div>
-<div class="ttc" id="amenu_8h_html_acbb95d0247229e8913d662e1f24129cc"><div class="ttname"><a href="menu_8h.html#acbb95d0247229e8913d662e1f24129cc">input_menu::get_uint</a></div><div class="ttdeci">int get_uint(int max)</div><div class="ttdoc">Get int in [0; max) or throw exeption in case of eof.</div><div class="ttdef"><b>Definition:</b> menu.cpp:13</div></div>
+<div class="ttc" id="amenu_8h_html_acbb95d0247229e8913d662e1f24129cc"><div class="ttname"><a href="menu_8h.html#acbb95d0247229e8913d662e1f24129cc">input_menu::get_uint</a></div><div class="ttdeci">int get_uint(int max)</div><div class="ttdoc">Get int in [0; max) or throw exeption in case of eof.</div><div class="ttdef"><b>Definition:</b> menu.cpp:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

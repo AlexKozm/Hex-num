@@ -1,12 +1,7 @@
 #include "hex_num.h"
-// #include "string"
-// #include <functional>
-// #include <iostream>
 #include <math.h>
 #include <sstream>
-// #include <stdexcept>
-// #include <string>
-// #include <tuple>
+#include <stdexcept>
 
 typedef hex_num::Container C;
 typedef hex_num::Hex_num Hex_num;
@@ -30,25 +25,25 @@ Hex_num::Hex_num(C *arr, std::string hex) : cont(arr) { str_to_arr(hex); }
 
 Hex_num::Hex_num(const Hex_num &that) {
   cont = that.cont->get_copy();
-  std::cout << "Copy constructor of base class" << std::endl;
+  // std::cout << "Copy constructor of base class" << std::endl;
 }
 
 Hex_num &Hex_num::operator=(const Hex_num &a) {
   delete cont;
   cont = a.cont->get_copy();
-  std::cout << "Copy assignment of base class" << std::endl;
+  // std::cout << "Copy assignment of base class" << std::endl;
   return *this;
 }
 
 Hex_num &Hex_num::operator=(Hex_num &&a) {
   std::swap(cont, a.cont);
-  std::cout << "Move assignment of base class" << std::endl;
+  // std::cout << "Move assignment of base class" << std::endl;
   return *this;
 }
 
 Hex_num::Hex_num(Hex_num &&that) {
   std::swap(cont, that.cont);
-  std::cout << "Move constructor of base class" << std::endl;
+  // std::cout << "Move constructor of base class" << std::endl;
 }
 
 Hex_num::~Hex_num() {
@@ -94,11 +89,18 @@ Hex_num Hex_num::move_left(unsigned n) {
   }
   bool sign = cont->get_sign();
   for (int i = cont->get_len(); i >= 1; --i) {
-    cont->set_val(i + n - 1, cont->get_digit(i - 1, '0'));
+    try {
+      cont->set_val(i + n - 1, cont->get_digit(i - 1, '0'));
+    } catch (std::overflow_error &err) {
+    }
   }
   for (int i = 0; i < static_cast<int>(n); ++i) {
-    cont->set_val(i, '0');
+    try {
+      cont->set_val(i, '0');
+    } catch (std::overflow_error &err) {
+    }
   }
+
   if (!sign) {
     cont->unset_minus();
   } else {

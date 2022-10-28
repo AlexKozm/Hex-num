@@ -3,6 +3,7 @@
  * @brief Menu file
  */
 
+#include <stdexcept>
 #if !defined(MENU_H)
 #define MENU_H
 
@@ -12,7 +13,10 @@ namespace input_menu {
  * @class EOF_exeption
  * @brief Exeption for End Of File
  */
-class EOF_exeption {};
+class EOF_exeption : public std::runtime_error {
+  public:
+  EOF_exeption(std::string msg) : runtime_error(msg){};
+} ;
 
 /**
  * @brief Get int in [0; max) or throw exeption in case of eof

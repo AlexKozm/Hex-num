@@ -1,10 +1,4 @@
 #include "hex_num_d.h"
-// #include "vector"
-// #include <array>
-// #include <tuple>
-// #include <utility>
-// #include <vector>
-// #include <iostream>
 
 namespace hex_num_dynamic {
 

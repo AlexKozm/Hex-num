@@ -9,8 +9,6 @@
 
 using namespace std;
 using namespace input_menu;
-// using namespace hex_num_dynamic;
-// typedef hex_num_dynamic::Hex_num Hex_num;
 using namespace hex_num;
 
 int input_menu::get_uint(int max) {
@@ -20,7 +18,7 @@ int input_menu::get_uint(int max) {
     cin >> inp;
     if (!cin.good()) {
       if (cin.eof()) {
-        throw input_menu::EOF_exeption();
+        throw input_menu::EOF_exeption("in get_uitn: EOF");
       }
       cout << "Try again: " << endl;
       cin.clear();

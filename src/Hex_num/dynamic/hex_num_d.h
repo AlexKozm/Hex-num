@@ -1,7 +1,6 @@
 #if !defined(HEX_NUM_DYNAMIC_H)
 #define HEX_NUM_DYNAMIC_H
 
-// #include <vector>
 #include "Hex_num/base/hex_num.h"
 #include "container_d.h"
 

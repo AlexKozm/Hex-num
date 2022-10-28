@@ -1,9 +1,5 @@
 #include "hex_num_s.h"
 #include "Hex_num/base/hex_num.h"
-// #include <algorithm>
-// #include <iostream>
-// #include <stdexcept>
-// #include <string>
 #include "container_s.h"
 
 typedef static_hex::Container Container;

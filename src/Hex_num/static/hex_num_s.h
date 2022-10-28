@@ -1,9 +1,6 @@
 #if !defined(HEX_NUM_H)
 #define HEX_NUM_H
 
-// #include <iostream>
-// #include <stdexcept>
-// #include <string>
 #include "Hex_num/base/hex_num.h"
 
 namespace static_hex {

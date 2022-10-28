@@ -1,10 +1,6 @@
 #include "hex_num_s.h"
 #include "Hex_num/base/hex_num.h"
 #include "container_s.h"
-// #include <algorithm>
-// #include <iostream>
-// #include <stdexcept>
-// #include <string>
 
 typedef static_hex::Container Container;
 typedef static_hex::Hex_num Hex_num;
@@ -69,6 +65,8 @@ void Container::set_digit(int pos, char val) {
 void Container::set_val(int pos, char val) {
   if (pos < get_len()) {
     arr[pos] = val;
+  } else if (pos >= get_len()){
+    throw std::overflow_error("Out of index");
   }
 }
 

@@ -2,8 +2,6 @@
 #define CONTAINER_H
 
 #include <iostream>
-// #include <stdexcept>
-// #include <string>
 
 namespace hex_num {
 
