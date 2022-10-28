@@ -213,6 +213,18 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 Catch2_DIR:PATH=/usr/local/lib/cmake/Catch2
 
 //Value Computed by CMake
+Hex_num_BINARY_DIR:STATIC=/home/alex/Mephi/sem3/Infa/lab3/build/src/Hex_num
+
+//The directory containing a CMake configuration file for Hex_num.
+Hex_num_DIR:PATH=Hex_num_DIR-NOTFOUND
+
+//Value Computed by CMake
+Hex_num_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Hex_num_SOURCE_DIR:STATIC=/home/alex/Mephi/sem3/Infa/lab3/src/Hex_num
+
+//Value Computed by CMake
 lab3_BINARY_DIR:STATIC=/home/alex/Mephi/sem3/Infa/lab3/build
 
 //Value Computed by CMake
@@ -326,7 +338,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

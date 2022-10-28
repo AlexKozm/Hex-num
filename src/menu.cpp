@@ -1,11 +1,11 @@
 #include "menu.h"
 // #include "overl_dyn_hex_num.h"
-#include "hex_num_d.h"
-#include "hex_num.h"
+#include "Hex_num/dynamic/hex_num_d.h"
+#include "Hex_num/base/hex_num.h"
 #include <iostream>
 #include <string>
 #include <limits>
-#include "../operators/operators.h"
+#include "Hex_num/operators/operators.h"
 
 using namespace std;
 using namespace input_menu;

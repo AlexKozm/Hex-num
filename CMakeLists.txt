@@ -7,5 +7,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 include_directories(./src)
 # include_directories(./src/Hex_num)
 
+add_subdirectory(./src/Hex_num)
 add_subdirectory(./src)
 add_subdirectory(./tst)

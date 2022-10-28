@@ -63,16 +63,19 @@ CMAKE_BINARY_DIR = /home/alex/Mephi/sem3/Infa/lab3/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: src/Hex_num/all
 all: src/all
 all: tst/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
+preinstall: src/Hex_num/preinstall
 preinstall: src/preinstall
 preinstall: tst/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: src/Hex_num/clean
 clean: src/clean
 clean: tst/clean
 .PHONY : clean
@@ -93,6 +96,21 @@ src/clean: src/CMakeFiles/lab3_run.dir/clean
 .PHONY : src/clean
 
 #=============================================================================
+# Directory level rules for directory src/Hex_num
+
+# Recursive "all" directory target.
+src/Hex_num/all: src/Hex_num/CMakeFiles/Hex_num.dir/all
+.PHONY : src/Hex_num/all
+
+# Recursive "preinstall" directory target.
+src/Hex_num/preinstall:
+.PHONY : src/Hex_num/preinstall
+
+# Recursive "clean" directory target.
+src/Hex_num/clean: src/Hex_num/CMakeFiles/Hex_num.dir/clean
+.PHONY : src/Hex_num/clean
+
+#=============================================================================
 # Directory level rules for directory tst
 
 # Recursive "all" directory target.
@@ -110,18 +128,44 @@ tst/clean: tst/CMakeFiles/tests_dyn.dir/clean
 .PHONY : tst/clean
 
 #=============================================================================
+# Target rules for target src/Hex_num/CMakeFiles/Hex_num.dir
+
+# All Build rule for target.
+src/Hex_num/CMakeFiles/Hex_num.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/Hex_num/CMakeFiles/Hex_num.dir/build.make src/Hex_num/CMakeFiles/Hex_num.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/Hex_num/CMakeFiles/Hex_num.dir/build.make src/Hex_num/CMakeFiles/Hex_num.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target Hex_num"
+.PHONY : src/Hex_num/CMakeFiles/Hex_num.dir/all
+
+# Build rule for subdir invocation for target.
+src/Hex_num/CMakeFiles/Hex_num.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Hex_num/CMakeFiles/Hex_num.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 0
+.PHONY : src/Hex_num/CMakeFiles/Hex_num.dir/rule
+
+# Convenience name for target.
+Hex_num: src/Hex_num/CMakeFiles/Hex_num.dir/rule
+.PHONY : Hex_num
+
+# clean rule for target.
+src/Hex_num/CMakeFiles/Hex_num.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/Hex_num/CMakeFiles/Hex_num.dir/build.make src/Hex_num/CMakeFiles/Hex_num.dir/clean
+.PHONY : src/Hex_num/CMakeFiles/Hex_num.dir/clean
+
+#=============================================================================
 # Target rules for target src/CMakeFiles/lab3_run.dir
 
 # All Build rule for target.
-src/CMakeFiles/lab3_run.dir/all:
+src/CMakeFiles/lab3_run.dir/all: src/Hex_num/CMakeFiles/Hex_num.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/lab3_run.dir/build.make src/CMakeFiles/lab3_run.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target lab3_run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=9,10,11 "Built target lab3_run"
 .PHONY : src/CMakeFiles/lab3_run.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/lab3_run.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/lab3_run.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/lab3_run.dir/rule
@@ -139,15 +183,15 @@ src/CMakeFiles/lab3_run.dir/clean:
 # Target rules for target tst/CMakeFiles/tests.dir
 
 # All Build rule for target.
-tst/CMakeFiles/tests.dir/all:
+tst/CMakeFiles/tests.dir/all: src/Hex_num/CMakeFiles/Hex_num.dir/all
 	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/tests.dir/build.make tst/CMakeFiles/tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/tests.dir/build.make tst/CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=11,12,13,14,15,16 "Built target tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=12,13 "Built target tests"
 .PHONY : tst/CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
 tst/CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tst/CMakeFiles/tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 0
 .PHONY : tst/CMakeFiles/tests.dir/rule
@@ -165,15 +209,15 @@ tst/CMakeFiles/tests.dir/clean:
 # Target rules for target tst/CMakeFiles/tests_dyn.dir
 
 # All Build rule for target.
-tst/CMakeFiles/tests_dyn.dir/all:
+tst/CMakeFiles/tests_dyn.dir/all: src/Hex_num/CMakeFiles/Hex_num.dir/all
 	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/tests_dyn.dir/build.make tst/CMakeFiles/tests_dyn.dir/depend
 	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/tests_dyn.dir/build.make tst/CMakeFiles/tests_dyn.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=17,18,19,20,21,22 "Built target tests_dyn"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles --progress-num=14,15 "Built target tests_dyn"
 .PHONY : tst/CMakeFiles/tests_dyn.dir/all
 
 # Build rule for subdir invocation for target.
 tst/CMakeFiles/tests_dyn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tst/CMakeFiles/tests_dyn.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Mephi/sem3/Infa/lab3/build/CMakeFiles 0
 .PHONY : tst/CMakeFiles/tests_dyn.dir/rule

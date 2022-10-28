@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Hex_num
+
+# Build rule for target.
+Hex_num: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Hex_num
+.PHONY : Hex_num
+
+# fast build rule for target.
+Hex_num/fast:
+	$(MAKE) $(MAKESILENT) -f src/Hex_num/CMakeFiles/Hex_num.dir/build.make src/Hex_num/CMakeFiles/Hex_num.dir/build
+.PHONY : Hex_num/fast
+
+#=============================================================================
 # Target rules for targets named lab3_run
 
 # Build rule for target.
@@ -163,6 +176,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Hex_num"
 	@echo "... lab3_run"
 	@echo "... tests"
 	@echo "... tests_dyn"

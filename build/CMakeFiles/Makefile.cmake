@@ -12,6 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
   "../src/CMakeLists.txt"
+  "../src/Hex_num/CMakeLists.txt"
   "../tst/CMakeLists.txt"
   "/usr/local/lib/cmake/Catch2/Catch2Config.cmake"
   "/usr/local/lib/cmake/Catch2/Catch2ConfigVersion.cmake"
@@ -45,12 +46,14 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Hex_num/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "tst/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "src/Hex_num/CMakeFiles/Hex_num.dir/DependInfo.cmake"
   "src/CMakeFiles/lab3_run.dir/DependInfo.cmake"
   "tst/CMakeFiles/tests.dir/DependInfo.cmake"
   "tst/CMakeFiles/tests_dyn.dir/DependInfo.cmake"

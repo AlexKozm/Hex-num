@@ -44,6 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/home/alex/Mephi/sem3/Infa/lab3/build/src/Hex_num/cmake_install.cmake")
   include("/home/alex/Mephi/sem3/Infa/lab3/build/src/cmake_install.cmake")
   include("/home/alex/Mephi/sem3/Infa/lab3/build/tst/cmake_install.cmake")
 
