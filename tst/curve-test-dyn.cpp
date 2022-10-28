@@ -1,5 +1,5 @@
-#include "Hex_num/base/hex_num.h"
-#include "Hex_num/dynamic/hex_num_d.h"
+#include "hex_num.h"
+#include "hex_num_d.h"
 #include <catch2/catch_test_macros.hpp>
 #include <sstream>
 

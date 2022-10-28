@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/lab3_run.dir/main.cpp.o CMakeFiles/lab3_run.dir/menu.cpp.o -o lab3_run  Hex_num/libHex_num.a 
